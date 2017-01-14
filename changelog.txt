@@ -1,0 +1,58 @@
+Changelog
+
+1.0.0 (2017-01-14)
+
+Installed:
+    - _underscores (dist)
+    - bootstrap (dist)
+    - wp_bootstrap_navwalker.php
+
+    - functions.php
+        enqueue:
+            bootstrap.min.css
+            font-awesome.min.css
+            Google fonts - Roboto
+            custom.css
+           
+            jquery.min.js       
+            bootstrap.min.js
+            custom.js
+
+        added call to add_editor_style()
+        added editor-style.css to /assets/css        
+
+        added function idealist_fonts_url() 
+            (copied from twentyseventeen_fonts_url())
+
+        require_once('wp_bootstrap_navwalker.php');
+
+Debug setup:
+    - wp-config.php
+        define( 'WP_DEBUG', true );
+        define( 'WP_DEBUG_LOG', true );
+        define( 'WP_DEBUG_DISPLAY', false );
+        define( 'SCRIPT_DEBUG', true );
+
+    - installed plugins
+        Query Monitor
+        Debug Bar
+        Log Deprecated Notices
+
+Branding:
+    - header.php
+        removed entire div class="site-branding" so that the site name and description are not displayed in header
+        added call to the_post_thumbnail()
+      
+    - style.css
+        Theme URI points to: 
+            https://wordpress.org/themes/idealist/
+
+Menu setup:
+    - header.php
+        Bootstrap navbar with Brand, menu and search
+
+
+
+
+
+
