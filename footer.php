@@ -14,12 +14,26 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'idealist' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'idealist' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-            <?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'idealist' ), 'idealist', '<a href="https://automattic.com/" rel="designer">Susan Price</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+        <div class="container">
+            <div class="col-sm-3">
+                <p><a href="/"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/logo.png" alt="Idealist home"></a></p>
+            </div><!-- col-sm-3 --> 
+
+            <div class="col-sm-6">
+                <nav>
+                    <ul class="list-unstyled list-inline">
+                        <li><a href="Home">Home</a></li>
+                        <li><a href="Blog">Blog</a></li>
+                        <li><a href="About">About</a></li>
+                        <li><a href="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div><!-- col-sm-6 -->
+            <div class="col-sm-3">
+                <p class="pull-right">Copyright &copy; 2017</p>
+            </div><!-- col-sm-3 -->
+        </div><!-- container -->
+	</footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
