@@ -29,20 +29,21 @@
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
 			        <span class="sr-only">Toggle navigation</span>
 			        <!-- for three lines in hamburger -->
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a class="navbar-brand" href="#">Brand</a>
+			      <a class="navbar-brand" href="/"><img src="<?php echo get_bloginfo('template_url') ?>/assets/img/logo.png" alt="Idealist Home" /></a>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <div class="collapse navbar-collapse" id="main-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
-			        <li class="active"><a href="#">Blog <span class="sr-only">(current)</span></a></li>
+			        <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">Blog</a></li>
 			        <li><a href="#">About</a></li>
 			        <li><a href="#">Contact</a></li>
 			      </ul>
