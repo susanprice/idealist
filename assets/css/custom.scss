@@ -1,0 +1,475 @@
+/*--------------------------------------------------------------
+ TABLE OF CONTENTS:
+----------------------------------------------------------------
+
+# Typography
+# Elements
+# Forms
+# Navigation
+    ## Links
+    ## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+    ## Posts and pages
+    ## Comments
+# Infinite scroll
+# Media
+    ## Captions
+# Media Queries
+--------------------------------------------------------------*/
+$test: #000;
+$black: #000;
+$light-gray: #ccc;
+$medium-gray: #bbb;
+$dark-gray: #aaa;
+$white: #fff;
+$red: #f00;
+$link: #000;
+$hover: $dark-gray;
+$font-stack: Roboto, sans-serif;
+$main-copy-color: $black;
+
+@mixin x-align-items($position) {
+    -webkit-align-items: $position;
+    align-items: $position;
+    -webkit-box-align: $position;
+    -moz-box-align: $position;
+    -ms-box-align: $position; 
+    -ms-flex-align: $position;
+}
+
+@mixin x-border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin x-box-sizing() {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@mixin x-display-center() {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin x-display-flex() {
+    display: -webkit-flex;
+    display: -ms-flexbox;     
+    display: flex;
+}
+
+@mixin x-story-border-details() {
+    border-color: $light-gray;
+    border-style: solid;        
+    border-width: 1px;
+}
+
+@mixin x-user-select($type) {
+    -webkit-user-select: $type;
+    -moz-user-select: $type;    
+    -ms-user-select: $type;
+     user-select: $type;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+html {
+    @include x-box-sizing();
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+    @include x-box-sizing();
+}
+
+body {
+    color: $black;
+    font-weight: 300;
+    letter-spacing: .1rem;
+}
+
+p {
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 300;        
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+    letter-spacing: 0.15em;
+}
+
+h6 {
+    font-size: .8em;
+}
+
+strong {
+    font-weight: 400;
+}
+
+.story-title,
+.page-title {
+    margin-bottom: .8em;
+    text-align: center;
+}
+
+.post-body {
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-size: 1.3em; 
+}
+
+a:link,
+a:visited {
+    color: $link;
+}
+
+a:hover {
+    color: $hover;
+    text-decoration: none;
+}
+
+.copyright {
+    color: $light-gray;
+    line-height: 3.5;
+    text-align: right;
+    vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+article,
+.panel {
+    @include x-border-radius(10px);
+    @include x-story-border-details();
+    margin: 20px auto;
+    max-width: 600px;
+    padding: .5em 2em;
+}
+
+.btn {
+    border: 2px solid $black;
+    padding: 0;
+}
+
+.fa-search {
+    background: $black;
+    color: $light-gray;
+    font-size: 1.1em;
+    padding: 1em;
+    vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+/* search entry field */
+.form-control {    
+    background: $black;
+    font-size: 1.8em;
+    left: 0;    
+    line-height: 1.8;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 1;
+}
+
+label {
+    font-weight: 300;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="texturl"],
+input[type="password"],
+input[type="search"],
+textarea {
+    @include x-story-border-details();
+    @include x-border-radius(3px);
+    font-size: 1.8em;
+    line-height: 1.8;
+    width: 100%;
+}
+
+textarea {
+    @include x-story-border-details();
+    @include x-border-radius(3px);
+    font-size: 1.8em;
+    line-height: 1.8;
+    width: 100%;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    background: $white; 
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    color: $dark-gray;
+    padding: 5px 10px;
+}
+
+.form-submit,
+.send-button {
+    @include x-story-border-details();
+    @include x-border-radius(6px);
+    @include x-display-center();
+    background: $white;    
+    height: 50px;
+    /* line-height: 2.8; */
+    width: 200px; 
+    margin: 1em auto;
+}
+
+.comment-form-author {
+    margin-top: 2em;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+
+.navbar {
+    @include x-border-radius(0);
+    background: $black;
+}
+
+.navbar-nav a,
+.navbar-default .navbar-nav>li>a {
+    color: $white;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background: $black;
+    border: 2px solid $black;
+    color: $white;
+}
+
+.navbar-brand {
+    font-size: 1.1em;
+}
+
+.footer-nav {
+    padding-left: 0;
+}
+
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+
+a {
+    color: $black;
+}
+
+footer li.active a {
+    color: $white;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+
+.flexbox-container {
+    @include x-display-flex();
+    @include x-align-items(center);
+}
+
+.page-main-image {
+    margin: auto auto;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.center {
+    @include x-display-center();
+}
+
+.vcenter p {
+    margin: 0;
+    vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+
+.widget-title {
+    color: $black;
+    font-size: 1.1em;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+
+.post,
+.widget,
+.comments {
+    @include x-story-border-details();
+    background: $white;
+    position: relative;
+}
+
+.comments .comments-wrap,
+.post header,
+.post .post-body,
+.post .post-excerpt {
+    padding: 1em;
+}
+
+.post-image {
+    @include x-display-center();
+    flex-direction: row;
+    height: auto;
+    margin-bottom: 2em;
+}
+
+.post-details {
+    font-size: .8em;
+    width: 90%;
+}
+
+.post-details i.fa:first-child {
+    padding: 0;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comments {
+    @include x-border-radius(10px);
+    margin: auto auto;
+    max-width: 600px;
+    padding: 1em 1.4em;
+}
+
+.comments ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments ol li {
+    margin: .5em 0;
+    padding: .6em 1.2em;
+}
+
+.children {
+    list-style: none;
+    padding: 0;
+}
+
+.leave-comment {
+    @include x-border-radius(10px);
+    @include x-story-border-details();
+    margin: 1.2em auto;
+    max-width: 600px;
+    padding: .8em 2em;
+}
+
+.comment {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 991px) {
+    .container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 1.2em;
+    }
+}    
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    /* iPhone 5 portrait */
+}
+
+
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
