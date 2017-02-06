@@ -23,14 +23,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button -->
-                <a class="navbar-brand" href="index.html">IDEALIST</a>
+                <a class="navbar-brand" href="/">IDEALIST</a>
             </div>
             <div class="hidden-sm hidden-xs col-md-6">
                 <nav class="center">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
