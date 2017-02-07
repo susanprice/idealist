@@ -165,8 +165,6 @@ function idealist_scripts() {
 
 	wp_enqueue_script( 'idealist-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	// TODO custom.js is placeholder only
-
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), '20160804', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
