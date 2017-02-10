@@ -202,3 +202,12 @@ require get_template_directory() . '/inc/jetpack.php';
 * Register custom navigation walker
 */
 require_once('wp_bootstrap_navwalker.php');
+
+/**
+ * Replaces the excerpt "more" text with a link.
+ */
+function new_excerpt_more($more) {
+    global $post;
+	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
