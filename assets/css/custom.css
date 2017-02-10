@@ -21,7 +21,7 @@
 # Media Queries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Typography
+# Global
 --------------------------------------------------------------*/
 html {
   -webkit-box-sizing: border-box;
@@ -96,6 +96,29 @@ a:hover {
   line-height: 3.5;
   text-align: right;
   vertical-align: middle; }
+
+.badge.social {
+  background: #ccc;
+  font-size: 24px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 42px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  color: white; }
+
+.badge.social.twitter:hover {
+  background: #55acee; }
+
+.badge.social.facebook:hover {
+  background: #3b5998; }
+
+.badge.social.gplus:hover {
+  background: #db4b39; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -173,7 +196,9 @@ textarea {
 
 input[type="submit"],
 button[type="submit"] {
-  background: #fff; }
+  background: #fff;
+  height: 50px;
+  width: 50px; }
 
 input[type="submit"]:hover,
 button[type="submit"]:hover {
@@ -289,10 +314,15 @@ footer li.active a {
 .post,
 .widget,
 .comments {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   border-color: #ccc;
   border-style: solid;
   border-width: 1px;
   background: #fff;
+  padding: 10px;
   position: relative; }
 
 .comments .comments-wrap,
@@ -306,8 +336,10 @@ footer li.active a {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  height: auto;
   margin-bottom: 2em; }
+
+.post-image img {
+  height: auto; }
 
 .post-details {
   font-size: .8em;
@@ -356,6 +388,36 @@ footer li.active a {
 .comment {
   width: 100%; }
 
+.post-comments-badge {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  border: none;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border: 1px solid #ccc;
+  background: #fff;
+  text-align: center;
+  display: table; }
+
+.post-comments-badge a {
+  display: table-cell;
+  vertical-align: middle;
+  color: #000;
+  font-size: 20px;
+  line-height: 20px; }
+
+.post-comments-badge i.fa {
+  display: block;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 4px; }
+
+.post-comments-badge:hover {
+  background-color: #ccc; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -363,6 +425,7 @@ footer li.active a {
 # Media
 --------------------------------------------------------------*/
 section.feature-image {
+  margin-bottom: 20px;
   padding: 200px 0; }
 
 section.main-content {
@@ -370,6 +433,10 @@ section.main-content {
 
 .feature-image-default {
   background: url("/wp-content/themes/idealist/assets/img/people-together.jpg") no-repeat;
+  background-size: cover; }
+
+.feature-image-default-alt {
+  background: url("/wp-content/themes/idealist/assets/img/pier.jpg") no-repeat;
   background-size: cover; }
 
 /*--------------------------------------------------------------
