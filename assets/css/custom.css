@@ -362,6 +362,16 @@ footer li.active a {
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
+section.feature-image {
+  padding: 200px 0; }
+
+section.main-content {
+  padding: 10px; }
+
+.feature-image-default {
+  background: url("/wp-content/themes/idealist/assets/img/people-together.jpg") no-repeat;
+  background-size: cover; }
+
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
