@@ -397,10 +397,10 @@ input.search-field {
   width: 100%; }
 
 .post-comments-badge {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   position: absolute;
-  top: 25px;
+  top: 40px;
   right: 20px;
   border: none;
   -webkit-border-radius: 100%;
