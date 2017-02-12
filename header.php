@@ -32,7 +32,7 @@
     ================================================== -->
     <header id="masthead" class="site-header">
         <div class="navbar-wrapper">
-            <nav class="navbar navbar-inverse">
+            <nav class="navbar navbar-inverse" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -48,32 +48,27 @@
                         <input type="text" id="search-entry" class="form-control" placeholder="search">
                     </div>
 
-					<div class="collapse navbar-collapse" id="main-navbar-collapse-1">
-					    <ul class="nav navbar-nav">
-							<!-- If the menu location is not set in the Admin, 
-							then by default all pages will appear in menu  -->
-							 <?php
-					            wp_nav_menu( array(
-					                'menu'              => 'primary',
-					                'theme_location'    => 'primary',
-					                'depth'             => 2,
-					                'container'         => 'div',
-					                'container_class'   => 'collapse navbar-collapse',
-					        		'container_id'      => 'bs-example-navbar-collapse-1',
-					                'menu_class'        => 'nav navbar-nav',
-					                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-					                'walker'            => new wp_bootstrap_navwalker())
-					            );
-					        ?>
-							</ul>
-		      
-                        <div class="nav navbar-nav navbar-right">
-                            <button type="button" class="btn btn-default" onclick="showSearchInput()">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </button>
-                        </div>
-				    </div><!-- /.navbar-collapse -->
-                </div>
+					 <?php
+			            wp_nav_menu( array(
+			                'menu'              => 'primary',
+			                'theme_location'    => 'primary',
+			                'depth'             => 2,
+			                'container'         => 'div',
+			                'container_class'   => 'collapse navbar-collapse',
+			        		'container_id'      => 'main-navbar-collapse-1',
+			                'menu_class'        => 'nav navbar-nav',
+			                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+			                'walker'            => new wp_bootstrap_navwalker())
+			            );
+			        ?>
+						
+                    <!-- div class="nav navbar-nav navbar-right">
+                        <button type="button" class="btn btn-default" onclick="showSearchInput()">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+                    </div -->
+
+				</div><!-- /.container-fluid -->
             </nav>
         </div>
     </header>
