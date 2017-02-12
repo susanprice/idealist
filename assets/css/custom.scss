@@ -399,6 +399,20 @@ footer li.active a {
     position: relative;
 }
 
+.search-form {
+    // align-items: center;  v alignment; doesn't work for entry field
+    // background-color: red;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; // h alignment or space-between
+    padding: 5px;
+}
+
+input.search-field {
+    height: 50px;
+}
+
 .comments .comments-wrap,
 .post header,
 .post .post-body,
@@ -562,3 +576,4 @@ section.main-content {
         text-align: center;
     }
 }
+

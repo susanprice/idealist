@@ -325,6 +325,15 @@ footer li.active a {
   padding: 10px;
   position: relative; }
 
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px; }
+
+input.search-field {
+  height: 50px; }
+
 .comments .comments-wrap,
 .post header,
 .post .post-body,
@@ -389,10 +398,10 @@ footer li.active a {
   width: 100%; }
 
 .post-comments-badge {
-  height: 70px;
-  width: 70px;
+  height: 50px;
+  width: 50px;
   position: absolute;
-  top: 25px;
+  top: 40px;
   right: 20px;
   border: none;
   -webkit-border-radius: 100%;
@@ -452,8 +461,6 @@ section.main-content {
 @media screen and (max-width: 768px) {
   .logo {
     width: 50%; } }
-@media screen and (max-width: 568px) {
-  /* iPhone 5 portrait */ }
 @media (min-width: 768px) {
   .navbar .navbar-nav {
     display: inline-block;
