@@ -169,14 +169,15 @@ input[type="email"],
 input[type="texturl"],
 input[type="password"],
 input[type="search"],
+input[type="url"],
 textarea {
   border-color: #ccc;
   border-style: solid;
   border-width: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   font-size: 1.8em;
   line-height: 1.8;
   width: 100%; }
@@ -185,10 +186,10 @@ textarea {
   border-color: #ccc;
   border-style: solid;
   border-width: 1px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   font-size: 1.8em;
   line-height: 1.8;
   width: 100%; }
@@ -196,8 +197,11 @@ textarea {
 input[type="submit"],
 button[type="submit"] {
   background: #fff;
+  /* border-radius: 10px; */
+  color: #ccc;
+  font-size: 18px;
   height: 50px;
-  width: 50px; }
+  width: 100%; }
 
 input[type="submit"]:hover,
 button[type="submit"]:hover {
@@ -209,10 +213,10 @@ button[type="submit"]:hover {
   border-color: #ccc;
   border-style: solid;
   border-width: 1px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  border-radius: 6px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -225,6 +229,15 @@ button[type="submit"]:hover {
 .comment-form-author {
   margin-top: 2em; }
 
+input[type="button" i],
+input[type="submit" i],
+input[type="reset" i],
+input[type="file" i]::-webkit-file-upload-button,
+button {
+  /* border-color: light-gray; */
+  border-width: 1px;
+  border-radius: 10px; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -235,6 +248,12 @@ button[type="submit"]:hover {
   border-radius: 0;
   background: #000; }
 
+/*
+.navbar-nav > li.current_page_item a,
+.navbar-nav > li.current_page_parent a {
+    color: red;
+}
+*/
 .navbar-nav a,
 .navbar-default .navbar-nav > li > a {
   color: #fff; }
@@ -331,7 +350,8 @@ footer li.active a {
   padding: 5px; }
 
 input.search-field {
-  height: 50px; }
+  height: 50px;
+  width: 200px; }
 
 .comments .comments-wrap,
 .post header,
@@ -426,6 +446,16 @@ input.search-field {
 .post-comments-badge:hover {
   background-color: #ccc; }
 
+#comments footer {
+  background: none;
+  color: inherit; }
+
+#comments footer a {
+  color: inherit; }
+
+#comments .comment-meta {
+  margin: 10px; }
+
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
@@ -437,6 +467,9 @@ section.feature-image {
   padding: 200px 0; }
 
 section.main-content {
+  /* for contact form */
+  display: flex;
+  justify-content: center;
   padding: 10px; }
 
 .feature-image-default {
