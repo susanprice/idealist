@@ -1,0 +1,65 @@
+/* This file is included as an example for a simple Contact Page form using the Contact Form 7 plugin
+ *
+ *   usage:
+ *   - install Contact Form 7 plugin
+ *   - from the WordPress dashboard, select Contact / Edit the form
+ *   - copy the code below to your clipboard and paste into the Form tab field
+ *   - save
+ *
+ *   The optional classes (row & col-md-12) are bootstrap-specific. 
+ */
+
+<div class="row">
+<div class="col-md-12">
+
+<label> Your Name (required)
+[text* your-name] </label>
+
+<label> Your Email (required)
+[email* your-email] </label>
+
+<label> Subject
+[text your-subject] </label>
+
+<label> Your Message
+[textarea your-message x3] </label>
+
+</div>
+</div>
+[submit "Send"]
+
+/* ********************************************************** */
+/* ********************************************************** */
+
+/* or, an alternative layout... */
+
+<div class="row">
+<div class="col-sm-6">
+<div class="form-group">
+<label for="contact-name" class="sr-only">Name</label>
+[text* your-name class:form-control class:input-lg id:contact-name placeholder "Your name"]
+</div>
+</div>
+<div class="col-sm-6">
+<div class="form-group">   
+<label for="contact-email" class="sr-only">Email</label>
+[email* your-email class:form-control class:input-lg id:contact-email placeholder "Your email"]
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">   
+<label class="sr-only" for="contact-subject">Subject</label>
+[text* your-subject class:form-control class:input-lg id:contact-subject placeholder "Your subject"]
+</div>
+</div>
+<div class="col-sm-12">
+<div class="form-group">   
+<label class="sr-only" for="contact-words">Message</label>
+[textarea* your-message class:form-control class:input-lg id:contact-words x3 placeholder "Your message"]
+</div>
+</div>
+</div>
+[submit class:btn class:btn-info class:btn-lg class:pull-right "Get in touch"]
+
+
+---
