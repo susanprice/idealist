@@ -31,7 +31,6 @@
                         <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
                         <li><a href="/about">About</a></li>
                         <li><a href="/contact">Contact</a></li>
-                        <li><a href="/blog">Blog</a></li>
                     </ul>
                 </nav>
             </div>
