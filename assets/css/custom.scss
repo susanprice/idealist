@@ -227,8 +227,9 @@ article,
 # Forms
 --------------------------------------------------------------*/
 
-/* search entry field */
-.form-control {    
+/* search entry field in header */
+/*
+.form-control {   
     background: $black;
     font-size: 1.8em;
     left: 0;    
@@ -239,6 +240,7 @@ article,
     width: 100%;
     z-index: 1;
 }
+*/
 
 label {
     font-weight: 300;
@@ -394,6 +396,42 @@ footer li.active a {
     font-size: 1.1em;
 }
 
+/* Search */
+
+.search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 5px;
+    position: relative;
+}
+
+.search-form .search-submit {
+    bottom: 3px;
+    padding: 0.5em 1em;
+    position: absolute;
+    right: 3px;
+    top: 5px;
+    width: 50px;
+}
+
+.search-form .search-submit .icon {
+    height: 24px;
+    top: -2px;
+    width: 16px;
+}
+
+input.search-field {
+    height: 50px;
+}
+
+button.search-submit {
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;  
+    border-top-left-radius: 0; 
+    border-bottom-left-radius: 0;  
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -412,21 +450,6 @@ footer li.active a {
     position: relative;
 }
 
-.search-form {
-    // align-items: center;  v alignment; doesn't work for entry field
-    // background-color: red;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; // h alignment or space-between
-    padding: 5px;
-}
-
-input.search-field {
-    height: 50px;
-    width: 200px;
-}
-
 .comments .comments-wrap,
 .post header,
 .post .post-body,
@@ -442,6 +465,7 @@ input.search-field {
 
 .post-image img {
     height: auto;
+    margin-top: 20px;
 }
 
 .post-details {
