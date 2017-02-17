@@ -163,6 +163,22 @@ function idealist_scripts() {
 
 	wp_enqueue_script( 'idealist-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
+	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
+	if ( is_customize_preview() ) {
+		wp_enqueue_style( 'idealist-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'idealist-style' ), '1.0' );
+		wp_style_add_data( 'idealist-ie9', 'conditional', 'IE 9' );
+	}
+
+	// Load the Internet Explorer 8 specific stylesheet.
+	wp_enqueue_style( 'idealist-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'idealist-style' ), '1.0' );
+	wp_style_add_data( 'idealist-ie8', 'conditional', 'lt IE 9' );
+
+	// Load the html5 shiv.
+	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
+	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
+
+
+
 	wp_enqueue_script( 'idealist-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), '20160804', true );
@@ -202,6 +218,11 @@ require get_template_directory() . '/inc/jetpack.php';
 * Register custom navigation walker
 */
 require_once('wp_bootstrap_navwalker.php');
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
 /**
  * Replaces the excerpt "more" text with a link.
