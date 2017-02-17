@@ -41,4 +41,4 @@ get_header(); ?>
 		</div><!-- #primary -->
 	</div><!-- #container -->
 
-<? get_footer(); ?>
+<?php get_footer(); ?>
