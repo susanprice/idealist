@@ -7,7 +7,10 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package idealist
+ * @package WordPress
+ * @subpackage Idealist
+ * @since 1.0
+ * @version 1.0
  */
 
 /*
@@ -34,7 +37,8 @@ if ( post_password_required() ) {
 			?>
 		</h3><!-- .comments-title -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<!-- Are there comments to navigate through? (Above) -->
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'idealist' ); ?></h2>
 			<div class="nav-links">
@@ -55,7 +59,8 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+		<!-- Are there comments to navigate through? (Below) -->
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'idealist' ); ?></h2>
 			<div class="nav-links">
@@ -71,7 +76,7 @@ if ( post_password_required() ) {
 	endif; // Check for have_comments().
 
 
-	// If comments are closed and there are comments, let's leave a little note, shall we?
+	// If comments are closed and there are comments, let the visitor know comments are closed
 	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'idealist' ); ?></p>
