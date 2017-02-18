@@ -2,40 +2,16 @@
 /**
  * Template Name: About Page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package idealist
+ * @package WordPress
+ * @subpackage Idealist
+ * @since 1.0
+ * @version 1.1
  */
 
 get_header();
-
-$thumbnail_url  = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 ?>
-
-<!-- FEATURED IMAGE
-================================================== -->
-
-<!-- check for feature image -->
-<?php if( has_post_thumbnail() ) { ?>
-    <section class="feature-image" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover;" data-type="background" data-speed="2">
-        <!-- TOD make display of title conditional -->
-        <!-- h1 class="page-title"><!-- ?php the_title(); ? --><!-- /h1 -->
-    </section>
-    
-    <!-- if not feature image, display fallback image -->
-    <?php } else { ?>
-
-    <section class="feature-image feature-image-default" data-type="background" data-speed="2">
-        <!-- TOD make display of title conditional -->
-        <!-- h1 class="page-title"><!-- ?php the_title(); ? --><!-- /h1 -->
-    </section>
-    <?php } ?>
-
 
 <!-- MAIN CONTENT
 ================================================== -->
