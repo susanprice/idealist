@@ -27,18 +27,20 @@
     ================================================== -->
     <header id="masthead" class="site-header">
         <div class="navbar-wrapper">
-            <nav class="navbar navbar-inverse" role="navigation">
+            <nav class="navbar" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
 
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
+                        <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <!-- mobile menu -->
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
+
+                        <!-- Display Site Title -->
                         <a class="navbar-brand" href="<?php echo home_url(); ?>">
                         <?php bloginfo('name'); ?>
                         </a>
