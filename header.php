@@ -77,7 +77,7 @@
 ================================================== -->
 
 <?php
-if ( is_home () ) {
+if ( is_home () | is_single () | is_category () | is_search () ) {
     return;
 }
 ?>
