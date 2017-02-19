@@ -77,23 +77,17 @@
 ================================================== -->
 
 <?php
-$thumbnail_url  = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+if ( is_home () ) {
+    return;
+}
 ?>
 
-<!-- check for feature image -->
+<!-- display featured image -->
 <?php if( has_post_thumbnail() ) { ?>
-    <section class="feature-image" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover;" data-type="background" data-speed="2">
-        <!-- TODO make display of title conditional -->
-        <!-- h1 class="page-title"><!-- ?php the_title(); ? --><!-- /h1 -->
-    </section>
-    
+    <?php echo wp_get_attachment_image( get_post_thumbnail_id( $post->ID ), array('1920', '600'), "", array( "class" => "img-responsive" ) );  ?>
+
     <!-- if not feature image, display fallback image -->
     <?php } else { ?>
-
-    <section class="feature-image feature-image-default img-responive" data-type="background" data-speed="2">
-        <!-- TOD make display of title conditional -->
-        <!-- h1 class="page-title"><!-- ?php the_title(); ? --><!-- /h1 -->
-    </section>
     <?php } ?>
 
 
