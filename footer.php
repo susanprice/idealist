@@ -18,7 +18,7 @@
         <div class="container-fluid">
             <div class="col-md-12">
                 <nav class="center vcenter">
-                    <p class="copyright">Copyright&copy;2017</p>
+                    <p class="copyright">Copyright &copy; 2017</p>
                 </nav>
             </div>
         </div>
