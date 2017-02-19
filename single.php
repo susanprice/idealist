@@ -12,13 +12,15 @@ get_header(); ?>
 	<!-- BLOG CONTENT
     ================================================== -->
     <div class="container">
-        <div id="primary" class="row" >
-            <main id="content" class="col-sm-8">		
-
+        <div class="row" id="primary">
+            <div class="col-lg-2 col-md-2"></div>
+            <main id="content" class="col-lg-8 col-md-8">		
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', get_post_format() );
+                // display the entire post
+				get_template_part( 'template-parts/content-page', get_post_format() );
+                // get_template_part( 'template-parts/content', get_post_format() );
 
 				the_post_navigation();
 
@@ -29,15 +31,8 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
 			</main><!-- #content -->
-
-			<!-- SIDEBAR
-    		================================================== -->
-			<aside class="col-sm-4">
-				<?php get_sidebar(); ?>
-			</aside>
-
+            <div class="col-lg-2 col-md-2"></div>
 		</div><!-- #primary -->
 	</div><!-- #container -->
 
