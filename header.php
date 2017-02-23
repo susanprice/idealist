@@ -73,22 +73,34 @@
     </div>
 </header>
 
+
+<!-- CUSTOM HEADER
+================================================== -->
+<?php if ( get_header_image() ) : ?>
+    <div id="site-header">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+            <img src="<?php header_image(); ?>" 
+                width="<?php echo get_custom_header()->width; ?>" 
+                height="<?php echo get_custom_header()->height; ?>" 
+                class="img-responsive"
+                alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+        </a>
+    </div>
+<?php endif; ?>
+
+
 <!-- FEATURED IMAGE
 ================================================== -->
-
 <?php
 if ( is_home () | is_single () | is_category () | is_search () ) {
     return;
 }
 ?>
 
-<!-- display featured image -->
 <?php if( has_post_thumbnail() ) { ?>
     <?php echo wp_get_attachment_image( get_post_thumbnail_id( $post->ID ), array('1920', '600'), "", array( "class" => "img-responsive" ) );  ?>
 
     <!-- if not feature image, display fallback image -->
     <?php } else { ?>
     <?php } ?>
-
-
 
