@@ -149,9 +149,9 @@ article,
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-/* search entry field in header */
+/* search entry field in header - future */
 /*
-.form-control {   
+.form-control {  
     background: $black;
     font-size: 1.8em;
     left: 0;    
@@ -164,7 +164,8 @@ article,
 }
 */
 label {
-  font-weight: 300; }
+  font-weight: 300;
+  padding-bottom: 20px; }
 
 input[type="text"],
 input[type="email"],
@@ -181,7 +182,6 @@ textarea {
   -ms-border-radius: 10px;
   border-radius: 10px;
   font-size: 1.8em;
-  line-height: 1.8;
   width: 100%; }
 
 textarea {
@@ -195,6 +195,9 @@ textarea {
   font-size: 1.8em;
   line-height: 1.8;
   width: 100%; }
+
+textarea#comment {
+  height: 200px; }
 
 input[type="submit"],
 button[type="submit"] {
@@ -248,21 +251,60 @@ button {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   border-radius: 0;
-  background: #000; }
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: #fff; }
 
 .navbar-nav a,
 .navbar-default .navbar-nav > li > a {
-  color: #fff; }
+  color: #ccc;
+  text-transform: uppercase; }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:focus,
-.navbar-default .navbar-nav > .active > a:hover {
-  background: #000;
-  border: 2px solid #000;
-  color: #fff; }
+.navbar-nav a:hover,
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: white;
+  color: #aaa; }
 
+.navbar-nav > li > a:active {
+  color: #aaa; }
+
+.current-menu-item > a {
+  color: #000; }
+
+/*
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    background: $black;
+    border: 2px solid $black;
+    color: $black;
+}
+*/
 .navbar-brand {
-  font-size: 1.1em; }
+  font-size: 2em;
+  left: 0;
+  margin: auto 10%;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 80%; }
+
+/*
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $black !important;
+}
+*/
+.navbar-toggle.collapsed .icon-bar {
+  background-color: #aaa !important; }
+
+.navbar-toggle {
+  margin-left: 10px; }
+
+span.icon-bar {
+  color: red;
+  background-color: #ccc; }
 
 .footer-nav {
   padding-left: 0; }
@@ -382,9 +424,9 @@ button.search-submit {
   flex-direction: row;
   margin-bottom: 2em; }
 
-.post-image img {
-  height: auto;
-  margin-top: 20px; }
+img.img-responsive {
+  margin: auto;
+  margin-bottom: 30px; }
 
 .post-details {
   font-size: .8em;
@@ -392,6 +434,10 @@ button.search-submit {
 
 .post-details i.fa:first-child {
   padding: 0; }
+
+p.not-found {
+  font-size: 1.5em;
+  text-align: center; }
 
 /*--------------------------------------------------------------
 ## Comments
@@ -480,8 +526,7 @@ button.search-submit {
 # Media
 --------------------------------------------------------------*/
 section.feature-image {
-  margin-bottom: 20px;
-  padding: 200px 0; }
+  margin-bottom: 20px; }
 
 section.main-content {
   /* for contact form */
@@ -489,13 +534,19 @@ section.main-content {
   justify-content: center;
   padding: 10px; }
 
+/*
 .feature-image-default {
-  background: url("/wp-content/themes/idealist/assets/img/people-together.jpg") no-repeat;
-  background-size: cover; }
+    background: url('/wp-content/themes/idealist/assets/img/people-together.jpg') no-repeat;
+    background-size: cover;
+}
 
 .feature-image-default-alt {
-  background: url("/wp-content/themes/idealist/assets/img/pier.jpg") no-repeat;
-  background-size: cover; }
+    background: url('/wp-content/themes/idealist/assets/img/pier.jpg') no-repeat;
+    background-size: cover;
+}
+*/
+img.post {
+  width: 100%; }
 
 /*--------------------------------------------------------------
 ## Captions
@@ -513,10 +564,10 @@ section.main-content {
 @media screen and (max-width: 568px) {
   /* iPhone 5 portrait */ }
 @media (min-width: 768px) {
-  .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top; }
-
-  .navbar .navbar-collapse {
-    text-align: center; } }
+  .navbar > .container-fluid .navbar-brand {
+    left: 0;
+    margin: auto 10%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 80%; } }

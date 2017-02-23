@@ -227,9 +227,9 @@ article,
 # Forms
 --------------------------------------------------------------*/
 
-/* search entry field in header */
+/* search entry field in header - future */
 /*
-.form-control {   
+.form-control {  
     background: $black;
     font-size: 1.8em;
     left: 0;    
@@ -244,6 +244,7 @@ article,
 
 label {
     font-weight: 300;
+    padding-bottom: 20px;
 }
 
 input[type="text"],
@@ -256,7 +257,6 @@ textarea {
     @include x-story-border-details();
     @include x-border-radius(10px);
     font-size: 1.8em;
-    line-height: 1.8;
     width: 100%;
 }
 
@@ -266,6 +266,10 @@ textarea {
     font-size: 1.8em;
     line-height: 1.8;
     width: 100%;
+}
+
+textarea#comment {
+    height: 200px;
 }
 
 input[type="submit"],
@@ -310,30 +314,79 @@ button {
     border-radius: 10px;
 }
 
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 
 .navbar {
     @include x-border-radius(0);
-    background: $black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: $white;    
 }
 
 .navbar-nav a,
 .navbar-default .navbar-nav>li>a {
-    color: $white;
+    color: $light-gray;
+    text-transform: uppercase;
 }
 
+.navbar-nav a:hover,
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: white;
+    color: $dark-gray;
+}
+
+.navbar-nav>li>a:active {
+    color: $dark-gray;
+}
+
+.current-menu-item > a {
+    color: $black;
+}
+
+/*
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:focus,
 .navbar-default .navbar-nav>.active>a:hover {
     background: $black;
     border: 2px solid $black;
-    color: $white;
+    color: $black;
 }
+*/
 
 .navbar-brand {
-    font-size: 1.1em;
+    font-size: 2em;
+    left: 0;
+    margin: auto 10%;
+    position: absolute;    
+    top: 0;
+    text-align: center;
+    width: 80%;
+}
+
+/*
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $black !important;
+}
+*/
+
+.navbar-toggle.collapsed .icon-bar {
+  background-color: $dark-gray !important;
+}
+
+.navbar-toggle {
+    margin-left: 10px;
+}
+
+span.icon-bar {
+    color: red;
+    background-color: $light-gray;
+
 }
 
 .footer-nav {
@@ -463,9 +516,9 @@ button.search-submit {
     margin-bottom: 2em;
 }
 
-.post-image img {
-    height: auto;
-    margin-top: 20px;
+img.img-responsive {
+    margin: auto;
+    margin-bottom: 30px;
 }
 
 .post-details {
@@ -475,6 +528,11 @@ button.search-submit {
 
 .post-details i.fa:first-child {
     padding: 0;
+}
+
+p.not-found {
+    font-size: 1.5em;
+    text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -575,7 +633,6 @@ button.search-submit {
 
 section.feature-image {
     margin-bottom: 20px;
-    padding: 200px 0;
 }
 
 section.main-content {
@@ -586,6 +643,7 @@ section.main-content {
     padding: 10px;
 }
 
+/*
 .feature-image-default {
     background: url('/wp-content/themes/idealist/assets/img/people-together.jpg') no-repeat;
     background-size: cover;
@@ -594,6 +652,11 @@ section.main-content {
 .feature-image-default-alt {
     background: url('/wp-content/themes/idealist/assets/img/pier.jpg') no-repeat;
     background-size: cover;
+}
+*/
+
+img.post {
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -621,15 +684,25 @@ section.main-content {
     /* iPhone 5 portrait */
 }
 
-
 @media (min-width: 768px) {
     .navbar .navbar-nav {
-        display: inline-block;
-        float: none;
-        vertical-align: top;
     }
     .navbar .navbar-collapse {
-        text-align: center;
     }
-}
+
+    .navbar>.container-fluid .navbar-brand {
+        left: 0;
+        margin: auto 10%;
+        position: absolute;    
+        top: 0;
+        text-align: center;
+        width: 80%;
+    }
+}   
+
+
+
+
+
+
 
