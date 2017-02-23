@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section class="feature-image feature-image-default-alt img-responive" data-type="background" data-speed="2">
+	<section class="img-responive" data-type="background" data-speed="2">
 		<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'idealist' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 	</section>	
 
