@@ -19,8 +19,7 @@ get_header(); ?>
 			while ( have_posts() ) : the_post();
 
                 // display the entire post
-				get_template_part( 'template-parts/content-page', get_post_format() );
-                // get_template_part( 'template-parts/content', get_post_format() );
+                get_template_part( 'template-parts/content-full-post', get_post_format() );
 
 				the_post_navigation();
 
