@@ -417,6 +417,19 @@ button.search-submit {
 .post .post-excerpt {
   padding: 1em; }
 
+/*
+.entry-header,
+.post-comments-badge {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column; 
+}
+*/
+.post header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2em; }
+
 .post-image {
   align-items: center;
   display: flex;
@@ -483,7 +496,7 @@ p.not-found {
   height: 50px;
   width: 50px;
   position: absolute;
-  top: 40px;
+  top: 30px;
   right: 20px;
   border: none;
   -webkit-border-radius: 100%;
