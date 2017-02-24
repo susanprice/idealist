@@ -41,6 +41,9 @@ function idealist_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	// Enable custom logo support
+	add_theme_support( 'custom-logo' );
+
 	add_editor_style( array( 'assets/css/editor-style.css', idealist_fonts_url() ) );
 
 	// This theme uses wp_nav_menu() in one location.
@@ -114,6 +117,52 @@ function idealist_widgets_init() {
 }
 add_action( 'widgets_init', 'idealist_widgets_init' );
 
+
+/**
+ * Register custom logo.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/custom-logo/
+ */
+function idealist_custom_logo_setup() {
+    $defaults = array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+        'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'idealist_custom_logo_setup' );
+
+
+/**
+ * Add theme support for post formats.
+ *
+ * @link https://developer.wordpress.org/themes/functionality/post-formats/
+ */
+function idealist_post_formats_setup() {
+	add_theme_support( 'post-formats', array( 'aside', 'link', 'image', 'quote', 'status' ) );
+    // add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
+}
+add_action( 'after_setup_theme', 'idealist_post_formats_setup' );
+
+
+/**
+ * Add post type support
+ *
+ * @link https://developer.wordpress.org/themes/functionality/post-formats/
+ */
+function idealist_custom_post_formats_setup() {
+    // add post-formats to post_type 'page'
+    add_post_type_support( 'page', 'post-formats' );
+ 
+    // add post-formats to post_type 'my_custom_post_type'
+    add_post_type_support( 'my_custom_post_type', 'post-formats' );
+}
+add_action( 'init', 'idealist_custom_post_formats_setup' );
+
+
 /**
  * Enqueue scripts and styles
  */
@@ -155,8 +204,6 @@ function idealist_scripts() {
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
-
-
 
 	wp_enqueue_script( 'idealist-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
