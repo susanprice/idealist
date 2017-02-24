@@ -23,6 +23,19 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'idealist' ); ?></a>
 
+
+<!-- CUSTOM LOGO
+================================================== -->
+<?php
+$custom_logo_id = get_theme_mod( 'custom_logo' );
+$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+if ( has_custom_logo() ) {
+    echo '<img src="'. esc_url( $logo[0] ) .'">';
+} else {
+    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+}
+?>
+
 <!-- HEADER
 ================================================== -->
 <header id="masthead" class="site-header">
@@ -73,6 +86,14 @@
     </div>
 </header>
 
+<!-- TEST
+================================================== -->
+<?php
+if ( has_post_format( 'quote' )) {
+  // echo 'this is the quote format';
+}
+?>
+
 
 <!-- CUSTOM HEADER
 ================================================== -->
@@ -103,4 +124,4 @@ if ( is_home () | is_single () | is_category () | is_search () ) {
     <!-- if not feature image, display fallback image -->
     <?php } else { ?>
     <?php } ?>
-
+    
