@@ -550,6 +550,43 @@ p.not-found {
     text-align: center;
 }
 
+
+/* Post Formats */
+/* .post .type-post .post_format-post-format-quote */
+
+.format-quote,
+blockquote {
+  // border-left: 10px solid #ccc;
+  // margin: 1.5em 10px;
+  // padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.format-quote p:before,
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 5em;
+  line-height: 0.3em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.format-quote p:after,
+blockquote:after {
+  color: #ccc;
+  content: close-quote;
+  font-size: 5em;
+  line-height: .8em;
+  margin-left: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.format-quote p,
+blockquote p {
+  display: inline;
+}
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
