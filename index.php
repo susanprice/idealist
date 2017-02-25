@@ -54,7 +54,12 @@ get_header(); ?>
 			<!-- SIDEBAR
 			================================================== -->
 			<aside class="col-sm-4">
-			<?php get_sidebar(); ?>
+			<!-- this is defined in Appearance > Widgets -->
+			<!-- ?php get_sidebar( 'primary' ); ? -->
+
+			<!-- this is a minimal, default sidebar if a sidebar is not defined in Appearance > Widgets -->
+			<?php get_sidebar( ); ?>
+
 			</aside>	
 		</div>
 	</div>
