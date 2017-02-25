@@ -104,15 +104,17 @@ function idealist_fonts_url() {
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
+
 function idealist_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'idealist' ),
+		'name'          => esc_html__( 'Primary Sidebar', 'idealist' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'idealist' ),
+		'class'			=> 'minimal',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'idealist_widgets_init' );
@@ -257,3 +259,107 @@ function new_excerpt_more($more) {
 	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+/**
+ * Widgets - Content added with this widget will be lost on theme switch
+ */
+
+/**
+ * Adds a simple text widget.
+ */
+class My_Widget extends WP_Widget {
+ 
+    function __construct() {
+ 
+        parent::__construct(
+            'my-text',  // Base ID
+            'My Text'   // Name
+        );
+ 
+ 		// register the widget
+        add_action( 'widgets_init', function() {
+            register_widget( 'My_Widget' );
+        });
+ 
+    }
+ 
+    public $args = array(
+        'before_title'  => '<h4 class="widgettitle">',
+        'after_title'   => '</h4>',
+        'before_widget' => '<div class="widget-wrap">',
+        'after_widget'  => '</div></div>'
+    );
+ 
+
+ 	/**
+     * Front-end display of widget.
+     *
+     * @see WP_Widget::widget()
+     *
+     * @param array $args     Widget arguments.
+     * @param array $instance Saved values from database.
+     */
+    public function widget( $args, $instance ) {
+ 
+        echo $args['before_widget'];
+ 
+        if ( ! empty( $instance['title'] ) ) {
+            echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title'];
+        }
+ 
+        echo '<div class="textwidget">';
+ 
+        echo esc_html__( $instance['text'], 'text_domain' );
+ 
+        echo '</div>';
+ 
+        echo $args['after_widget'];
+ 
+    }
+ 
+    /**
+     * Back-end widget form.
+     *
+     * @see WP_Widget::form()
+     *
+     * @param array $instance Previously saved values from database.
+     */
+    public function form( $instance ) {
+ 
+        $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( '', 'text_domain' );
+        $text = ! empty( $instance['text'] ) ? $instance['text'] : esc_html__( '', 'text_domain' );
+        ?>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'text_domain' ); ?></label>
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+        </p>
+        <p>
+            <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'text' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'text' ) ); ?>" type="text" cols="30" rows="10"><?php echo esc_attr( $text ); ?></textarea>
+        </p>
+        <?php
+ 
+    }
+ 
+ 	/**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     *
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     *
+     * @return array Updated safe values to be saved.
+     */
+    public function update( $new_instance, $old_instance ) {
+ 
+        $instance = array();
+ 
+        $instance['title'] = ( !empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+        $instance['text'] = ( !empty( $new_instance['text'] ) ) ? $new_instance['text'] : '';
+ 
+        return $instance;
+    }
+ 
+}
+$my_widget = new My_Widget();
