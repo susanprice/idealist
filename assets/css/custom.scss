@@ -567,11 +567,12 @@ blockquote:before {
   color: #ccc;
   content: open-quote;
   font-size: 5em;
-  line-height: 0.3em;
+  line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
 
+/*
 .format-quote p:after,
 blockquote:after {
   color: #ccc;
@@ -581,10 +582,15 @@ blockquote:after {
   margin-left: 0.25em;
   vertical-align: -0.4em;
 }
+*/
 
 .format-quote p,
 blockquote p {
   display: inline;
+}
+
+.sticky p { 
+    font-size: 3em;
 }
 
 /*--------------------------------------------------------------
