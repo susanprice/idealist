@@ -16,7 +16,7 @@
 <div class="navbar-wrapper">
     <nav class="navbar">
         <div class="container-fluid">
-
+        <hr>
            <div class="col-sm-12 col-md-12 col-lg-12">
                 <nav>
                   <?php wp_nav_menu( array( 
@@ -30,7 +30,7 @@
                 </nav>
             </div>    
 
-           <div class="col-sm-12 col-md-12 col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                 <p class="copyright">Copyright &copy; 2017</p>
             </div>
         </div>
