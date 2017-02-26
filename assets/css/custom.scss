@@ -166,7 +166,7 @@ a:hover {
 .copyright {
     color: $light-gray;
     line-height: 3.5;
-    text-align: right;
+    text-align: center;
     vertical-align: middle;
 }
 
@@ -222,6 +222,19 @@ article,
     padding: 1em;
     vertical-align: middle;
 }
+
+/*
+.fa-twitter:before {
+    color: $white;    
+}
+
+.fa-twitter {
+    color: $white;
+    font-size: 2em;
+    padding: 15px;
+    vertical-align: middle;
+}
+*/
 
 /*--------------------------------------------------------------
 # Forms
@@ -483,6 +496,32 @@ button.search-submit {
     border-bottom-right-radius: 10px;  
     border-top-left-radius: 0; 
     border-bottom-left-radius: 0;  
+}
+
+svg.icon.icon-twitter,
+.icon-twitter {
+    color: $light-gray;
+    fill: $light-gray;
+    height: 1.5em;
+    width: 1.5em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a.social-icon {
+    color: $light-gray;
+}
+
+.social_menu_class {
+    display: flex;
+    justify-content: center;
+}
+
+#menu-social {
+    margin: 0;
+    padding: 0;
 }
 
 /*--------------------------------------------------------------
