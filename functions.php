@@ -26,7 +26,7 @@ function idealist_setup() {
 	// Let WordPress manage the document title.
 	add_theme_support( 'title-tag' );
 
-	// Enable support for Post Thumbnails on posts and pages.
+	// Enable support for Featured Images (aka Post Thumbnails) on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 
 	// Add HTML5 support
