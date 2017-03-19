@@ -261,3 +261,11 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
+/* TODO temporary - for debugging only */
+function debug_to_console( $data ) {
+if ( is_array( $data ) )
+ $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+ else
+ $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+echo $output;
+}
