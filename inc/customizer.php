@@ -59,18 +59,11 @@ function idealist_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->add_control( 'copyright_id', array(
-        'type'          => 'date',
-        'priority'      => 160, 
-        'section'       => 'footer', 
-        'label'         => __( 'Date' ),
-        'description'   => __( 'This is a date control with a red border.' ),
-        'input_attrs'   => array(
-            'class'         => 'my-custom-class-for-js',
-            'style'         => 'border: 1px solid #900',
-            'placeholder'   => __( 'mm/dd/yyyy' ),
-            ),
-        'active_callback' => 'is_front_page',
-    ) );
+          'label' => __( 'Copyright Notice' ),
+          'type' => 'textarea',
+          'section' => 'footer',
+        ) );
+
 
     // Hide core sections/controls when they aren't used on the current page.
     $wp_customize->get_section( 'header_image' )->active_callback = 'is_front_page';
