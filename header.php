@@ -36,6 +36,22 @@ if ( has_custom_logo() ) {
 }
 ?>
 
+<?php
+  $content_text_color = get_option('content_text_color');
+  $content_link_color = get_option('content_link_color');
+  $header_text_color = get_header_textcolor();
+?>
+<style>
+  #content { color:  <?php echo $content_text_color; ?>; }
+  #content a { color:  <?php echo $content_link_color; ?>; }
+  .navbar > .container-fluid .navbar-brand { color:  <?php echo $content_link_color; ?>; }
+</style>
+
+<!-- TODO debug -->
+<?php 
+  echo "The header text color is: ". $header_text_color . "."; 
+?>
+
 <!-- HEADER
 ================================================== -->
 <header id="masthead" class="site-header">
