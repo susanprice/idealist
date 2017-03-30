@@ -25,11 +25,13 @@ function idealist_posted_on() {
 	);
 
 	$posted_on = sprintf(
+		/* translators: displays post date */
 		esc_html_x( 'Posted on %s', 'post date', 'idealist' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
+		/* translators: displays post author */
 		esc_html_x( 'by %s', 'post author', 'idealist' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
@@ -49,12 +51,14 @@ function idealist_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'idealist' ) );
 		if ( $categories_list && idealist_categorized_blog() ) {
+			/* translators: displays categories */
 			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'idealist' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'idealist' ) );
 		if ( $tags_list ) {
+			/* translators: tags */			
 			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'idealist' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
