@@ -29,13 +29,10 @@
 <?php
 $custom_logo_id = get_theme_mod( 'custom_logo' );
 $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-if ( has_custom_logo() ) {
-    echo '<img src="'. esc_url( $logo[0] ) .'">';
-} else {
-    echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
-}
 ?>
 
+<!-- CUSTOM COLORS
+================================================== -->
 <?php
   $content_text_color = get_option('content_text_color');
   $content_link_color = get_option('content_link_color');
@@ -48,9 +45,9 @@ if ( has_custom_logo() ) {
 </style>
 
 <!-- TODO debug -->
-<?php 
+<!-- ?php 
   echo "The header text color is: ". $header_text_color . "."; 
-?>
+? -->
 
 <!-- HEADER
 ================================================== -->
@@ -71,7 +68,13 @@ if ( has_custom_logo() ) {
 
                     <!-- Display Site Title -->
                     <a class="navbar-brand" href="<?php echo home_url(); ?>">
-                    <?php bloginfo('name'); ?>
+                        <?php
+                        if ( has_custom_logo() ) {
+                            echo '<img src="'. esc_url( $logo[0] ) .'">';
+                        } else {
+                            echo '<h1>'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+                        }
+                        ?>
                     </a>
 
                     <!-- input type="text" id="search-entry" class="form-control" placeholder="search" -->
