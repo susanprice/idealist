@@ -38,19 +38,24 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
   $content_link_color = get_option('content_link_color');
   $header_text_color = get_header_textcolor();
 ?>
-<style>
-  #content { color:  <?php echo $content_text_color; ?>; }
-
-  /* Link Color */
-  #content a { color:  <?php echo $content_link_color; ?>; }
-  h1.logo { color: #<?php echo $header_text_color; ?>; } 
-  .navbar > .container-fluid .navbar-brand { color:  <?php echo $content_link_color; ?>; }
-</style>
 
 <!-- TODO debug -->
 <!-- ?php 
-  echo "The header text color is: ". $header_text_color . "."; 
+  echo "The content_link_color is: ". $content_link_color . "."; 
+  echo "The content_text_color is: ". $content_text_color . "."; 
 ? -->
+
+<style>
+  /* Header Text Color */
+  h1.logo { color: #<?php echo $header_text_color; ?>; } 
+
+  /* Content Text Color */
+  #content p { color: <?php echo $content_text_color; ?>; }
+
+  /* Link Color */
+  #content a { color: <?php echo $content_link_color; ?>; }
+  .navbar > .container-fluid .navbar-brand { color:  #<?php echo $content_link_color; ?>; }
+</style>
 
 <!-- HEADER
 ================================================== -->
