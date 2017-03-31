@@ -605,6 +605,10 @@ a:active {
 .main-navigation .current-menu-ancestor > a {
 }
 
+.navbar-header>a.navbar-brand>img {
+	display: inline;
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
