@@ -462,6 +462,15 @@ footer li.active a {
     font-size: 1.1em;
 }
 
+/* Recent Posts */
+ul, ol {
+    margin: 0 0 1.5em 0;
+}
+
+ul {
+    padding-left: 2em;
+}
+
 /* Search */
 
 .search-form {
@@ -793,6 +802,9 @@ img.post {
 }
 
 @media (min-width: 768px) {
+    .navbar-nav>li>a {
+    }
+
     .navbar .navbar-nav {
     }
     .navbar .navbar-collapse {

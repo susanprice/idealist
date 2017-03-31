@@ -374,6 +374,13 @@ footer li.active a {
   color: #000;
   font-size: 1.1em; }
 
+/* Recent Posts */
+ul, ol {
+  margin: 0 0 1.5em 0; }
+
+ul {
+  padding-left: 2em; }
+
 /* Search */
 .search-form {
   display: flex;
