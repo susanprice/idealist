@@ -101,6 +101,17 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		                'walker'            => new wp_bootstrap_navwalker())
 		            );
 		        ?>
+
+                <!-- Display Site Description -->
+                <div class="site-branding">
+                    <?php
+                        $description = get_bloginfo( 'description', 'display' );
+                        if ( $description || is_customize_preview() ) : ?>
+                            <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+                        <?php
+                        endif; ?>
+                </div><!-- .site-branding -->
+
 					
                 <!-- div class="nav navbar-nav navbar-right">
                     <button type="button" class="btn btn-default" onclick="showSearchInput()">
