@@ -362,15 +362,10 @@ button {
     color: $black;
 }
 
-/*
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover {
-    background: $black;
-    border: 2px solid $black;
-    color: $black;
+h1.logo {
+    font-size: 1em;
+    margin: auto auto;
 }
-*/
 
 .navbar-brand {
     font-size: 2em;
@@ -380,6 +375,10 @@ button {
     top: 0;
     text-align: center;
     width: 80%;
+}
+
+a.navbar-brand {
+    padding: 10px;
 }
 
 /*
@@ -425,6 +424,10 @@ footer li.active a {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+
+header#masthead.site-header {
+    height: 100%;
+}
 
 .flexbox-container {
     @include x-display-flex();
@@ -793,7 +796,6 @@ img.post {
 
 @media screen and (max-width: 768px) {
     .logo {
-        width: 50%;
     }
 }
 

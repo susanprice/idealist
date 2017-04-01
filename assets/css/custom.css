@@ -286,15 +286,10 @@ button {
 .current-menu-item > a {
   color: #000; }
 
-/*
-.navbar-default .navbar-nav>.active>a,
-.navbar-default .navbar-nav>.active>a:focus,
-.navbar-default .navbar-nav>.active>a:hover {
-    background: $black;
-    border: 2px solid $black;
-    color: $black;
-}
-*/
+h1.logo {
+  font-size: 1em;
+  margin: auto auto; }
+
 .navbar-brand {
   font-size: 2em;
   left: 0;
@@ -303,6 +298,9 @@ button {
   top: 0;
   text-align: center;
   width: 80%; }
+
+a.navbar-brand {
+  padding: 10px; }
 
 /*
 .navbar-default .navbar-toggle .icon-bar {
@@ -337,6 +335,9 @@ footer li.active a {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+header#masthead.site-header {
+  height: 100%; }
+
 .flexbox-container {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -651,9 +652,6 @@ img.post {
   .container {
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2em; } }
-@media screen and (max-width: 768px) {
-  .logo {
-    width: 50%; } }
 @media screen and (max-width: 568px) {
   /* iPhone 5 portrait */ }
 @media (min-width: 768px) {
