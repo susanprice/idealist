@@ -54,7 +54,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
   /* Link Color */
   #content a { color: <?php echo $content_link_color; ?>; }
-  .navbar > .container-fluid .navbar-brand { color:  #<?php echo $content_link_color; ?>; }
+  .navbar > .container-fluid .navbar-brand { color:  <?php echo $content_link_color; ?>; }
 </style>
 
 <!-- HEADER
@@ -88,7 +88,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     <!-- input type="text" id="search-entry" class="form-control" placeholder="search" -->
                 </div>
 
-				 <?php
+				<?php
 		            wp_nav_menu( array(
 		                'menu'              => 'primary',
 		                'theme_location'    => 'primary',
