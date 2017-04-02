@@ -185,11 +185,9 @@ function idealist_scripts() {
 
 	// Scripts
 
-	wp_enqueue_script( 'jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '20160804' );
+	wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/assets/js/jquery-3.2.0.js', array(), '3.2.0', true );
 
-	wp_enqueue_script( 'jquery-js', 'assets/js/jquery-3.1.1.slim.min.js', array(), '20160804' );
-
-	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery-js'), '20160804' );
+	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery-js'), '20160804' );
 
 	wp_enqueue_script( 'idealist-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
@@ -261,7 +259,7 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
-/* TODO temporary - for debugging only */
+/* TODO temporary - for debugging only 
 function debug_to_console( $data ) {
 if ( is_array( $data ) )
  $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
@@ -269,3 +267,4 @@ if ( is_array( $data ) )
  $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
 echo $output;
 }
+*/
