@@ -85,7 +85,7 @@ $main-copy-color: $black;
 
 html {
     @include x-box-sizing();
-    font-family: sans-serif;
+    font-family: $font-stack;
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -103,6 +103,7 @@ body {
 
 p {
     color: $black;
+    font-family: $font-stack;
 }
 
 h1,
@@ -111,6 +112,7 @@ h3,
 h4,
 h5,
 h6 {
+    font-family: $font-stack;
     font-weight: 300;        
 }
 
@@ -147,6 +149,11 @@ strong {
 
 .post-body {
     margin-bottom: 1em;
+}
+
+p.site-description {
+    font-size: 1em;
+    text-align: center;
 }
 
 .subtitle {
@@ -269,6 +276,7 @@ input[type="url"],
 textarea {
     @include x-story-border-details();
     @include x-border-radius(10px);
+    font-family: $font-stack;
     font-size: 1.8em;
     width: 100%;
 }
@@ -332,6 +340,10 @@ button {
 # Navigation
 --------------------------------------------------------------*/
 
+a {
+    font-family: $font-stack;
+}
+
 .navbar {
     @include x-border-radius(0);
     margin-bottom: 20px;
@@ -345,6 +357,7 @@ button {
 .navbar-nav a,
 .navbar-default .navbar-nav>li>a {
     color: $light-gray;
+    font-family: $font-stack;
     text-transform: uppercase;
 }
 
