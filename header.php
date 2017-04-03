@@ -47,14 +47,14 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 
 <style>
   /* Header Text Color */
-  h1.logo { color: #<?php echo $header_text_color; ?>; } 
+  h1.logo { color: #<?php echo esc_attr( $header_text_color ); ?>; } 
 
   /* Content Text Color */
-  #content p { color: <?php echo $content_text_color; ?>; }
+  #content p { color: <?php echo esc_attr( $content_text_color ); ?>; }
 
   /* Link Color */
-  #content a { color: <?php echo $content_link_color; ?>; }
-  .navbar > .container-fluid .navbar-brand { color:  <?php echo $content_link_color; ?>; }
+  #content a { color: <?php echo esc_attr( $content_link_color ); ?>; }
+  .navbar > .container-fluid .navbar-brand { color:  <?php echo esc_attr( $content_link_color ); ?>; }
 </style>
 
 <!-- HEADER
@@ -75,7 +75,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     </button>
 
                     <!-- Display Site Title -->
-                    <a class="navbar-brand" href="<?php echo home_url(); ?>">
+                    <a class="navbar-brand" href="<?php echo esc_attr( home_url() ); ?>">
                         <?php
                         if ( has_custom_logo() ) {
                             echo '<img src="'. esc_url( $logo[0] ) .'">';
@@ -139,8 +139,8 @@ if ( has_post_format( 'quote' )) {
     <div id="site-header">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
             <img src="<?php header_image(); ?>" 
-                width="<?php echo get_custom_header()->width; ?>" 
-                height="<?php echo get_custom_header()->height; ?>" 
+                width="<?php echo esc_attr( get_custom_header()->width ); ?>" 
+                height="<?php echo esc_attr( get_custom_header()->height ); ?>" 
                 class="img-responsive"
                 alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
         </a>
