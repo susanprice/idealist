@@ -7,10 +7,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Idealist
- * @since 1.0
- * @version 1.1
+ * @package Idealist
  */
 
 
@@ -20,9 +17,9 @@ get_header(); ?>
         ================================================== -->
         <div class="container">
             <div class="row">
-                <!--  This displays site title & tab text (SEO) -->
+                <!--  display site title -->
                 <h1><?php bloginfo('name'); ?></h1>
-                <!--  This displays tagline -->
+                <!--  display site tagline -->
                 <h2><?php bloginfo('description'); ?></h2>
 
                 <div class="col-md-6">
