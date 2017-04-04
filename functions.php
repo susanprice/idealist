@@ -185,21 +185,9 @@ function idealist_scripts() {
 
 	// Scripts
 
-	wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/assets/js/jquery-3.2.0.js', array(), '3.2.0', true );
-
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery-js'), '20160804' );
 
 	wp_enqueue_script( 'idealist-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
-
-	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
-	if ( is_customize_preview() ) {
-		wp_enqueue_style( 'idealist-ie9', get_theme_file_uri( '/assets/css/ie9.css' ), array( 'idealist-style' ), '1.0' );
-		wp_style_add_data( 'idealist-ie9', 'conditional', 'IE 9' );
-	}
-
-	// Load the Internet Explorer 8 specific stylesheet.
-	wp_enqueue_style( 'idealist-ie8', get_theme_file_uri( '/assets/css/ie8.css' ), array( 'idealist-style' ), '1.0' );
-	wp_style_add_data( 'idealist-ie8', 'conditional', 'lt IE 9' );
 
 	// Load the html5 shiv.
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
