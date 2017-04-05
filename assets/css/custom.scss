@@ -1,3 +1,8 @@
+/*
+ *
+ * Custom styles for Idealist
+ *
+*/
 /*--------------------------------------------------------------
  TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -20,7 +25,6 @@
     ## Captions
 # Media Queries
 --------------------------------------------------------------*/
-$test: #000;
 $black: #000;
 $light-gray: #ccc;
 $medium-gray: #bbb;
@@ -179,17 +183,17 @@ a:hover {
 
 .badge.social {
     background: #ccc;
-    font-size: 24px;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    line-height: 42px;
-    margin: 0 5px 20px 0;
-    padding: 0;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
     border-radius: 50px;
     color: white;
+    font-size: 24px;
+    height: 40px;
+    line-height: 42px;
+    margin: 0 5px 20px 0;
+    padding: 0;    
+    text-align: center;
+    width: 40px;
 }
 
 .badge.social.twitter:hover {
@@ -296,7 +300,6 @@ textarea#comment {
 input[type="submit"],
 button[type="submit"] {
     background: $white; 
-    /* border-radius: 10px; */
     color: $light-gray;
     font-size: 18px;
     height: 50px;
@@ -316,9 +319,8 @@ button[type="submit"]:hover {
     @include x-display-center();
     background: $white;    
     height: 50px;
-    /* line-height: 2.8; */
+    margin: 1em auto;    
     width: 100%;
-    margin: 1em auto;
 }
 
 .comment-form-author {
@@ -330,9 +332,8 @@ input[type="submit" i],
 input[type="reset" i], 
 input[type="file" i]::-webkit-file-upload-button, 
 button {
-    /* border-color: light-gray; */
-    border-width: 1px;
     border-radius: 10px;
+    border-width: 1px;
 }
 
 
@@ -371,7 +372,7 @@ a {
     color: $dark-gray;
 }
 
-.current-menu-item > a {
+.current-menu-item>a {
     color: $black;
 }
 
@@ -394,12 +395,6 @@ a.navbar-brand {
     padding: 10px;
 }
 
-/*
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: $black !important;
-}
-*/
-
 .navbar-toggle.collapsed .icon-bar {
   background-color: $dark-gray !important;
 }
@@ -409,9 +404,8 @@ a.navbar-brand {
 }
 
 span.icon-bar {
-    color: red;
     background-color: $light-gray;
-
+    color: red;
 }
 
 .footer-nav {
@@ -582,15 +576,6 @@ h3.comments-title {
     padding: 1em;
 }
 
-/*
-.entry-header,
-.post-comments-badge {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column; 
-}
-*/
-
 .post header {
     display: flex;
     flex-direction: column; 
@@ -624,41 +609,37 @@ p.not-found {
 
 
 /* Post Formats */
-/* .post .type-post .post_format-post-format-quote */
 
 .format-quote,
 blockquote {
-  // border-left: 10px solid #ccc;
-  // margin: 1.5em 10px;
-  // padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+    quotes: "\201C""\201D""\2018""\2019";
 }
 
 .format-quote p:before,
 blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 5em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
+    color: #ccc;
+    content: open-quote;
+    font-size: 5em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
 }
 
 /*
 .format-quote p:after,
 blockquote:after {
-  color: #ccc;
-  content: close-quote;
-  font-size: 5em;
-  line-height: .8em;
-  margin-left: 0.25em;
-  vertical-align: -0.4em;
+    color: #ccc;
+    content: close-quote;
+    font-size: 5em;
+    line-height: .8em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
 }
 */
 
 .format-quote p,
 blockquote p {
-  display: inline;
+    display: inline;
 }
 
 .sticky p { 
@@ -705,30 +686,26 @@ blockquote p {
 }
 
 .post-comments-badge {
-    height: 50px;
-    width: 50px;
-
-    // TODO handle with flexbox rather than absolute
-    position: absolute;
-    top: 30px;
-    right: 20px;
-
-    border: none;
+    background: $white;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
-    // border-radius: 100%;
+    border-radius: 100%;
     border: 1px solid $light-gray;
-    background: $white;
+    display: table;    
+    height: 50px;
+    position: absolute;
+    right: 20px;    
     text-align: center;
-    display: table;
+    top: 30px;
+    width: 50px;
 }
 
 .post-comments-badge a {
-    display: table-cell;
-    vertical-align: middle;
     color: $black;
+    display: table-cell;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 20px;        
+    vertical-align: middle;
 }
 
 .post-comments-badge i.fa {
@@ -768,25 +745,12 @@ section.feature-image {
     margin-bottom: 20px;
 }
 
+/* contact form */
 section.main-content {
-    /* for contact form */
     display: flex;
     justify-content: center;
-
     padding: 10px;
 }
-
-/*
-.feature-image-default {
-    background: url('/wp-content/themes/idealist/assets/img/people-together.jpg') no-repeat;
-    background-size: cover;
-}
-
-.feature-image-default-alt {
-    background: url('/wp-content/themes/idealist/assets/img/pier.jpg') no-repeat;
-    background-size: cover;
-}
-*/
 
 img.post {
   width: 100%;
@@ -822,15 +786,16 @@ img.post {
 
     .navbar .navbar-nav {
     }
+
     .navbar .navbar-collapse {
     }
 
     .navbar>.container-fluid .navbar-brand {
         left: 0;
         margin: auto 10%;
-        position: absolute;    
+        position: absolute;  
+        text-align: center;          
         top: 0;
-        text-align: center;
         width: 80%;
     }
 }   

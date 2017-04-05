@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*
+ *
+ * Custom styles for Idealist
+ *
+*/
 /*--------------------------------------------------------------
  TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -106,17 +111,17 @@ a:hover {
 
 .badge.social {
   background: #ccc;
-  font-size: 24px;
-  height: 40px;
-  width: 40px;
-  text-align: center;
-  line-height: 42px;
-  margin: 0 5px 20px 0;
-  padding: 0;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
-  color: white; }
+  color: white;
+  font-size: 24px;
+  height: 40px;
+  line-height: 42px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  text-align: center;
+  width: 40px; }
 
 .badge.social.twitter:hover {
   background: #55acee; }
@@ -222,7 +227,6 @@ textarea#comment {
 input[type="submit"],
 button[type="submit"] {
   background: #fff;
-  /* border-radius: 10px; */
   color: #ccc;
   font-size: 18px;
   height: 50px;
@@ -247,9 +251,8 @@ button[type="submit"]:hover {
   justify-content: center;
   background: #fff;
   height: 50px;
-  /* line-height: 2.8; */
-  width: 100%;
-  margin: 1em auto; }
+  margin: 1em auto;
+  width: 100%; }
 
 .comment-form-author {
   margin-top: 2em; }
@@ -259,9 +262,8 @@ input[type="submit" i],
 input[type="reset" i],
 input[type="file" i]::-webkit-file-upload-button,
 button {
-  /* border-color: light-gray; */
-  border-width: 1px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  border-width: 1px; }
 
 /*--------------------------------------------------------------
 # Navigation
@@ -313,11 +315,6 @@ h1.logo {
 a.navbar-brand {
   padding: 10px; }
 
-/*
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: $black !important;
-}
-*/
 .navbar-toggle.collapsed .icon-bar {
   background-color: #aaa !important; }
 
@@ -325,8 +322,8 @@ a.navbar-brand {
   margin-left: 10px; }
 
 span.icon-bar {
-  color: red;
-  background-color: #ccc; }
+  background-color: #ccc;
+  color: red; }
 
 .footer-nav {
   padding-left: 0; }
@@ -476,14 +473,6 @@ h3.comments-title {
 .post .post-excerpt {
   padding: 1em; }
 
-/*
-.entry-header,
-.post-comments-badge {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column; 
-}
-*/
 .post header {
   display: flex;
   flex-direction: column;
@@ -512,7 +501,6 @@ p.not-found {
   text-align: center; }
 
 /* Post Formats */
-/* .post .type-post .post_format-post-format-quote */
 .format-quote,
 blockquote {
   quotes: "“" "”" "‘" "’"; }
@@ -529,12 +517,12 @@ blockquote:before {
 /*
 .format-quote p:after,
 blockquote:after {
-  color: #ccc;
-  content: close-quote;
-  font-size: 5em;
-  line-height: .8em;
-  margin-left: 0.25em;
-  vertical-align: -0.4em;
+    color: #ccc;
+    content: close-quote;
+    font-size: 5em;
+    line-height: .8em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
 }
 */
 .format-quote p,
@@ -585,25 +573,25 @@ blockquote p {
   width: 100%; }
 
 .post-comments-badge {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  top: 30px;
-  right: 20px;
-  border: none;
+  background: #fff;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
+  border-radius: 100%;
   border: 1px solid #ccc;
-  background: #fff;
+  display: table;
+  height: 50px;
+  position: absolute;
+  right: 20px;
   text-align: center;
-  display: table; }
+  top: 30px;
+  width: 50px; }
 
 .post-comments-badge a {
-  display: table-cell;
-  vertical-align: middle;
   color: #000;
+  display: table-cell;
   font-size: 20px;
-  line-height: 20px; }
+  line-height: 20px;
+  vertical-align: middle; }
 
 .post-comments-badge i.fa {
   display: block;
@@ -633,23 +621,12 @@ blockquote p {
 section.feature-image {
   margin-bottom: 20px; }
 
+/* contact form */
 section.main-content {
-  /* for contact form */
   display: flex;
   justify-content: center;
   padding: 10px; }
 
-/*
-.feature-image-default {
-    background: url('/wp-content/themes/idealist/assets/img/people-together.jpg') no-repeat;
-    background-size: cover;
-}
-
-.feature-image-default-alt {
-    background: url('/wp-content/themes/idealist/assets/img/pier.jpg') no-repeat;
-    background-size: cover;
-}
-*/
 img.post {
   width: 100%; }
 
@@ -670,6 +647,6 @@ img.post {
     left: 0;
     margin: auto 10%;
     position: absolute;
-    top: 0;
     text-align: center;
+    top: 0;
     width: 80%; } }
