@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package idealist
+ * @package Idealist
  */
 
 ?><!DOCTYPE html>
@@ -39,12 +39,6 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
   $header_text_color = get_header_textcolor();
 ?>
 
-<!-- TODO debug -->
-<!-- ?php 
-  echo "The content_link_color is: ". $content_link_color . "."; 
-  echo "The content_text_color is: ". $content_text_color . "."; 
-? -->
-
 <style>
   /* Header Text Color */
   h1.logo { color: #<?php echo esc_attr( $header_text_color ); ?>; } 
@@ -63,8 +57,6 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
     <div class="navbar-wrapper">
         <nav class="navbar" role="navigation">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
@@ -111,8 +103,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                         <?php
                         endif; ?>
                 </div><!-- .site-branding -->
-
-					
+		
                 <!-- div class="nav navbar-nav navbar-right">
                     <button type="button" class="btn btn-default" onclick="showSearchInput()">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -128,7 +119,6 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 ================================================== -->
 <?php
 if ( has_post_format( 'quote' )) {
-  // echo 'this is the quote format';
 }
 ?>
 
