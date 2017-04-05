@@ -2,9 +2,7 @@
 /**
  * Custom template tags for this theme
  *
- * Eventually, some of the functionality here could be replaced by core features.
- *
- * @package idealist
+ * @package Idealist
  */
 
 if ( ! function_exists( 'idealist_posted_on' ) ) :
