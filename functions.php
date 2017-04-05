@@ -4,16 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package idealist
+ * @package Idealist
  */
 
 if ( ! function_exists( 'idealist_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
  */
 function idealist_setup() {
 
@@ -46,7 +43,7 @@ function idealist_setup() {
 
 	add_editor_style( array( 'assets/css/editor-style.css', idealist_fonts_url() ) );
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in mulitple locations.
 	register_nav_menus( array(
     	'primary' => __( 'Primary Menu', 'idealist' ),
     	'social'  => __( 'Social Links Menu', 'idealist' ),
@@ -57,9 +54,7 @@ endif;
 add_action( 'after_setup_theme', 'idealist_setup' );
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
+ * Set the content width based on design and stylesheet.
  *
  * @global int $content_width
  */
@@ -145,7 +140,6 @@ add_action( 'after_setup_theme', 'idealist_custom_logo_setup' );
  */
 function idealist_post_formats_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'link', 'image', 'quote', 'status' ) );
-    // add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
 }
 add_action( 'after_setup_theme', 'idealist_post_formats_setup' );
 
@@ -156,10 +150,7 @@ add_action( 'after_setup_theme', 'idealist_post_formats_setup' );
  * @link https://developer.wordpress.org/themes/functionality/post-formats/
  */
 function idealist_custom_post_formats_setup() {
-    // add post-formats to post_type 'page'
     add_post_type_support( 'page', 'post-formats' );
- 
-    // add post-formats to post_type 'my_custom_post_type'
     add_post_type_support( 'my_custom_post_type', 'post-formats' );
 }
 add_action( 'init', 'idealist_custom_post_formats_setup' );
@@ -185,6 +176,8 @@ function idealist_scripts() {
 
 	// Scripts
 
+	wp_enqueue_script( 'jquery-js', get_template_directory_uri() . '/assets/js/jquery-3.2.0.js', array(), '20160804' );
+
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/assets/js/bootstrap.js', array('jquery-js'), '20160804' );
 
 	wp_enqueue_script( 'idealist-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
@@ -195,64 +188,37 @@ function idealist_scripts() {
 
 	wp_enqueue_script( 'idealist-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'custom-js', get_template_directory_uri() . '/assets/js/custom.js', array(), '20160804', true );
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'idealist_scripts' );
 
-
 // Add "Header Image" option in the Customizer
 require get_template_directory() . '/inc/custom-header.php';
 
-/**
- * Custom template tags for this theme.
- */
+// Custom template tags for this theme
 require get_template_directory() . '/inc/template-tags.php';
 
-/**
- * Custom functions that act independently of the theme templates.
- */
+// Custom functions that act independently of the theme templates
 require get_template_directory() . '/inc/extras.php';
 
-/**
- * Customizer additions.
- */
+// Customizer additions
 require get_template_directory() . '/inc/customizer.php';
 
-/**
- * Load Jetpack compatibility file.
- */
+// Load Jetpack compatibility file
 require get_template_directory() . '/inc/jetpack.php';
 
-/**
-* Register custom navigation walker
-*/
+// Register custom navigation walker
 require_once('wp_bootstrap_navwalker.php');
 
-/**
- * SVG icons functions and filters.
- */
+// SVG icons functions and filters
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
 
-/**
- * Replaces the excerpt "more" text with a link.
- */
+// Replaces the excerpt "more" text with a link
 function new_excerpt_more($more) {
     global $post;
 	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
-
-/* TODO temporary - for debugging only 
-function debug_to_console( $data ) {
-if ( is_array( $data ) )
- $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
- else
- $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-echo $output;
-}
-*/
