@@ -1,5 +1,5 @@
 /*
-Theme Name: idealist
+Theme Name: Idealist
 
 Adding support for languages written in a Right To Left (RTL) direction is easy -
 it's just a matter of overwriting all the horizontal positioning attributes
@@ -11,7 +11,8 @@ https://codex.wordpress.org/Right-to-Left_Language_Support
 
 /*
 body {
-	direction: rtl;
-	unicode-bidi: embed;
+    direction: rtl;
+    unicode-bidi: embed;
 }
 */
+
