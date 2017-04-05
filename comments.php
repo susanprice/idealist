@@ -7,16 +7,13 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Idealist
- * @since 1.0
- * @version 1.0
+ * @package Idealist
  */
 
 /*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
+ * If the current post is password protected and
+ * the visitor has not entered the password, 
+ * return without loading the comments.
  */
 if ( post_password_required() ) {
 	return;
@@ -65,10 +62,8 @@ if ( post_password_required() ) {
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
 			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'idealist' ); ?></h2>
 			<div class="nav-links">
-
 				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'idealist' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'idealist' ) ); ?></div>
-
 			</div><!-- .nav-links -->
 		</nav><!-- #comment-nav-below -->
 		<?php
