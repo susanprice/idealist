@@ -2,7 +2,7 @@
 /**
  * SVG icons related functions and filters
  *
- * Code from theme Twenty Seventeen.
+ * @package Idealist
  *
  */
 
