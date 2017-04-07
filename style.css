@@ -1,23 +1,14 @@
 /*
 Theme Name: Idealist
-Theme URI: http://spriceinteractive.com/themes/idealist
+Theme URI: https://wpvisuals.com
 Author: S. Price
-Author URI: http://spriceinteractive.com
-Description: minimalist theme for blogs and news sites
+Author URI: https://wpvisuals.com
+Description: Idealist is a minimalist theme for blogs and news sites
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: idealist
-Tags: blog, custom-background, custom-colors, custom-header, flexible-header, right-sidebar, theme-options, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-idealist is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+Tags: blog, custom-colors, custom-header, right-sidebar, theme-options, translation-ready
 */
 
 /*--------------------------------------------------------------
@@ -607,6 +598,7 @@ a:active {
 
 .navbar-header>a.navbar-brand>img {
 	display: inline;
+	height: 30px;
 }
 
 /* Small menu. */
