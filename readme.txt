@@ -67,3 +67,8 @@ Idealist is distributed under the terms of GPLv2 or later
 * Released April 4, 2017
 - Initial release 
 
+= 1.0.1 =
+- fixed multiple text-domains warning
+- moved wp_bootstrap_navwalker.php to /inc
+- updated Theme & Author URI
+
