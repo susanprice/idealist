@@ -1,7 +1,7 @@
 === Idealist ===
 
 Theme Name: Idealist
-Version: 1.0.0
+Version: 1.0.1
 Tested up to: WordPress 4.7
 
 Author: S. Price
