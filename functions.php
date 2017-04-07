@@ -210,7 +210,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 // Register custom navigation walker
-require_once('wp_bootstrap_navwalker.php');
+require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 // SVG icons functions and filters
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
