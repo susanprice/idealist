@@ -11,5 +11,9 @@
 		<span class="screen-reader-text"><?php echo esc_attr( 'Search for:', 'label', 'idealist' ); ?></span>
 	</label>
 	<input type="search" id="<?php echo esc_attr( $unique_id ); ?>" class="search-field" placeholder="<?php echo esc_attr_x( 'Search &hellip;', 'placeholder', 'idealist' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
-	<button type="submit" class="search-submit"><?php echo idealist_get_svg( array( 'icon' => 'search' ) ); ?><span class="screen-reader-text"><?php echo esc_attr( 'Search', 'submit button', 'idealist' ); ?></span></button>
+	<button type="submit" class="search-submit"><i class="fa fa-search" aria-hidden="true"></i>
+        <span class="screen-reader-text">
+        <?php echo esc_attr( 'Search', 'submit button', 'idealist' ); ?></span>
+    </button>
+
 </form>
