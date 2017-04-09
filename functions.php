@@ -212,9 +212,6 @@ require get_template_directory() . '/inc/jetpack.php';
 // Register custom navigation walker
 require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
-// SVG icons functions and filters
-require get_parent_theme_file_path( '/inc/icon-functions.php' );
-
 // Replaces the excerpt "more" text with a link
 function new_excerpt_more($more) {
     global $post;
