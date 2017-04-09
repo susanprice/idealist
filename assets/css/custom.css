@@ -152,11 +152,13 @@ article,
   padding: 0; }
 
 .fa-search {
-  background: #000;
-  color: #ccc;
-  font-size: 1.1em;
-  padding: 1em;
+  color: #bbb;
+  font-size: 1em;
+  padding: 0;
   vertical-align: middle; }
+
+.fa-search:hover {
+  color: #aaa; }
 
 /*
 .fa-twitter:before {
@@ -400,7 +402,7 @@ ul {
 
 .search-form .search-submit {
   bottom: 3px;
-  padding: 0.5em 1em;
+  padding: 0.6em .8em;
   position: absolute;
   right: 3px;
   top: 5px;
@@ -412,7 +414,9 @@ ul {
   width: 16px; }
 
 input.search-field {
-  height: 50px; }
+  font-size: 1.4em;
+  height: 50px;
+  padding-left: 10px; }
 
 button.search-submit {
   border-top-right-radius: 10px;

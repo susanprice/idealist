@@ -227,11 +227,14 @@ article,
 }
 
 .fa-search {
-    background: $black;
-    color: $light-gray;
-    font-size: 1.1em;
-    padding: 1em;
+    color: $medium-gray;
+    font-size: 1em;
+    padding: 0;
     vertical-align: middle;
+}
+
+.fa-search:hover {
+    color: $dark-gray;
 }
 
 /*
@@ -493,7 +496,7 @@ ul {
 
 .search-form .search-submit {
     bottom: 3px;
-    padding: 0.5em 1em;
+    padding: 0.6em .8em;
     position: absolute;
     right: 3px;
     top: 5px;
@@ -507,7 +510,9 @@ ul {
 }
 
 input.search-field {
+    font-size: 1.4em;
     height: 50px;
+    padding-left: 10px;
 }
 
 button.search-submit {
