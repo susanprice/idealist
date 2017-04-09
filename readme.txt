@@ -1,7 +1,7 @@
 === Idealist ===
 
 Theme Name: Idealist
-Version: 1.0.1
+Version: 1.0.2
 Tested up to: WordPress 4.7
 
 Author: S. Price
@@ -45,10 +45,6 @@ normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT, http://opensource.org/licenses/MIT
 Source: https://necolas.github.io/normalize.css/
 
-Scalable Vector Grahics, Copyright W3C
-License: https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
-Source: http://www.w3.org/TR/svg
-
 wp-bootstrap-navwalker
 License: GPL3
 Source: https://github.com/wp-bootstrap/wp-bootstrap-navwalker
@@ -71,4 +67,12 @@ Idealist is distributed under the terms of GPLv2 or later
 - fixed multiple text-domains warning
 - moved wp_bootstrap_navwalker.php to /inc
 - updated Theme & Author URI
+
+= 1.0.2 =
+- using FontAwesome for SVG search icon
+- search form styling updates
+
+
+
+
 
