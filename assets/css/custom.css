@@ -103,9 +103,12 @@ a:hover {
   color: #aaa;
   text-decoration: none; }
 
+#content p {
+  line-height: 1.8em; }
+
 .copyright {
   color: #ccc;
-  line-height: 3.5;
+  line-height: 1.5;
   text-align: center;
   vertical-align: middle; }
 
@@ -241,9 +244,7 @@ button[type="submit"]:hover {
 
 .form-submit,
 .send-button {
-  border-color: #ccc;
-  border-style: solid;
-  border-width: 1px;
+  /* @include x-story-border-details(); */
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -329,6 +330,9 @@ span.icon-bar {
 
 .footer-nav {
   padding-left: 0; }
+
+footer .navbar {
+  margin: 0; }
 
 /*--------------------------------------------------------------
 ## Links
@@ -645,7 +649,8 @@ img.post {
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2em; } }
 @media screen and (max-width: 568px) {
-  /* iPhone 5 portrait */ }
+  .sticky p {
+    font-size: 1.2em; } }
 @media (min-width: 768px) {
   .navbar > .container-fluid .navbar-brand {
     left: 0;
