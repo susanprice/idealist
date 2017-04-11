@@ -12,6 +12,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
+
 function idealist_customize_register( $wp_customize ) {
     $colors = array();
     $colors[] = array(
@@ -24,6 +25,8 @@ function idealist_customize_register( $wp_customize ) {
         'default' => '#88C34B',
         'label' => __('Content Link Color', 'idealist')
     );
+
+    /* add settings and controls to an existing section (color) */
     foreach( $colors as $color ) {
         // SETTINGS
         $wp_customize->add_setting(
@@ -45,7 +48,42 @@ function idealist_customize_register( $wp_customize ) {
                 )
             );
         }
-    }
+
+
+    /* add settings and controls to a new section (footer) */
+    $wp_customize->add_section( 'footer' , array(
+        'title'      => __( 'Footer', 'idealist' ),
+        'priority'   => 30,
+    ) );
+
+    $wp_customize->add_setting( 'copyright_id', array(
+        'type'                    => 'theme_mod', 
+        'capability'              => 'edit_theme_options',
+        'theme_supports'          => '', 
+        'default'                 => '',
+        'transport'               => 'refresh', 
+        'sanitize_callback'       => '',
+        'sanitize_js_callback'    => '', 
+    ) );
+
+
+    $wp_customize->add_control( 'copyright_id', array(
+     'label'                => __( 'Copyright Notice' ),
+     'type'                 => 'textarea',
+     'section'              => 'footer',      
+     'priority'             => 160, 
+     'description'          => __( 'This text will display in the footer:' ),
+     'input_attrs'          => array(
+         'style'            => 'border: 1px solid #ccc',
+         'placeholder'      => __( '' ),
+         ),
+    ) );
+
+    // Hide core sections/controls when they aren't used on the current page.
+    $wp_customize->get_section( 'header_image' )->active_callback = 'is_front_page';
+    $wp_customize->get_control( 'blogdescription' )->active_callback = 'is_front_page';
+}
+
 add_action( 'customize_register', 'idealist_customize_register' );
 
 
