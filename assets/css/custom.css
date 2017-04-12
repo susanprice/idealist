@@ -194,7 +194,7 @@ article,
 */
 label {
   font-weight: 300;
-  padding-bottom: 20px; }
+  margin-top: 10px; }
 
 input[type="text"],
 input[type="email"],
@@ -258,7 +258,7 @@ button[type="submit"]:hover {
   width: 100%; }
 
 .comment-form-author {
-  margin-top: 2em; }
+  margin-top: .1em; }
 
 input[type="button" i],
 input[type="submit" i],
