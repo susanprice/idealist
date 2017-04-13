@@ -75,7 +75,7 @@ function idealist_customize_register( $wp_customize ) {
      'description'          => __( 'This text will display in the footer:' ),
      'input_attrs'          => array(
          'style'            => 'border: 1px solid #ccc',
-         'placeholder'      => __( '' ),
+         'placeholder'      => __( 'Enter text here to display in footer.' ),
          ),
     ) );
 
