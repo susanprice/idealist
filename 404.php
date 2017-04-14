@@ -25,9 +25,10 @@ get_header(); ?>
 				<div class="page-content">
 					<p class="not-found"><?php esc_html_e( 'Would you like to try searching for it?', 'idealist' ); ?></p>
 
-					<?php
+                    <!--  on mobile: display search form here only if we don't already have a sidebar containing a search widget -->
+					<!-- ?php
 						get_search_form();
-					?>
+					? -->
 				</div>
 			</section>
 		</div>
