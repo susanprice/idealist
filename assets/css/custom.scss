@@ -315,8 +315,7 @@ button[type="submit"] {
 
 input[type="submit"]:hover,
 button[type="submit"]:hover {
-    color: $dark-gray;
-    padding: 5px 10px;
+    color: black;
 }
 
 .form-submit,
@@ -494,20 +493,26 @@ ul {
 
 /* Search */
 
+#secondary>.widget_search {
+    border: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
 .search-form {
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
-    padding: 5px;
+    padding: 0;
     position: relative;
 }
 
 .search-form .search-submit {
     bottom: 3px;
-    padding: 0.6em .8em;
-    position: absolute;
-    right: 3px;
-    top: 5px;
+    padding: 0.4em .8em;
+    position: absolute; /* for Firefox */
+    right: 0;
+    top: 0;
     width: 50px;
 }
 
@@ -785,7 +790,8 @@ img.post {
 }    
 
 @media screen and (max-width: 768px) {
-    .logo {
+    .search-form {
+        margin-bottom: 20px;
     }
 }
 

@@ -239,8 +239,7 @@ button[type="submit"] {
 
 input[type="submit"]:hover,
 button[type="submit"]:hover {
-  color: #aaa;
-  padding: 5px 10px; }
+  color: black; }
 
 .form-submit,
 .send-button {
@@ -397,19 +396,25 @@ ul {
   padding-left: 2em; }
 
 /* Search */
+#secondary > .widget_search {
+  border: 0;
+  margin-bottom: 15px;
+  padding: 0; }
+
 .search-form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px;
+  padding: 0;
   position: relative; }
 
 .search-form .search-submit {
   bottom: 3px;
-  padding: 0.6em .8em;
+  padding: 0.4em .8em;
   position: absolute;
-  right: 3px;
-  top: 5px;
+  /* for Firefox */
+  right: 0;
+  top: 0;
   width: 50px; }
 
 .search-form .search-submit .icon {
@@ -648,6 +653,9 @@ img.post {
   .container {
     background: rgba(255, 255, 255, 0.8);
     padding: 1.2em; } }
+@media screen and (max-width: 768px) {
+  .search-form {
+    margin-bottom: 20px; } }
 @media screen and (max-width: 568px) {
   .sticky p {
     font-size: 1.2em; } }
