@@ -219,3 +219,10 @@ function new_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+// Allow svg and json uploads to the media library
+function my_myme_types( $mime_types ) {
+	$mime_types['svg'] = 'image/svg+xml';     // Adding .svg extension
+	$mime_types['json'] = 'application/json'; // Adding .json extension
+	return $mime_types;
+}
+add_filter( 'upload_mimes', 'my_myme_types', 1, 1 );
