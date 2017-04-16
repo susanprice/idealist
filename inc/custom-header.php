@@ -34,8 +34,8 @@ function idealist_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'idealist_custom_header_args', array(
 		'default-image'          => get_parent_theme_file_uri( '/assets/img/header.jpg' ),
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1920,
+		'height'                 => 600,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'idealist_header_style',
 	) ) );
