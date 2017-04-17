@@ -68,14 +68,14 @@ function idealist_customize_register( $wp_customize ) {
 
 
     $wp_customize->add_control( 'copyright_id', array(
-     'label'                => __( 'Copyright Notice' ),
+     'label'                => __( 'Copyright Notice', 'idealist' ),
      'type'                 => 'textarea',
      'section'              => 'footer',      
      'priority'             => 160, 
-     'description'          => __( 'This text will display in the footer:' ),
+     'description'          => __( 'This text will display in the footer:', 'idealist' ),
      'input_attrs'          => array(
          'style'            => 'border: 1px solid #ccc',
-         'placeholder'      => __( 'Enter text here to display in footer.' ),
+         'placeholder'      => __( 'Enter text here to display in footer.', 'idealist' ),
          ),
     ) );
 
