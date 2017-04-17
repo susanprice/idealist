@@ -50,7 +50,7 @@ function idealist_customize_register( $wp_customize ) {
         }
 
 
-    /* add settings and controls to a new section (footer) */
+    /* add settings and controls to a new section: Theme Options */
     $wp_customize->add_section( 'themeoptions' , array(
         'title'      => __( 'Theme Options', 'idealist' ),
         'priority'   => 30,
@@ -68,14 +68,14 @@ function idealist_customize_register( $wp_customize ) {
 
 
     $wp_customize->add_control( 'copyright_id', array(
-     'label'                => __( 'Footer', 'idealist' ),
-     'type'                 => 'textarea',
-     'section'              => 'themeoptions',      
-     'priority'             => 160, 
-     'description'          => __( 'copyright notice or license agreement:', 'idealist' ),
-     'input_attrs'          => array(
-         'style'            => 'border: 1px solid #ccc',
-         'placeholder'      => __( 'Enter text here to display in footer.', 'idealist' ),
+        'label'                => __( 'Footer', 'idealist' ),
+        'type'                 => 'textarea',
+        'section'              => 'themeoptions',      
+        'priority'             => 160, 
+        'description'          => __( 'copyright notice or license agreement:', 'idealist' ),
+        'input_attrs'          => array(
+        'style'            => 'border: 1px solid #ccc',
+        'placeholder'      => __( 'Enter text here to display in footer.', 'idealist' ),
          ),
     ) );
 
