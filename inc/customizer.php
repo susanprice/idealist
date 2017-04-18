@@ -14,6 +14,8 @@
  */
 
 function idealist_customize_register( $wp_customize ) {
+
+    // Colors section: add settings and controls to the existing colors section    
     $colors = array();
     $colors[] = array(
         'slug'=>'content_text_color', 
@@ -26,7 +28,6 @@ function idealist_customize_register( $wp_customize ) {
         'label' => __('Content Link Color', 'idealist')
     );
 
-    /* add settings and controls to an existing section (color) */
     foreach( $colors as $color ) {
         // SETTINGS
         $wp_customize->add_setting(
@@ -42,15 +43,15 @@ function idealist_customize_register( $wp_customize ) {
             new WP_Customize_Color_Control(
                 $wp_customize,
                 $color['slug'], 
-                array('label' => $color['label'], 
-                    'section' => 'colors',
-                    'settings' => $color['slug'])
+                array('label'   => $color['label'], 
+                    'section'   => 'colors',
+                    'settings'  => $color['slug'])
                 )
             );
         }
 
 
-    /* add settings and controls to a new section: Theme Options */
+    // Theme Options section: add settings and controls to this new section 
     $wp_customize->add_section( 'themeoptions' , array(
         'title'      => __( 'Theme Options', 'idealist' ),
         'priority'   => 30,
@@ -77,6 +78,20 @@ function idealist_customize_register( $wp_customize ) {
         'style'            => 'border: 1px solid #ccc',
         'placeholder'      => __( 'Enter text here to display in footer.', 'idealist' ),
          ),
+    ) );
+
+
+    // Support selective refresh for site title and description
+    $wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+    $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+     
+    $wp_customize->selective_refresh->add_partial( 'blogname', array(
+        'selector' => '.site-title a',
+        'render_callback' => 'twentyfifteen_customize_partial_blogname',
+    ) );
+    $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+        'selector' => '.site-description',
+        'render_callback' => 'twentyfifteen_customize_partial_blogdescription',
     ) );
 
     // Hide core sections/controls when they aren't used on the current page.
