@@ -48,7 +48,122 @@ function idealist_setup() {
     	'primary' => __( 'Primary Menu', 'idealist' ),
     	'social'  => __( 'Social Links Menu', 'idealist' ),
 	) );
-	
+
+	// Define and register starter content to showcase the theme on new sites.
+	$starter_content = array(
+		'widgets' => array(
+			// Place three core-defined widgets in the sidebar area.
+			'sidebar-1' => array(
+				'text_business_info',
+				'search',
+				'text_about',
+			),
+
+			// Add the core-defined business info widget to the footer 1 area.
+			'sidebar-2' => array(
+				'text_business_info',
+			),
+
+			// Put two core-defined widgets in the footer 2 area.
+			'sidebar-3' => array(
+				'text_about',
+				'search',
+			),
+		),
+
+		// Specify the core-defined pages to create and add custom thumbnails to some of them.
+		/*
+		'posts' => array(
+			'home',
+			'about' => array(
+				'thumbnail' => '{{image-birch}}',
+			),
+			'contact' => array(
+				'thumbnail' => '{{image-skybuildings}}',
+			),
+			'blog' => array(
+				'thumbnail' => '{{image-tree}}',
+			),
+			'homepage-section' => array(
+				'thumbnail' => '{{header}}',
+			),
+		),
+		*/
+
+		// Create the custom image attachments used as post thumbnails for pages.
+		/*
+		'attachments' => array(
+			'image-birch' => array(
+				'post_title' => _x( 'Birch', 'Theme starter content', 'idealist' ),
+				'file' => 'assets/img/birch.jpg', // URL relative to the template directory.
+			),
+			'image-skybuildings' => array(
+				'post_title' => _x( 'Sky', 'Theme starter content', 'idealist' ),
+				'file' => 'assets/img/skybuildings.jpg',
+			),
+			'image-tree' => array(
+				'post_title' => _x( 'Tree', 'Theme starter content', 'idealist' ),
+				'file' => 'assets/img/tree.jpg',
+			),
+		),
+		*/
+
+		// Default to a static front page and assign the front and posts pages.
+		/*
+		'options' => array(
+			'show_on_front' => 'page',
+			'page_on_front' => '{{home}}',
+			'page_for_posts' => '{{blog}}',
+		),
+		*/
+
+		// Set the front page section theme mods to the IDs of the core-registered pages.
+		/*
+		'theme_mods' => array(
+			'panel_1' => '{{homepage-section}}',
+			'panel_2' => '{{about}}',
+			'panel_3' => '{{blog}}',
+			'panel_4' => '{{contact}}',
+		),
+		*/
+
+		// Set up nav menus for each of the two areas registered in the theme.
+		// Note that the core "home" page is actually a link in case a static front page is not used.
+		/*
+		'nav_menus' => array(
+			// Assign a menu to the "top" location.
+			'top' => array(
+				'name' => __( 'Top Menu', 'idealist' ),
+				'items' => array(
+					'link_home', 
+					'page_about',
+					'page_blog',
+					'page_contact',
+				),
+			),
+
+			// Assign a menu to the "social" location.
+			'social' => array(
+				'name' => __( 'Social Links Menu', 'idealist' ),
+				'items' => array(
+					'link_yelp',
+					'link_facebook',
+					'link_twitter',
+					'link_instagram',
+					'link_email',
+				),
+			),
+		*/	
+	);
+
+	/**
+	 * Filters Idealist array of starter content.
+	 *
+	 * @param array $starter_content Array of starter content.
+	 */
+	$starter_content = apply_filters( 'idealist_starter_content', $starter_content );
+
+	add_theme_support( 'starter-content', $starter_content );
 }
 endif;
 add_action( 'after_setup_theme', 'idealist_setup' );
@@ -213,16 +328,16 @@ require get_template_directory() . '/inc/jetpack.php';
 require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
 // Replaces the excerpt "more" text with a link
-function new_excerpt_more($more) {
+function idealist_excerpt_more($more) {
     global $post;
 	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'idealist_excerpt_more');
 
 // Allow svg and json uploads to the media library
-function my_myme_types( $mime_types ) {
-	$mime_types['svg'] = 'image/svg+xml';     // Adding .svg extension
-	$mime_types['json'] = 'application/json'; // Adding .json extension
+function idealist_add_mime_types( $mime_types ) {
+	$mime_types['svg'] = 'image/svg+xml';     
+	$mime_types['json'] = 'application/json'; 
 	return $mime_types;
 }
-add_filter( 'upload_mimes', 'my_myme_types', 1, 1 );
+add_filter( 'upload_mimes', 'idealist_add_mime_types', 1, 1 );
