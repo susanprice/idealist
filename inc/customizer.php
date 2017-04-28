@@ -109,3 +109,21 @@ function idealist_customize_preview_js() {
 	wp_enqueue_script( 'idealist_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'idealist_customize_preview_js' );
+
+/**
+ * Render the site title for the selective refresh partial.
+ * 
+ * @return void
+ */
+function idealist_customize_partial_blogname() {
+    bloginfo( 'name' );
+}
+
+/**
+ * Render the site tagline for the selective refresh partial.
+ *
+ * @return void
+ */
+function idealist_customize_partial_blogdescription() {
+    bloginfo( 'description' );
+}
