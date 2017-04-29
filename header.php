@@ -70,9 +70,9 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     <a class="navbar-brand" href="<?php echo esc_attr( home_url() ); ?>">
                         <?php
                         if ( has_custom_logo() ) {
-                            echo '<img src="'. esc_url( $logo[0] ) .'">';
+                            echo '<img class="custom-logo" src="'. esc_url( $logo[0] ) .'">';
                         } else {
-                            echo '<h1 class="logo">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+                            echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
                         }
                         ?>
                     </a>
