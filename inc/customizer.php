@@ -96,6 +96,12 @@ function idealist_customize_register( $wp_customize ) {
          ),
     ) );
 
+   // Support selective refresh for Theme Options
+    $wp_customize->selective_refresh->add_partial( 'copyright_id', array(
+    'selector' => '.copyright',
+    'render_callback' => 'idealist_customize_partial_copyright',
+    ) );
+    
     // Hide core sections/controls when they aren't used on the current page.
     $wp_customize->get_section( 'header_image' )->active_callback = 'is_front_page';
     $wp_customize->get_control( 'blogdescription' )->active_callback = 'is_front_page';
