@@ -50,6 +50,24 @@ function idealist_customize_register( $wp_customize ) {
             );
         }
 
+   // Support selective refresh
+    $wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
+    $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
+    $wp_customize->get_setting( 'header_textcolor' )->transport  = 'postMessage';
+     
+    $wp_customize->selective_refresh->add_partial( 'blogname', array(
+        'selector' => '.site-title',
+        'render_callback' => 'idealist_customize_partial_blogname',
+    ) );
+    $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+        'selector' => '.site-description',
+        'render_callback' => 'idealist_customize_partial_blogdescription',
+    ) );
+    $wp_customize->selective_refresh->add_partial( 'logo', array(
+        'selector' => 'img.custom-logo',
+        'render_callback' => 'idealist_customize_partial_logo',
+    ) );
+
 
     // Theme Options section: add settings and controls to this new section 
     $wp_customize->add_section( 'themeoptions' , array(
@@ -78,20 +96,6 @@ function idealist_customize_register( $wp_customize ) {
         'style'            => 'border: 1px solid #ccc',
         'placeholder'      => __( 'Enter text here to display in footer.', 'idealist' ),
          ),
-    ) );
-
-
-    // Support selective refresh for site title and description
-    $wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
-    $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-     
-    $wp_customize->selective_refresh->add_partial( 'blogname', array(
-        'selector' => '.site-title a',
-        'render_callback' => 'idealist_customize_partial_blogname',
-    ) );
-    $wp_customize->selective_refresh->add_partial( 'blogdescription', array(
-        'selector' => '.site-description',
-        'render_callback' => 'idealist_customize_partial_blogdescription',
     ) );
 
     // Hide core sections/controls when they aren't used on the current page.
