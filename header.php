@@ -80,7 +80,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     <!-- input type="text" id="search-entry" class="form-control" placeholder="search" -->
                 </div>
 
-				<?php
+				<!-- ?php
 		            wp_nav_menu( array(
 		                'menu'              => 'primary',
 		                'theme_location'    => 'primary',
@@ -92,7 +92,18 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 		                'walker'            => new wp_bootstrap_navwalker())
 		            );
-		        ?>
+		        ? -->
+
+                <?php
+                    wp_nav_menu( array(
+                        
+                        'theme_location'    => 'primary',
+                        'container'         => 'nav',
+                        'container_class'   => 'navbar-collapse collapse',
+                        'menu_class'        => 'nav navbar-nav'
+                        
+                    ) );
+                ?>
 
                 <!-- Display Site Description -->
                 <div class="site-branding">
