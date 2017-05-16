@@ -194,7 +194,8 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 				$fb_output .= ' class="' . $menu_class . '"';
 
 			$fb_output .= '>';
-			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">'. esc_html__('Add a menu', 'idealist') .'</a></li>';
+			// if no menu is assigned, don't display 'Add a Menu' 
+			$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">'. esc_html__('', 'idealist') .'</a></li>';
 			$fb_output .= '</ul>';
 
 			if ( $container )
