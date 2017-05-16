@@ -82,19 +82,9 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                             echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
                         }
                         $description = get_bloginfo( 'description', 'display' );
-                        // echo $description;
                         echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
                         ?>
                     </a>
-
-                    <!-- Display Site Description (aka tagline) under Site Title (or logo) -->
-                        <!-- ?php
-                            $description = get_bloginfo( 'description', 'display' );
-                            if ( $description || is_customize_preview() ) : ?>
-                                <p class="site-description"><!-- ?php echo $description; /* WPCS: xss ok. */ ?></p>
-                            <!-- ?php
-                            endif; ? -->
-
                 </div>
 
 				<?php
@@ -114,19 +104,6 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     }    
 		        ?>
 
-                <!--?php
-                    wp_nav_menu( array(
-                        
-                        'theme_location'    => 'primary',
-                        'container'         => 'nav',
-                        'container_class'   => 'navbar-collapse collapse',
-                        'menu_class'        => 'nav navbar-nav'
-                        
-                    ) );
-                ? -->
-
-                
-		
                 <!-- div class="nav navbar-nav navbar-right">
                     <button type="button" class="btn btn-default" onclick="showSearchInput()">
                         <i class="fa fa-search" aria-hidden="true"></i>
