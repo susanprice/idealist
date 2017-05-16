@@ -335,9 +335,11 @@ function idealist_excerpt_more($more) {
 add_filter('excerpt_more', 'idealist_excerpt_more');
 
 // Allow svg and json uploads to the media library
+/*
 function idealist_add_mime_types( $mime_types ) {
 	$mime_types['svg'] = 'image/svg+xml';     
 	$mime_types['json'] = 'application/json'; 
 	return $mime_types;
 }
 add_filter( 'upload_mimes', 'idealist_add_mime_types', 1, 1 );
+*/
