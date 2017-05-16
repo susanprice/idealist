@@ -58,13 +58,20 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
         <nav class="navbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <!-- mobile menu -->
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
+
+                    <!-- mobile menu -->
+                    <?php
+                        if ( has_nav_menu( 'primary' ) ) {
+                            ?>
+                            <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                    <?php        
+                        }
+                    ?>    
 
                     <!-- Display Site Title -->
                     <a class="navbar-brand" href="<?php echo esc_attr( home_url() ); ?>">
@@ -74,27 +81,40 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                         } else {
                             echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
                         }
+                        $description = get_bloginfo( 'description', 'display' );
+                        // echo $description;
+                        echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
                         ?>
                     </a>
 
-                    <!-- input type="text" id="search-entry" class="form-control" placeholder="search" -->
+                    <!-- Display Site Description (aka tagline) under Site Title (or logo) -->
+                        <!-- ?php
+                            $description = get_bloginfo( 'description', 'display' );
+                            if ( $description || is_customize_preview() ) : ?>
+                                <p class="site-description"><!-- ?php echo $description; /* WPCS: xss ok. */ ?></p>
+                            <!-- ?php
+                            endif; ? -->
+
                 </div>
 
-				<!-- ?php
-		            wp_nav_menu( array(
-		                'menu'              => 'primary',
-		                'theme_location'    => 'primary',
-		                'depth'             => 2,
-		                'container'         => 'div',
-		                'container_class'   => 'collapse navbar-collapse',
-		        		'container_id'      => 'main-navbar-collapse-1',
-		                'menu_class'        => 'nav navbar-nav',
-		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-		                'walker'            => new wp_bootstrap_navwalker())
-		            );
-		        ? -->
+				<?php
 
-                <?php
+                    if ( has_nav_menu( 'primary' ) ) {
+    		            wp_nav_menu( array(
+    		                'menu'              => 'primary',
+    		                'theme_location'    => 'primary',
+    		                'depth'             => 2,
+    		                'container'         => 'div',
+    		                'container_class'   => 'collapse navbar-collapse',
+    		        		'container_id'      => 'main-navbar-collapse-1',
+    		                'menu_class'        => 'nav navbar-nav',
+    		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+    		                'walker'            => new wp_bootstrap_navwalker())
+    		            );
+                    }    
+		        ?>
+
+                <!--?php
                     wp_nav_menu( array(
                         
                         'theme_location'    => 'primary',
@@ -103,17 +123,9 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                         'menu_class'        => 'nav navbar-nav'
                         
                     ) );
-                ?>
+                ? -->
 
-                <!-- Display Site Description -->
-                <div class="site-branding">
-                    <?php
-                        $description = get_bloginfo( 'description', 'display' );
-                        if ( $description || is_customize_preview() ) : ?>
-                            <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-                        <?php
-                        endif; ?>
-                </div><!-- .site-branding -->
+                
 		
                 <!-- div class="nav navbar-nav navbar-right">
                     <button type="button" class="btn btn-default" onclick="showSearchInput()">
