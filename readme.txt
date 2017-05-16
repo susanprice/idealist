@@ -7,7 +7,7 @@ Tested up to: WordPress 4.7
 Author: S. Price
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: right-sidebar, custom-colors, custom-header, sticky-post, translation-ready
+Tags: blog, custom-header, right-sidebar, sticky-post, translation-ready
 
 == Description ==
 
@@ -35,7 +35,7 @@ Source: http://fontawesome.io/
 
 Header image 
 License: Creative Commons CC0
-Source: https://pixabay.com/en/marguerite-flower-nature-blossom-1675918/
+https://pixabay.com/en/black-and-white-tunnel-road-1730543/
 
 HTML5 Shiv, Copyright 2014 Alexander Farkas, @afarkas @jdalton @jon_neal @rem
 License: MIT/GPL2
@@ -64,13 +64,29 @@ Idealist is distributed under the terms of GPLv2 or later
 - Initial release 
 
 = 1.0.1 =
+* Released April 7, 2017
 - fixed multiple text-domains warning
 - moved wp_bootstrap_navwalker.php to /inc
 - updated Theme & Author URI
 
 = 1.0.2 =
-- using FontAwesome for SVG search icon
-- search form styling updates
+* Released May 16, 2017
+- Added: 'Theme Options' section to customizer
+- Added: starter content
+- Fixed: removed unused layout files
+- Fixed: visual edit shortcuts work for theme options, menu, and site title & description and widgets
+- Fixed: don't display "Add a Menu" if no menu is assigned
+- Improved: custom header is full-width (and changed default header image)
+- Improved: using Font Awesome for SVG search icon
+- Improved: search form styling updates
+- Improved: footer styling
+- Improved: all styles moved from style.css to assets/css/custom.css to simplify child theme creation
+
+
+
+
+
+
 
 
 
