@@ -23,8 +23,10 @@
 		<?php elseif ( is_search() ) : ?>
 
 			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'idealist' ); ?></p>
+
 			<?php
-				get_search_form();
+				// on mobile: display search form here only if we don't already have a sidebar containing a search widget
+				// get_search_form();
 
 		else : ?>
 
