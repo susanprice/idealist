@@ -81,7 +81,7 @@ function idealist_customize_register( $wp_customize ) {
         'theme_supports'          => '', 
         'default'                 => '',
         'transport'               => 'refresh', 
-        'sanitize_callback'       => '',
+        'sanitize_callback'       => 'sanitize_text_field',
     ) );
 
     $wp_customize->add_control( 'copyright_id', array(
@@ -138,3 +138,22 @@ function idealist_customize_partial_blogname() {
 function idealist_customize_partial_blogdescription() {
     bloginfo( 'description' );
 }
+
+/**
+ * Render the site copyright for the selective refresh partial.
+ *
+ * @return void
+ */
+function idealist_customize_partial_copyright() {
+}
+
+/**
+ * Render the site logo for the selective refresh partial.
+ *
+ * @return void
+ */
+function idealist_customize_partial_logo() {
+}
+
+
+
