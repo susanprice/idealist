@@ -74,7 +74,7 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                     ?>    
 
                     <!-- Display Site Title -->
-                    <a class="navbar-brand" href="<?php echo esc_attr( home_url() ); ?>">
+                    <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
                         <?php
                         if ( has_custom_logo() ) {
                             echo '<img class="custom-logo" src="'. esc_url( $logo[0] ) .'">';
