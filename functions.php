@@ -330,7 +330,7 @@ require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 // Replaces the excerpt "more" text with a link
 function idealist_excerpt_more($more) {
     global $post;
-	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
+	return '... <a class="moretag" href="'. esc_url( get_permalink($post->ID) ) . '"> continue reading &raquo;</a>';
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
 
