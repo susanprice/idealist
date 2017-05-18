@@ -27,7 +27,7 @@ function idealist_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Add HTML5 support
-	add_theme_support( 'html5', array('search-form', 'comment-form', 'comment-list', 'caption',) );
+	add_theme_support( 'html5', array('comment-form', 'comment-list', 'caption',) );
 
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'idealist_custom_background_args', array(
