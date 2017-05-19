@@ -280,7 +280,7 @@ function idealist_scripts() {
 
 	wp_enqueue_style( 'idealist-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.css' );
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome/css/font-awesome.css');
 
