@@ -1,7 +1,7 @@
 === Idealist ===
 
 Theme Name: Idealist
-Version: 1.0.2
+Version: 1.0.3
 Tested up to: WordPress 4.7
 
 Author: S. Price
@@ -29,7 +29,7 @@ Bootstrap, Copyright 2011-2016 Twitter, Inc.
 License: MIT
 Source: http://getbootstrap.com/
 
-Font Awesome icons, Copyright Dave Gandy
+Font Awesome CSS and Fonts, Copyright Dave Gandy
 License: SIL Open Font License, version 1.1.
 Source: http://fontawesome.io/
 
@@ -59,18 +59,15 @@ Idealist is distributed under the terms of GPLv2 or later
 
 == Changelog ==
 
-= 1.0.0 =
-* Released April 4, 2017
+= 1.0.0 = 04-04-17
 - Initial release 
 
-= 1.0.1 =
-* Released April 7, 2017
-- fixed multiple text-domains warning
-- moved wp_bootstrap_navwalker.php to /inc
-- updated Theme & Author URI
+= 1.0.1 = 04-07-17
+- Fixed: multiple text-domains warning
+- Fixed: Theme & Author URI
+- Improved: moved wp_bootstrap_navwalker.php to /inc
 
-= 1.0.2 =
-* Released May 16, 2017
+= 1.0.2 = 05-16-17
 - Added: 'Theme Options' section to customizer
 - Added: starter content
 - Fixed: removed unused layout files
@@ -81,6 +78,18 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: search form styling updates
 - Improved: footer styling
 - Improved: all styles moved from style.css to assets/css/custom.css to simplify child theme creation
+
+= 1.0.3 =
+- Added: Font Awesome license mentions both CSS and Fonts
+- Improved: including minified & un-minified css and js
+- Fixed: escaping home_url() & get_permalink() with esc_url()
+- Fixed: removed search-form from add_theme_support('html5')
+- Fixed: changed bootstrap style handle to 'bootstrap'
+- Fixed: changed bootstrap script handle to 'bootstrap-js'
+- Fixed: jQuery not enqueued
+
+
+
 
 
 
