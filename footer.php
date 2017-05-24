@@ -13,7 +13,7 @@
 
 
 <?php 
-    $custom_footer_id = get_theme_mod( 'copyright_id' );
+    $idealist_footer_copyright = get_theme_mod( 'copyright_id' );
 ?>
 
 
@@ -38,7 +38,7 @@
                 </div>    
 
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <p class="copyright"><?php echo esc_attr( $custom_footer_id ); ?></p>
+                    <p class="copyright"><?php echo esc_attr( $idealist_footer_copyright ); ?></p>
                 </div>
             </div>
         </nav>
