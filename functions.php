@@ -325,12 +325,13 @@ require get_template_directory() . '/inc/jetpack.php';
 // Register custom navigation walker
 require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
-// Replaces the excerpt "more" text with a link
+// Replaces the excerpt "more" indicator (ellipses in square brackets) with a text link
 function idealist_excerpt_more($more) {
-    global $post;
-	return '... <a class="moretag" href="'. esc_url( get_permalink($post->ID) ) . '"> continue reading &raquo;</a>';
+    global $idealist_post;
+	return '... <a class="moretag" href="'. esc_url( get_permalink($idealist_post->ID) ) . '"> read more &raquo;</a>';
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
+
 
 // Allow svg and json uploads to the media library
 /*
