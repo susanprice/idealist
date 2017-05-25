@@ -27,28 +27,28 @@
 <!-- CUSTOM LOGO
 ================================================== -->
 <?php
-$custom_logo_id = get_theme_mod( 'custom_logo' );
-$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+$idealist_logo = get_theme_mod( 'custom_logo' );
+$idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 ?>
 
 <!-- CUSTOM COLORS
 ================================================== -->
 <?php
-  $content_text_color = get_option('content_text_color');
-  $content_link_color = get_option('content_link_color');
-  $header_text_color = get_header_textcolor();
+  $idealist_content_text_color = get_option('content_text_color');
+  $idealist_content_link_color = get_option('content_link_color');
+  $idealist_header_text_color = get_header_textcolor();
 ?>
 
 <style>
   /* Header Text Color */
-  h1.logo { color: #<?php echo esc_attr( $header_text_color ); ?>; } 
+  .site-title, p.site-description { color: #<?php echo esc_attr( $idealist_header_text_color ); ?>; } 
 
   /* Content Text Color */
-  #content p { color: <?php echo esc_attr( $content_text_color ); ?>; }
+  #content p { color: <?php echo esc_attr( $idealist_content_text_color ); ?>; }
 
   /* Link Color */
-  #content a { color: <?php echo esc_attr( $content_link_color ); ?>; }
-  .navbar > .container-fluid .navbar-brand { color:  <?php echo esc_attr( $content_link_color ); ?>; }
+  #content a { color: <?php echo esc_attr( $idealist_content_link_color ); ?>; }
+  .navbar > .container-fluid .navbar-brand { color:  <?php echo esc_attr( $idealist_content_link_color ); ?>; }
 </style>
 
 <!-- HEADER
@@ -73,11 +73,11 @@ $logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
                         }
                     ?>    
 
-                    <!-- Display Site Title -->
+                    <!-- Display Site Title or Logo and tagline -->
                     <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
                         <?php
                         if ( has_custom_logo() ) {
-                            echo '<img class="custom-logo" src="'. esc_url( $logo[0] ) .'">';
+                            echo '<img class="custom-logo" src="'. esc_url( $idealist_logo_image[0] ) .'">';
                         } else {
                             echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
                         }
