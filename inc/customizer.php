@@ -101,9 +101,6 @@ function idealist_customize_register( $wp_customize ) {
     'render_callback' => 'idealist_customize_partial_copyright',
     ) );
 
-    // remove toggle to display site title and description
-    $wp_customize->remove_control('display_header_text');
-
     // Hide core sections/controls when they aren't used on the current page.
     $wp_customize->get_section( 'header_image' )->active_callback = 'is_front_page';
     $wp_customize->get_control( 'blogdescription' )->active_callback = 'is_front_page';
