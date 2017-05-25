@@ -53,7 +53,6 @@ function idealist_customize_register( $wp_customize ) {
    // Support selective refresh
     $wp_customize->get_setting( 'blogname' )->transport        = 'postMessage';
     $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
-    $wp_customize->get_setting( 'header_textcolor' )->transport  = 'postMessage';
      
     $wp_customize->selective_refresh->add_partial( 'blogname', array(
         'selector' => '.site-title',
@@ -118,6 +117,10 @@ add_action( 'customize_register', 'idealist_customize_register' );
  */
 function idealist_customize_preview_js() {
 	wp_enqueue_script( 'idealist_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+
+    // future - use minified version
+    // wp_enqueue_script( 'idealist_customizer', get_template_directory_uri() . '/assets/js/customizer.min.js', array( 'customize-preview' ), '20151215', true );
+
 }
 add_action( 'customize_preview_init', 'idealist_customize_preview_js' );
 
