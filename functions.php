@@ -43,6 +43,9 @@ function idealist_setup() {
 
 	add_editor_style( array( 'assets/css/editor-style.css', idealist_fonts_url() ) );
 
+	// Set the default content width.
+	$GLOBALS['content_width'] = 600;
+
 	// This theme uses wp_nav_menu() in mulitple locations.
 	register_nav_menus( array(
     	'primary' => __( 'Primary Menu', 'idealist' ),
@@ -169,12 +172,15 @@ endif;
 add_action( 'after_setup_theme', 'idealist_setup' );
 
 /**
- * Set the content width based on design and stylesheet.
- *
- * @global int $content_width
+ * Set the maximum content width
  */
 function idealist_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'idealist_content_width', 640 );
+
+	if ( ! isset( $content_width ) ) {
+		$content_width = 600;
+	}
+
+	$GLOBALS['content_width'] = apply_filters( 'idealist_content_width', $content_width );
 }
 add_action( 'after_setup_theme', 'idealist_content_width', 0 );
 
@@ -286,8 +292,8 @@ function idealist_scripts() {
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500', false );
 
-	wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.min.css');
-	// wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.css');
+	// wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.min.css');
+	wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.css');
 
 	// Scripts
 
