@@ -115,14 +115,6 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
     </div>
 </header>
 
-<!-- TEST
-================================================== -->
-<?php
-if ( has_post_format( 'quote' )) {
-}
-?>
-
-
 <!-- CUSTOM HEADER
 ================================================== -->
 <?php if ( get_header_image() ) : ?>
