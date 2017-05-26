@@ -70,7 +70,7 @@ function idealist_customize_register( $wp_customize ) {
 
     // Add Theme Options section
     $wp_customize->add_section( 'theme_options' , array(
-        'title'      => __( 'Theme Options', 'idealist' ),
+        'title'      => __( 'Idealist Options', 'idealist' ),
         'priority'   => 130,
     ) );
 
