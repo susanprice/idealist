@@ -33,7 +33,7 @@ function idealist_customize_register( $wp_customize ) {
         $wp_customize->add_setting(
             $color['slug'], array(
               'default' => $color['default'],
-              'type' => 'option', 
+              'type' => 'theme_mod', 
               'capability' => 'edit_theme_options',
               'sanitize_callback' => 'sanitize_hex_color',
             )
