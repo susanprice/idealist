@@ -26,9 +26,10 @@ function idealist_custom_header_setup() {
 	 *     @type string $default_text_color     Default color of the header text.
 	 *     @type int    $width                  Width in pixels of the custom header image. Default 954.
 	 *     @type int    $height                 Height in pixels of the custom header image. Default 1300.
+	 *     @type string $flex-height     		Flex support for height of header.
+	 *     @type string $header-text     		Display the header text over the image.	 
 	 *     @type string $wp-head-callback       Callback function used to styles the header image and text
 	 *                                          displayed on the blog.
-	 *     @type string $flex-height     		Flex support for height of header.
 	 * }
 	 */
 	add_theme_support( 'custom-header', apply_filters( 'idealist_custom_header_args', array(
@@ -37,6 +38,7 @@ function idealist_custom_header_setup() {
 		'width'                  => 1920,
 		'height'                 => 600,
 		'flex-height'            => true,
+		'header-text'            => true,
 		'wp-head-callback'       => 'idealist_header_style',
 	) ) );
 
