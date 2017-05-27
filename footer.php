@@ -37,8 +37,8 @@
                     </nav>
                 </div>    
 
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                    <p class="copyright"><?php echo esc_attr( $idealist_footer_copyright ); ?></p>
+                <div class="col-sm-12 col-md-12 col-lg-12" id="copyright">
+                    <?php echo esc_attr( $idealist_footer_copyright ); ?>
                 </div>
             </div>
         </nav>
