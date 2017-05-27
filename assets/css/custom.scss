@@ -987,11 +987,11 @@ ul {
 }
 
 .search-form .search-submit {
-    bottom: 3px;
+    bottom: 3px; 
     padding: 0.4em .8em;
     position: absolute; /* for Firefox */
     right: 0;
-    top: 0;
+    top: 0;  
     width: 50px;
 }
 
@@ -1403,9 +1403,13 @@ img.post {
 
 @media screen and (max-width: 768px) {
     .search-form {
-        margin-bottom: 20px;
+        display: initial;
     }
 
+    .search-form .search-submit {
+        top: 14px;
+    }
+ 
     div#d3chart>iframe {
         height: 530px;
     }
