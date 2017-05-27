@@ -331,10 +331,23 @@ require get_template_directory() . '/inc/jetpack.php';
 // Register custom navigation walker
 require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
 
-// Replaces the excerpt "more" indicator (ellipses in square brackets) with a text link
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with ... and
+ * a 'Continue reading' link.
+ *
+ * @return string 'Continue reading' link prepended with an ellipsis.
+ */
 function idealist_excerpt_more($more) {
-    global $idealist_post;
-	return '... <a class="moretag" href="'. esc_url( get_permalink($idealist_post->ID) ) . '"> read more &raquo;</a>';
+	if ( is_admin() ) {
+		return $link;
+	}
+
+	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'idealist' ), get_the_title( get_the_ID() ) )
+	);
+	return ' &hellip; ' . $link;
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
 
