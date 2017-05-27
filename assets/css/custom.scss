@@ -115,6 +115,13 @@ p {
     margin-bottom: 1.5em;
 }
 
+footer nav #copyright {
+    color: $dark-gray;
+    font-size: 11px;
+    margin: 20px;
+    text-align: center;
+}
+
 dfn,
 cite,
 em,
@@ -262,13 +269,6 @@ a:hover {
 
 #content p {
     line-height: 1.8em;
-}
-
-.copyright {
-    color: $light-gray;
-    line-height: 1.5;
-    text-align: center;
-    vertical-align: middle;
 }
 
 .badge.social {
