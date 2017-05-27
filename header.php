@@ -31,24 +31,23 @@ $idealist_logo = get_theme_mod( 'custom_logo' );
 $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 ?>
 
-<!-- CUSTOM COLORS
+<!-- CUSTOM SETTINGS
 ================================================== -->
 <?php
-  $idealist_content_text_color = get_option('content_text_color');
-  $idealist_content_link_color = get_option('content_link_color');
   $idealist_header_text_color = get_header_textcolor();
+  $idealist_background_color = get_background_color();  
+  $idealist_show_borders = get_theme_mod( 'show_borders_id' );
 ?>
 
 <style>
   /* Header Text Color */
-  .site-title, p.site-description { color: #<?php echo esc_attr( $idealist_header_text_color ); ?>; } 
+  .site-title, p.site-description { color: #<?php echo esc_attr( $idealist_header_text_color ); ?>; }
 
-  /* Content Text Color */
-  #content p { color: <?php echo esc_attr( $idealist_content_text_color ); ?>; }
+  /* Background Color */
+  #secondary > .widget_search { background-color: #<?php echo esc_attr( $idealist_background_color ); ?>; }
 
-  /* Link Color */
-  #content a { color: <?php echo esc_attr( $idealist_content_link_color ); ?>; }
-  .navbar > .container-fluid .navbar-brand { color:  <?php echo esc_attr( $idealist_content_link_color ); ?>; }
+  /* Border Display */
+  .post, .widget, .comments, input[type="search"], button.search-submit { border-width: <?php echo intval( $idealist_show_borders ); ?>; } 
 </style>
 
 <!-- HEADER
