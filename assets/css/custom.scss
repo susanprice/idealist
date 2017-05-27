@@ -379,6 +379,7 @@ article,
 .panel {
     @include x-border-radius(10px);
     @include x-story-border-details();
+    background-color: $white;
     margin: 20px auto;
     padding: .5em 2em;
 }
