@@ -23,7 +23,6 @@
     <div class="navbar-wrapper">
         <nav class="navbar">
             <div class="container-fluid">
-            <hr>
                 <div class="col-sm-12 col-md-12 col-lg-12">
                     <nav>
                         <!-- ?php wp_nav_menu( array( 
