@@ -13,11 +13,12 @@
 		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		
-		<div class="post-comments-badge">
-			<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
-		</div><!-- post-comments-badge -->
-
+			<?php if ( get_theme_mod( 'show_comments_badge_id' ) ) : ?>
+				<div class="post-comments-badge">
+					<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
+				</div><!-- post-comments-badge -->
+			<?php endif; ?>
+	
 		<div class="post-details">
 			<?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', ''  ); ?>
 		</div><!-- post-details -->
