@@ -243,8 +243,8 @@ add_action( 'widgets_init', 'idealist_widgets_init' );
  */
 function idealist_custom_logo_setup() {
     $defaults = array(
-        'height'      => 100,
-        'width'       => 400,
+        'height'      => 50,
+        'width'       => 50,
         'flex-height' => true,
         'flex-width'  => true,
         'header-text' => array( 'site-title', 'site-description' ),
