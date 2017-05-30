@@ -41,7 +41,8 @@ function idealist_setup() {
 	// Enable custom logo support
 	add_theme_support( 'custom-logo' );
 
-	add_editor_style( array( 'assets/css/editor-style.css', idealist_fonts_url() ) );
+	// Set styles for TinyMCE editor
+	add_editor_style( 'assets/css/editor-style.css' );
 
 	// Set the default content width.
 	$GLOBALS['content_width'] = 600;
@@ -99,36 +100,6 @@ function idealist_content_width() {
 	$GLOBALS['content_width'] = apply_filters( 'idealist_content_width', $content_width );
 }
 add_action( 'after_setup_theme', 'idealist_content_width', 0 );
-
-/**
- * Register custom fonts.
- */
-function idealist_fonts_url() {
-	$fonts_url = '';
-
-	/**
-	 * Translators: If there are characters in your language that are not
-	 * supported by Libre Franklin, translate this to 'off'. Do not translate
-	 * into your own language.
-	 */
-	$libre_franklin = _x( 'on', 'Libre Franklin font: on or off', 'idealist' );
-
-	if ( 'off' !== $libre_franklin ) {
-		$font_families = array();
-
-		$font_families[] = 'Libre Franklin:300,300i,400,400i,600,600i,800,800i';
-
-		$query_args = array(
-			'family' => urlencode( implode( '|', $font_families ) ),
-			'subset' => urlencode( 'latin,latin-ext' ),
-		);
-
-		$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	}
-
-	return esc_url_raw( $fonts_url );
-}
-
 
 
 /**
