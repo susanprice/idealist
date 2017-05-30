@@ -35,12 +35,12 @@ function idealist_customize_register( $wp_customize ) {
     ) );
 
     $wp_customize->selective_refresh->add_partial( 'logo', array(
-        'selector' => 'img.custom-logo',
+        'selector' => '.custom-logo',
         'render_callback' => 'idealist_customize_partial_logo',
     ) );
 
     $wp_customize->selective_refresh->add_partial( 'copyright_id', array(
-        'selector' => '#copyright',
+        'selector' => '.copyright',
         'render_callback' => 'idealist_customize_partial_copyright',
     ) );
 }
