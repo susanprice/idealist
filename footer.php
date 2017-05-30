@@ -36,8 +36,10 @@
                     </nav>
                 </div>    
 
-                <div class="col-sm-12 col-md-12 col-lg-12" id="copyright">
-                    <?php echo esc_attr( $idealist_footer_copyright ); ?>
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <p class="copyright"><?php echo esc_attr( $idealist_footer_copyright ); ?></p>
+                    <p class="credits"><?php echo esc_html("WordPress Theme: Idealist by"); ?>
+                        <a href="https://wpvisuals.com">WPVisuals.com</a></p>
                 </div>
             </div>
         </nav>
