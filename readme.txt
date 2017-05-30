@@ -79,14 +79,22 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: footer styling
 - Improved: all styles moved from style.css to assets/css/custom.css to simplify child theme creation
 
-= 1.0.3 =
-- Added: Font Awesome license mentions both CSS and Fonts
-- Improved: including minified & un-minified css and js
+= 1.0.3 = 05-30-17
+- Added: Font Awesome license references CSS and Fonts
+- Added: added 'Documentation' section to customizer
+- Improved: includes minified & un-minified css and js
 - Fixed: escaping home_url() & get_permalink() with esc_url()
+- Fixed: all globals prefixed
 - Fixed: removed search-form from add_theme_support('html5')
 - Fixed: changed bootstrap style handle to 'bootstrap'
 - Fixed: changed bootstrap script handle to 'bootstrap-js'
 - Fixed: jQuery not enqueued
+- Fixed: added 'header-text' to add_theme_support() for custom-header
+- Fixed: customizer displays checkbox to toggle display of header text
+- Fixed: header displays custom icon, title and taglines independently
+- Fixed: removed normalize from custom.css because it is in bootstrap.css
+- Fixed: customizer settings saved to theme_mod
+- Fixed: updated translatable strings
 
 
 
