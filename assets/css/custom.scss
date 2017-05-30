@@ -113,7 +113,9 @@ p {
     margin-bottom: 1.5em;
 }
 
-footer nav #copyright {
+p.credits,
+p.copyright a,
+.copyright {
     color: $dark-gray;
     font-size: 11px;
     margin: 20px;
