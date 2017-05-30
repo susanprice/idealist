@@ -8,7 +8,7 @@
  */
 
 /**
- * Add postMessage support for site title and description for the Theme Customizer.
+ * Add postMessage support and selective refresh for the Theme Customizer.
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
@@ -57,8 +57,8 @@ function idealist_customizer( $wp_customize ) {
     $wp_customize->add_panel( 'idealist_main_options', array(
         'capability'     => 'edit_theme_options',
         'theme_supports' => '',
-        'title'          => esc_html__( 'Idealist Options', 'idealist' ),
-        'description'    => esc_html__( 'Panel to update Idealist theme options', 'idealist' ), 
+        'title'          => __( 'Idealist Options', 'idealist' ),
+        'description'    => __( 'Panel to update Idealist theme options', 'idealist' ), 
         'priority'       => 10, 
     ) );
 
@@ -119,6 +119,7 @@ function idealist_customizer( $wp_customize ) {
         ),
     ) );
 
+    // Idealist 'Documentation' Settings & Controls
     $wp_customize->add_setting(
         'support_id', array(
         'sanitize_callback'       => 'sanitize_text_field',
@@ -126,51 +127,12 @@ function idealist_customizer( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new Idealist_Info_Text( 
+        new Idealist_Support_Text( 
             $wp_customize,
             'support_id',
             array(
                 'settings'      => 'support_id',
                 'section'       => 'theme_support',
-                //'description'   => '<a class="idealist-support-link" href="https://wpvisuals.com/themes/idealist" target="_blank">'.__('Documentation', 'idealist').'</a>',
-                'description'   => '<p class="idealist-support">'.
-                __('<strong>Quick Start Guide</strong> to Making Your Front Page Look Like the Screenshot:'.'<br>'.'<br>'.
-                    '<strong>Add a Logo</strong>'.'<br>'.
-                '1. Go to Appearance / Customize / Site Identity.'.'<br>'.
-                '2. Select a logo. A square works best.'.'<br>'.
-                '3. Select \'Save & Publish\'.'.'<br>'.'<br>'.
-
-                '<strong>Set the Colors</strong>'.'<br>'.
-                '1. Go to Appearance / Customize / Colors.'.'<br>'.
-                '2. Set Header Text Color to #212121.'.'<br>'.
-                '3. Set Background Color to #e8e8e8.'.'<br>'.
-                '4. Select \'Save & Publish\'.'.'<br>'.'<br>'.
-
-                '<strong>Set the Header Image</strong>'.'<br>'.
-                '1. Go to Appearance / Customize / Header Image.'.'<br>'.
-                '2. Use a jpeg that is at least 1900 x 200.'.'<br>'.
-                '3. Select \'Save & Publish\'.'.'<br>'.'<br>'.
-
-                '<strong>Setup the Sidebar</strong>'.'<br>'.
-                '1. Go to Appearance / Customize / Widgets.'.'<br>'.
-                '2. Add the Search widget.'.'<br>'.
-                '3. Add the Recent Posts widget.'.'<br>'.
-                '4. Add the Recent Comments widget.'.'<br>'.
-                '5. Select \'Save & Publish\'.'.'<br>'.'<br>'.
-               
-                '<strong>Set the Front Page</strong>'.'<br>'.
-                '1. Go to Appearance / Customize / Static Front Page.'.'<br>'.
-                '2. Set to Recent Posts.'.'<br>'.
-                '3. Select \'Save & Publish\'.'.'<br>'.'<br>'.
-
-                 '<strong>Extras</strong>'.'<br>'.
-                '1. Go to Appearance / Customize / Idealist Options / Settings.'.'<br>'.
-                '2. Toggle the Comments Badge and Borders.'.'<br>'.
-                '3. Add Text to the Footer.'.'<br>'.'<br>'.
-
-                 '<strong>Add New Content</strong>'.'<br>'.
-                '1. Go to Posts to Add New Posts.'.'<br>'.
-                '2. Click on Publish.', 'idealist'),
             )
         )
     );
@@ -199,6 +161,7 @@ function idealist_customize_preview_js() {
     // wp_enqueue_script( 'idealist_customizer', get_template_directory_uri() . '/assets/js/customizer.min.js', array( 'customize-preview' ), '20151215', true );
 
 }
+
 add_action( 'customize_preview_init', 'idealist_customize_preview_js' );
 
 /**
@@ -221,22 +184,56 @@ function idealist_customize_partial_blogdescription() {
 
 if( class_exists( 'WP_Customize_Control' ) ):   
 
-class Idealist_Info_Text extends WP_Customize_Control {
+    class Idealist_Info_Text extends WP_Customize_Control {
 
-    public function render_content(){
-    ?>
-        <span class="customize-control-title">
-            <?php echo esc_html( $this->label ); ?>
-        </span>
-
-        <?php if($this->description){ ?>
-            <span class="description customize-control-description">
-            <?php echo wp_kses_post($this->description); ?>
+        public function render_content(){
+        ?>
+            <span class="customize-control-title">
+                <?php echo esc_html( $this->label ); ?>
             </span>
-        <?php }
-    }
 
-}
+            <?php if($this->description){ ?>
+                <span class="description customize-control-description">
+                <?php echo wp_kses_post($this->description); ?>
+                </span>
+            <?php }
+        }
+    }    
+
+    class Idealist_Support_Text extends WP_Customize_Control {
+
+        public function render_content() {  ?>
+            <h3><?php esc_html_e('Quick Start Quide to Make Your Front Page Look Like the Screenshot:', 'idealist'); ?><h3>
+            <h3><?php esc_html_e('Add a Logo', 'idealist'); ?></h3>
+            <p><?php esc_html_e('1. Go to Appearance / Customize / Site Identity.', 'idealist'); ?></p>
+            <p><?php esc_html_e('2. Select a logo. A square works best.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Select \'Save & Publish\'.', 'idealist'); ?>
+            <h3><?php esc_html_e('Set the Colors', 'idealist'); ?></h3>
+            <p><?php esc_html_e('1. Go to Appearance / Customize / Colors.', 'idealist'); ?></p>
+            <p><?php esc_html_e('2. Set Header Text Color to #212121.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Set Background Color to #e8e8e8.', 'idealist'); ?></p>
+            <p><?php esc_html_e('4. Select \'Save & Publish\'.', 'idealist'); ?>
+            <h3><?php esc_html_e('Set the Header Image', 'idealist'); ?></h3>
+            <p><?php esc_html_e('1. Go to Appearance / Customize / Header Image.', 'idealist'); ?></p>
+            <p><?php esc_html_e('2. Use a jpeg that is at least 1920 x 600 pixels.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Select \'Save & Publish\'.', 'idealist'); ?>
+            <h3><?php esc_html_e('Setup the Sidebar', 'idealist'); ?></h3>
+            <p><?php esc_html_e('1. Go to Appearance / Customize / Widgets.', 'idealist'); ?></p>
+            <p><?php esc_html_e('2. Add the Search widget.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Add the Recent Posts widget.', 'idealist'); ?></p>
+            <p><?php esc_html_e('4. Select \'Save & Publish\'.', 'idealist'); ?>
+            <h3><?php esc_html_e('Set the Front Page', 'idealist'); ?></h3>
+            <p><?php esc_html_e('1. Go to Appearance / Customize / Static Front Page.', 'idealist'); ?></p>
+            <p><?php esc_html_e('2. Set to \'Your latest posts\'.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Select \'Save & Publish\'.', 'idealist'); ?>
+            <h3><?php esc_html_e('Extras', 'idealist'); ?></h3>
+            <p><?php esc_html_e('1. Go to Appearance / Customize / Idealist Options / Settings.', 'idealist'); ?></p>
+            <p><?php esc_html_e('2. Toggle the Comments Badge and Borders.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Add Text to the Footer.', 'idealist'); ?></p>
+            <h3><?php esc_html_e('Thank you for using the WordPress Idealist theme!', 'idealist'); ?></h3>
+            <?php
+        }
+    }
 
 endif;
 
