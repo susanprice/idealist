@@ -68,20 +68,18 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                    <?php        
+                        <?php        
                         }
-                    ?>    
+                        ?>    
 
-                    <!-- Display Site Title or Logo and tagline -->
-                    <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
+                    <!-- Display Site Title, Logo and tagline -->
+                    <a class="navbar-brand side-by-side" href="<?php echo esc_url( home_url() ); ?>">
                         <?php
-                        if ( has_custom_logo() ) {
-                            echo '<img class="custom-logo" src="'. esc_url( $idealist_logo_image[0] ) .'">';
-                        } else {
+                            if ( has_custom_logo() ) {
+                               echo '<img class="custom-logo" src="'. esc_url( $idealist_logo_image[0] ) .'">';
+                            }
                             echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
-                        }
-                        $description = get_bloginfo( 'description', 'display' );
-                        echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
+                            echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
                         ?>
                     </a>
                 </div>
