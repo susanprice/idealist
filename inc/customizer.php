@@ -58,40 +58,42 @@ function idealist_customizer( $wp_customize ) {
         'capability'     => 'edit_theme_options',
         'theme_supports' => '',
         'title'          => esc_html__( 'Idealist Options', 'idealist' ),
-        'description'    => esc_html__( 'Panel to update Idealist theme options', 'idealist' ), // in case of html tags such as <p>
+        'description'    => esc_html__( 'Panel to update Idealist theme options', 'idealist' ), 
         'priority'       => 10, 
     ) );
 
     // Idealist Options Sections
     $wp_customize->add_section( 'theme_options' , array(
-        'title'      => __( 'Main Options', 'idealist' ),
+        'title'      => __( 'Settings', 'idealist' ),
         'priority'   => 20,
-        'panel'       => 'idealist_main_options',
+        'panel'      => 'idealist_main_options',
     ) );
 
     $wp_customize->add_section( 'theme_support' , array(
         'title'      => __( 'Documentation', 'idealist' ),
         'priority'   => 30,
-        'panel'       => 'idealist_main_options',
+        'panel'      => 'idealist_main_options',
     ) );
 
-    // Idealist 'Main Options' Settings & Controls
+    // Idealist 'Settings' Settings & Controls
     $wp_customize->add_setting( 'show_borders_id', array(
         'default'    => '1',
+        'sanitize_callback' => 'absint',
     ) );
 
     $wp_customize->add_control( 'show_borders_id', array(
-        'label'      => __( 'Show Borders', 'documentation' ),
+        'label'      => __( 'Show Borders', 'idealist' ),
         'section'    => 'theme_options',
         'type'       => 'checkbox',
     ) );
 
     $wp_customize->add_setting( 'show_comments_badge_id', array(
         'default'    => '1',
+        'sanitize_callback' => 'absint',
     ) );
 
     $wp_customize->add_control( 'show_comments_badge_id', array(
-        'label'      => __( 'Show Comments Badge', 'documentation' ),
+        'label'      => __( 'Show Comments Badge', 'idealist' ),
         'section'    => 'theme_options',
         'type'       => 'checkbox',
     ) );
