@@ -50,7 +50,9 @@ h6 {
 p {
   margin-bottom: 1.5em; }
 
-footer nav #copyright {
+p.credits,
+p.copyright a,
+.copyright {
   color: #aaa;
   font-size: 11px;
   margin: 20px;
@@ -168,12 +170,6 @@ strong {
 .post-body {
   margin-bottom: 1em; }
 
-p.site-description {
-  color: #ccc;
-  font-size: .8em;
-  padding: 5px;
-  text-align: center; }
-
 .subtitle {
   font-size: 1.3em; }
 
@@ -287,7 +283,7 @@ article,
   border-color: #ccc;
   border-style: solid;
   border-width: 1px;
-  background-color: white;
+  background-color: #fff;
   margin: 20px auto;
   padding: .5em 2em; }
 
@@ -517,10 +513,16 @@ a {
 .current-menu-item > a {
   color: #000; }
 
-.site-title,
-h1.logo {
-  font-size: 1em;
-  margin: auto auto; }
+.site-title {
+  font-size: 1.5em;
+  margin: auto 10px;
+  padding-left: 5px; }
+
+p.site-description {
+  color: #ccc;
+  font-size: .6em;
+  padding: 1px;
+  margin-top: 20px; }
 
 .navbar-brand {
   font-size: 2em;
@@ -541,8 +543,7 @@ a.navbar-brand {
   margin-left: 10px; }
 
 span.icon-bar {
-  background-color: #ccc;
-  color: red; }
+  background-color: #ccc; }
 
 footer {
   background-color: white; }
@@ -627,8 +628,16 @@ footer li.active a {
   left: 100%; }
 
 .navbar-header > a.navbar-brand > img {
-  display: inline;
-  height: 30px; }
+  display: inline; }
+
+img.custom-logo {
+  height: 50px;
+  width: 50px; }
+
+.side-by-side {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .nav-links {
   height: 30px;
@@ -870,7 +879,7 @@ a.social-icon {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 30px; }
 
 .byline,
 .updated:not(.published) {
@@ -1172,8 +1181,8 @@ img.post {
   .search-form .search-submit {
     top: 14px; }
 
-  div#d3chart > iframe {
-    height: 530px; } }
+  p.site-description {
+    display: none; } }
 @media screen and (max-width: 568px) {
   .sticky p {
     font-size: 1.2em; }
