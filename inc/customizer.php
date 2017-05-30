@@ -119,25 +119,61 @@ function idealist_customizer( $wp_customize ) {
         ),
     ) );
 
-    // Idealist 'Documentation/Support' Settings & Controls
-    $wp_customize->add_setting( 'support_id', array(
-    ) );
+    $wp_customize->add_setting(
+        'support_id', array(
+        'sanitize_callback'       => 'sanitize_text_field',
+        )
+    );
 
-    $wp_customize->add_setting( 'thanks_id', array(
-    ) );
+    $wp_customize->add_control(
+        new Idealist_Info_Text( 
+            $wp_customize,
+            'support_id',
+            array(
+                'settings'      => 'support_id',
+                'section'       => 'theme_support',
+                //'description'   => '<a class="idealist-support-link" href="https://wpvisuals.com/themes/idealist" target="_blank">'.__('Documentation', 'idealist').'</a>',
+                'description'   => '<p class="idealist-support">'.
+                __('<strong>Quick Start Guide</strong> to Making Your Front Page Look Like the Screenshot:'.'<br>'.'<br>'.
+                    '<strong>Add a Logo</strong>'.'<br>'.
+                '1. Go to Appearance / Customize / Site Identity.'.'<br>'.
+                '2. Select a logo. A square works best.'.'<br>'.
+                '3. Select \'Save & Publish\'.'.'<br>'.'<br>'.
 
-    $wp_customize->add_control( 'support_id', array(
-        'label'                => __( '', 'idealist' ),
-        'type'                 => 'hidden',
-        'section'              => 'theme_support',      
-        'description'          => esc_html__( 'Find the FAQ and documentation here: https://wpvisuals.com/support/idealist', 'idealist' ),
-    ) );
+                '<strong>Set the Colors</strong>'.'<br>'.
+                '1. Go to Appearance / Customize / Colors.'.'<br>'.
+                '2. Set Header Text Color to #212121.'.'<br>'.
+                '3. Set Background Color to #e8e8e8.'.'<br>'.
+                '4. Select \'Save & Publish\'.'.'<br>'.'<br>'.
 
-    $wp_customize->add_control( 'thanks_id', array(
-        'label'                => __( 'Thanks for using Idealist!', 'idealist' ),
-        'type'                 => 'hidden',
-        'section'              => 'theme_support',      
-    ) );
+                '<strong>Set the Header Image</strong>'.'<br>'.
+                '1. Go to Appearance / Customize / Header Image.'.'<br>'.
+                '2. Use a jpeg that is at least 1900 x 200.'.'<br>'.
+                '3. Select \'Save & Publish\'.'.'<br>'.'<br>'.
+
+                '<strong>Setup the Sidebar</strong>'.'<br>'.
+                '1. Go to Appearance / Customize / Widgets.'.'<br>'.
+                '2. Add the Search widget.'.'<br>'.
+                '3. Add the Recent Posts widget.'.'<br>'.
+                '4. Add the Recent Comments widget.'.'<br>'.
+                '5. Select \'Save & Publish\'.'.'<br>'.'<br>'.
+               
+                '<strong>Set the Front Page</strong>'.'<br>'.
+                '1. Go to Appearance / Customize / Static Front Page.'.'<br>'.
+                '2. Set to Recent Posts.'.'<br>'.
+                '3. Select \'Save & Publish\'.'.'<br>'.'<br>'.
+
+                 '<strong>Extras</strong>'.'<br>'.
+                '1. Go to Appearance / Customize / Idealist Options / Settings.'.'<br>'.
+                '2. Toggle the Comments Badge and Borders.'.'<br>'.
+                '3. Add Text to the Footer.'.'<br>'.'<br>'.
+
+                 '<strong>Add New Content</strong>'.'<br>'.
+                '1. Go to Posts to Add New Posts.'.'<br>'.
+                '2. Click on Publish.', 'idealist'),
+            )
+        )
+    );
 
     // Hide core sections/controls when they aren't used on the current page.
     $wp_customize->get_section( 'header_image' )->active_callback = 'is_front_page';
@@ -183,21 +219,25 @@ function idealist_customize_partial_blogdescription() {
     bloginfo( 'description' );
 }
 
-/**
- * Render the site copyright for the selective refresh partial.
- *
- * @return void
- */
-function idealist_customize_partial_copyright() {
+if( class_exists( 'WP_Customize_Control' ) ):   
+
+class Idealist_Info_Text extends WP_Customize_Control {
+
+    public function render_content(){
+    ?>
+        <span class="customize-control-title">
+            <?php echo esc_html( $this->label ); ?>
+        </span>
+
+        <?php if($this->description){ ?>
+            <span class="description customize-control-description">
+            <?php echo wp_kses_post($this->description); ?>
+            </span>
+        <?php }
+    }
+
 }
 
-/**
- * Render the site logo for the selective refresh partial.
- *
- * @return void
- */
-function idealist_customize_partial_logo() {
-}
-
+endif;
 
 
