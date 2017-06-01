@@ -1,45 +1,25 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Idealist 1.0.0\n"
-"POT-Creation-Date: 2017-03-19 09:06-0700\n"
-"PO-Revision-Date: 2017-03-19 09:25-0700\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Idealist 1.0.3\n"
+"POT-Creation-Date: 2017-05-30 16:24-0700\n"
+"PO-Revision-Date: 2017-05-30 16:23-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.2\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
-"esc_esc_x;esc_html_x;esc_html__;esc_html_e;esc_html_x;_n_noop;_nx_noop;"
-"translate_nooped_plural\n"
-"X-Poedit-SearchPath-0: 404.php\n"
-"X-Poedit-SearchPath-1: archive.php\n"
-"X-Poedit-SearchPath-2: category.php\n"
-"X-Poedit-SearchPath-3: comments.php\n"
-"X-Poedit-SearchPath-4: footer.php\n"
-"X-Poedit-SearchPath-5: functions.php\n"
-"X-Poedit-SearchPath-6: header.php\n"
-"X-Poedit-SearchPath-7: index.php\n"
-"X-Poedit-SearchPath-8: page-about.php\n"
-"X-Poedit-SearchPath-9: page-fullwidth.php\n"
-"X-Poedit-SearchPath-10: page-home.php\n"
-"X-Poedit-SearchPath-11: page-single-panel.php\n"
-"X-Poedit-SearchPath-12: page.php\n"
-"X-Poedit-SearchPath-13: search.php\n"
-"X-Poedit-SearchPath-14: searchform.php\n"
-"X-Poedit-SearchPath-15: sidebar-primary.php\n"
-"X-Poedit-SearchPath-16: sidebar.php\n"
-"X-Poedit-SearchPath-17: single.php\n"
-"X-Poedit-SearchPath-18: style.css\n"
-"X-Poedit-SearchPath-19: wp_bootstrap_navwalker.php\n"
-"X-Poedit-SearchPath-20: inc\n"
-"X-Poedit-SearchPath-21: layouts\n"
-"X-Poedit-SearchPath-22: template-parts\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: 404.php:22
 msgid "Yikes! That page can&rsquo;t be found."
@@ -49,91 +29,242 @@ msgstr ""
 msgid "Would you like to try searching for it?"
 msgstr ""
 
-#: comments.php:34
+#. translators: handle singular or plural based on the number of comments
+#: comments.php:31
 #, php-format
+msgctxt "comments title"
 msgid "%1$s comment on &ldquo;%2$s&rdquo;"
-msgstr ""
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
 
-#: comments.php:44 comments.php:66
+#: comments.php:41 comments.php:63
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:47 comments.php:69
+#: comments.php:44 comments.php:65
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:48 comments.php:70
+#: comments.php:45 comments.php:66
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:83
+#: comments.php:78
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:51
+#: functions.php:52
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:52
+#: functions.php:53
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:82
-msgid "on"
-msgstr ""
-
-#: functions.php:110
+#: functions.php:113
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:115
 msgid "Add widgets here."
+msgstr ""
+
+#. translators: %s: Name of current post
+#: functions.php:235
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: inc/icon-functions.php:38
-msgid "Please define default parameters in the form of an array."
+#: inc/custom-header.php:49
+msgid "Default Header Image"
 msgstr ""
 
-#: inc/icon-functions.php:43
-msgid "Please define an SVG icon filename."
+#: inc/customizer.php:60
+msgid "Idealist Options"
 msgstr ""
 
-#: inc/template-tags.php:29
+#: inc/customizer.php:61
+msgid "Panel to update Idealist theme options"
+msgstr ""
+
+#: inc/customizer.php:67
+msgid "Settings"
+msgstr ""
+
+#: inc/customizer.php:73
+msgid "Documentation"
+msgstr ""
+
+#: inc/customizer.php:85
+msgid "Show Borders"
+msgstr ""
+
+#: inc/customizer.php:96
+msgid "Show Comments Badge"
+msgstr ""
+
+#: inc/customizer.php:111
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer.php:115
+msgid "copyright notice or license agreement:"
+msgstr ""
+
+#: inc/customizer.php:118
+msgid "Enter text here to display in footer."
+msgstr ""
+
+#: inc/customizer.php:206
+msgid "Quick Start Quide to Make Your Front Page Look Like the Screenshot:"
+msgstr ""
+
+#: inc/customizer.php:207
+msgid "Add a Logo"
+msgstr ""
+
+#: inc/customizer.php:208
+msgid "1. Go to Appearance / Customize / Site Identity."
+msgstr ""
+
+#: inc/customizer.php:209
+msgid "2. Select a logo. A square works best."
+msgstr ""
+
+#: inc/customizer.php:210 inc/customizer.php:219 inc/customizer.php:228
+msgid "3. Select 'Save & Publish'."
+msgstr ""
+
+#: inc/customizer.php:211
+msgid "Set the Colors"
+msgstr ""
+
+#: inc/customizer.php:212
+msgid "1. Go to Appearance / Customize / Colors."
+msgstr ""
+
+#: inc/customizer.php:213
+msgid "2. Set Header Text Color to #212121."
+msgstr ""
+
+#: inc/customizer.php:214
+msgid "3. Set Background Color to #e8e8e8."
+msgstr ""
+
+#: inc/customizer.php:215 inc/customizer.php:224
+msgid "4. Select 'Save & Publish'."
+msgstr ""
+
+#: inc/customizer.php:216
+msgid "Set the Header Image"
+msgstr ""
+
+#: inc/customizer.php:217
+msgid "1. Go to Appearance / Customize / Header Image."
+msgstr ""
+
+#: inc/customizer.php:218
+msgid "2. Use a jpeg that is at least 1920 x 600 pixels."
+msgstr ""
+
+#: inc/customizer.php:220
+msgid "Setup the Sidebar"
+msgstr ""
+
+#: inc/customizer.php:221
+msgid "1. Go to Appearance / Customize / Widgets."
+msgstr ""
+
+#: inc/customizer.php:222
+msgid "2. Add the Search widget."
+msgstr ""
+
+#: inc/customizer.php:223
+msgid "3. Add the Recent Posts widget."
+msgstr ""
+
+#: inc/customizer.php:225
+msgid "Set the Front Page"
+msgstr ""
+
+#: inc/customizer.php:226
+msgid "1. Go to Appearance / Customize / Static Front Page."
+msgstr ""
+
+#: inc/customizer.php:227
+msgid "2. Set to 'Your latest posts'."
+msgstr ""
+
+#: inc/customizer.php:229
+msgid "Extras"
+msgstr ""
+
+#: inc/customizer.php:230
+msgid "1. Go to Appearance / Customize / Idealist Options / Settings."
+msgstr ""
+
+#: inc/customizer.php:231
+msgid "2. Toggle the Comments Badge and Borders."
+msgstr ""
+
+#: inc/customizer.php:232
+msgid "3. Add Text to the Footer."
+msgstr ""
+
+#: inc/customizer.php:233
+msgid "Thank you for using the WordPress Idealist theme!"
+msgstr ""
+
+#. translators: displays post date
+#: inc/template-tags.php:27
 #, php-format
+msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/template-tags.php:35
+#. translators: displays post author
+#: inc/template-tags.php:33
 #, php-format
+msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:52 inc/template-tags.php:59
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:50 inc/template-tags.php:57
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:55
+#. translators: displays categories
+#: inc/template-tags.php:53
 #, php-format
 msgid "Posted in %1$s"
 msgstr ""
 
-#: inc/template-tags.php:62
+#. translators: tags
+#: inc/template-tags.php:60
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:69
+#. translators: %s: post title
+#: inc/template-tags.php:67
 #, php-format
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:76 template-parts/content-page.php:34
+#. translators: %s: Name of current post
+#: inc/template-tags.php:74 template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
+msgstr ""
+
+#: inc/wp_bootstrap_navwalker.php:197
+msgid " "
 msgstr ""
 
 #: search.php:16
@@ -141,24 +272,9 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: searchform.php:11
-msgid "Search for:"
-msgstr ""
-
 #: searchform.php:13
+msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
-
-#: searchform.php:14
-msgid "Search"
-msgstr ""
-
-#: sidebar-primary.php:18
-msgid "Archives"
-msgstr ""
-
-#: sidebar-primary.php:24
-msgid "Meta"
 msgstr ""
 
 #: template-parts/content-full-post.php:41 template-parts/content-page.php:22
@@ -181,12 +297,20 @@ msgid ""
 "different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:31
+#: template-parts/content-none.php:33
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
 
-#: wp_bootstrap_navwalker.php:197
-msgid "Add a menu"
+#. Theme Name of the plugin/theme
+msgid "Idealist"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Idealist is a minimalist theme for blogs and news sites"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "S. Price"
 msgstr ""
