@@ -7,7 +7,7 @@ Tested up to: WordPress 4.7
 Author: S. Price
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor-style, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-column, white
+Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor-style, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
 == Description ==
 
