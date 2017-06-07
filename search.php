@@ -12,8 +12,10 @@ get_header(); ?>
 	<section class="img-responive" data-type="background" data-speed="2">
 		<!--  translators: displays search term entered -->
 		<h1 class="page-title">
-		<!-- translators: displays search term entered -->		
-		<?php printf( esc_html__( 'Search Results for: %s', 'idealist' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+		<?php 			
+		// translators: displays search term entered
+		printf(	esc_html__( 'Search Results for: %s', 'idealist' ), 
+		'<span>' . get_search_query() . '</span>' ); ?></h1>
 	</section>	
 
 	<div class="container">
