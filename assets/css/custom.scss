@@ -522,6 +522,10 @@ label {
     margin-top: 10px;
 }
 
+form label {
+    display: block; // contact form labels full-width of panel    
+}
+
 input[type="text"],
 input[type="email"],
 input[type="texturl"],
