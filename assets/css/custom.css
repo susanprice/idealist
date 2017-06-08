@@ -408,6 +408,9 @@ label {
   font-weight: 300;
   margin-top: 10px; }
 
+form label {
+  display: block; }
+
 input[type="text"],
 input[type="email"],
 input[type="texturl"],
@@ -938,8 +941,7 @@ h3.comments-title {
   margin-bottom: 2em; }
 
 img.img-responsive {
-  margin: auto;
-  margin-bottom: 30px; }
+  margin: auto; }
 
 .post-details {
   font-size: .8em;
