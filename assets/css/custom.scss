@@ -1132,6 +1132,12 @@ h3.comments-title {
     padding-bottom: 3em;
 }
 
+// avoid collision with badge
+.post header {
+    margin-right: 50px;   
+}
+
+
 .post header {
     display: flex;
     flex-direction: column; 
