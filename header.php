@@ -120,7 +120,7 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
             <img src="<?php header_image(); ?>" 
                 width="<?php echo esc_attr( get_custom_header()->width ); ?>" 
                 height="<?php echo esc_attr( get_custom_header()->height ); ?>" 
-                class="img-responsive"
+                class="img-responsive main-image"
                 alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
         </a>
     </div>
