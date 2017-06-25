@@ -56,57 +56,59 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
     <div class="navbar-wrapper">
         <nav class="navbar" role="navigation">
             <div class="container-fluid">
-                <div class="navbar-header">
+                <div class="row all-elements">
+                    <div class="navbar-header">
 
-                    <!-- mobile menu -->
-                    <?php
-                        if ( has_nav_menu( 'primary' ) ) {
-                            ?>
-                            <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        <?php        
-                        }
-                        ?>    
-
-                    <!-- Display Site Title, Logo and tagline -->
-                    <a class="navbar-brand side-by-side" href="<?php echo esc_url( home_url() ); ?>">
+                        <!-- Mobile Menu -->
                         <?php
-                            if ( has_custom_logo() ) {
-                               echo '<img class="custom-logo" src="'. esc_url( $idealist_logo_image[0] ) .'">';
+                            if ( has_nav_menu( 'primary' ) ) {
+                                ?>
+                                <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            <?php        
                             }
-                            echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
-                            echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
-                        ?>
-                    </a>
-                </div>
+                            ?> 
+                        
+                        <!-- Display Custom Logo, Site Title, and Tagline -->
+                        <a class="navbar-brand side-by-side" href="<?php echo esc_url( home_url() ); ?>">
+                            <?php
+                                if ( has_custom_logo() ) {
+                                   echo '<img class="custom-logo" src="'. esc_url( $idealist_logo_image[0] ) .'">';
+                                }
+                                echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
+                                echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
+                            ?>
+                        </a>
+                    </div> <!-- navbar-header -->
 
-				<?php
+    				<?php
 
-                    if ( has_nav_menu( 'primary' ) ) {
-    		            wp_nav_menu( array(
-    		                'menu'              => 'primary',
-    		                'theme_location'    => 'primary',
-    		                'depth'             => 2,
-    		                'container'         => 'div',
-    		                'container_class'   => 'collapse navbar-collapse',
-    		        		'container_id'      => 'main-navbar-collapse-1',
-    		                'menu_class'        => 'nav navbar-nav',
-    		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-    		                'walker'            => new wp_bootstrap_navwalker())
-    		            );
-                    }    
-		        ?>
+                        if ( has_nav_menu( 'primary' ) ) {
+        		            wp_nav_menu( array(
+        		                'menu'              => 'primary',
+        		                'theme_location'    => 'primary',
+        		                'depth'             => 2,
+        		                'container'         => 'div',
+        		                'container_class'   => 'collapse navbar-collapse',
+        		        		'container_id'      => 'main-navbar-collapse-1',
+        		                'menu_class'        => 'nav navbar-nav',
+        		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+        		                'walker'            => new wp_bootstrap_navwalker())
+        		            );
+                        }    
+    		        ?>
+                </div>   
 
-                <!-- div class="nav navbar-nav navbar-right">
-                    <button type="button" class="btn btn-default" onclick="showSearchInput()">
+                <!-- Display Search Icon -->
+                <div class="pull-right nav-search">
+                    <button type="button" class="btn btn-default nav-search pull-right" onclick="showSearchInput()">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
-                </div -->
-
+                </div> 
 			</div><!-- /.container-fluid -->
         </nav>
     </div>
