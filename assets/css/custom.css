@@ -204,15 +204,27 @@ article,
   border: 2px solid #000000;
   padding: 0; }
 
+.nav-search {
+  border: 0;
+  color: #000000;
+  margin-right: 10px;
+  margin-top: -18px; }
+
 .fa-search {
-  color: #C0C0C0;
-  font-size: 1em;
+  color: #000000;
+  font-size: 1.2em;
   padding: 0;
   vertical-align: middle; }
 
 .fa-search:hover {
   color: #808080; }
 
+/*
+.all-elements {
+    display: flex;
+    align-items: center;
+}
+*/
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -1047,9 +1059,6 @@ img.post {
   .container {
     padding: 1.2em; } }
 @media screen and (max-width: 768px) {
-  .search-form {
-    display: initial; }
-
   p.site-description {
     display: none; } }
 @media screen and (max-width: 568px) {
