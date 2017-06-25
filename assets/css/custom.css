@@ -292,7 +292,8 @@ textarea:focus {
   color: #00FF00; }
 
 label {
-  font-weight: 300; }
+  font-weight: 300;
+  margin-bottom: 0; }
 
 form label {
   display: block; }
