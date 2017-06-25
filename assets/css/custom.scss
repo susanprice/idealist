@@ -25,17 +25,23 @@
 # Media Queries
 --------------------------------------------------------------*/
 
+$white: #FFFFFF;
+$gainsboro: #DCDCDC;
+$light-gray: #D3D3D3;    
+$silver: #C0C0C0;       
+$dark-gray: #A9A9A9;
+$gray: #808080;         
+$dim-gray: #696969;
+$light-slate-gray: #778899;
+$slate-gray: #708090;
+$dark-slate-gray: #2F4F4F;
+$black: #000000;
+$black-alpha: rgba(0, 0, 0, .5);
+$red: #FF0000;
+$green: #00FF00;
+$blue: #0000FF;
 
-$black: #000;
-$light-gray: #ccc;
-$medium-gray: #bbb;
-$dark-gray: #aaa;
-$white: #fff;
-$red: #f00;
-$link: #000;
-$hover: $dark-gray;
 $font-stack: Roboto, sans-serif;
-$main-copy-color: $black;
 
 @mixin x-align-items($position) {
     -webkit-align-items: $position;
@@ -84,7 +90,6 @@ $main-copy-color: $black;
      user-select: $type;
 }
 
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -93,7 +98,7 @@ button,
 input,
 select,
 textarea {
-    color: #404040;
+    color: $black;
     font-family: sans-serif;
     font-size: 16px;
     font-size: 1rem;
@@ -116,7 +121,7 @@ p {
 p.credits,
 p.copyright a,
 .copyright {
-    color: $dark-gray;
+    color: $gray;
     font-size: 11px;
     margin: 20px;
     text-align: center;
@@ -138,7 +143,7 @@ address {
 }
 
 pre {
-    background: #eee;
+    background: $light-gray;
     font-family: "Courier 10 Pitch", Courier, monospace;
     font-size: 15px;
     font-size: 0.9375rem;
@@ -147,27 +152,6 @@ pre {
     max-width: 100%;
     overflow: auto;
     padding: 1.6em;
-}
-
-code,
-kbd,
-tt,
-var {
-    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-    font-size: 15px;
-    font-size: 0.9375rem;
-}
-
-abbr,
-acronym {
-    border-bottom: 1px dotted #666;
-    cursor: help;
-}
-
-mark,
-ins {
-    background: #fff9c0;
-    text-decoration: none;
 }
 
 big {
@@ -194,11 +178,6 @@ body {
     color: $black;
     font-weight: 300;
     letter-spacing: .1rem;
-}
-
-p {
-    color: $black;
-    font-family: $font-stack;
 }
 
 h1,
@@ -237,34 +216,23 @@ h6 {
 }
 
 p {
-    font-size: 1.4em;  
+    color: $black;
+    font-family: $font-stack;     
+    // font-size: 1.4em;
+    font-size: 14px;
 }
 
 strong {
     font-weight: 400;
 }
 
-.story-title,
-.page-title {
-    margin-bottom: .8em;
-    text-align: center;
-}
-
-.post-body {
-    margin-bottom: 1em;
-}
-
-.subtitle {
-    font-size: 1.3em; 
-}
-
 a:link,
 a:visited {
-    color: $link;
+    color: $black;
 }
 
 a:hover {
-    color: $hover;
+    color: $dim-gray;
     text-decoration: none;
 }
 
@@ -272,41 +240,9 @@ a:hover {
     line-height: 1.8em;
 }
 
-.badge.social {
-    background: #ccc;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    color: white;
-    font-size: 24px;
-    height: 40px;
-    line-height: 42px;
-    margin: 0 5px 20px 0;
-    padding: 0;    
-    text-align: center;
-    width: 40px;
-}
-
-.badge.social.twitter:hover {
-    background: #55acee;
-}
-
-.badge.social.facebook:hover {
-    background: #3b5998;
-}
-
-.badge.social.gplus:hover {
-    background: #db4b39;
-}
-
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-
-html {
-    box-sizing: border-box;
-}
 
 *,
 *:before,
@@ -315,7 +251,7 @@ html {
 }
 
 body {
-    background: #fff; /* Fallback for when there is no custom background color defined. */
+    background: $white; /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -330,47 +266,13 @@ q {
     quotes: "" "";
 }
 
-hr {
-    background-color: #ccc;
-    border: 0;
-    height: 1px;
-    margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-    margin: 0 0 1.5em 3em;
-}
-
-ul {
-    list-style: disc;
-}
-
-ol {
-    list-style: decimal;
-}
-
-li > ul,
-li > ol {
-    margin-bottom: 0;
-    margin-left: 1.5em;
-}
-
-dt {
-    font-weight: bold;
-}
-
-dd {
-    margin: 0 1.5em 1.5em;
-}
-
 img {
-    height: auto; /* Make sure images are scaled correctly. */
-    max-width: 100%; /* Adhere to container width. */
+    height: auto; 
+    max-width: 100%; 
 }
 
 figure {
-    margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+    margin: 1em 0; 
 }
 
 table {
@@ -383,7 +285,7 @@ article,
     @include x-border-radius(10px);
     @include x-story-border-details();
     background-color: $white;
-    margin: 20px auto;
+    margin: 15px;
     padding: .5em 2em;
 }
 
@@ -393,28 +295,15 @@ article,
 }
 
 .fa-search {
-    color: $medium-gray;
+    color: $silver;
     font-size: 1em;
     padding: 0;
     vertical-align: middle;
 }
 
 .fa-search:hover {
-    color: $dark-gray;
+    color: $gray;
 }
-
-/*
-.fa-twitter:before {
-    color: $white;    
-}
-
-.fa-twitter {
-    color: $white;
-    font-size: 2em;
-    padding: 15px;
-    vertical-align: middle;
-}
-*/
 
 /*--------------------------------------------------------------
 # Forms
@@ -424,11 +313,11 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
+    background: $light-gray;
     border: 1px solid;
-    border-color: #ccc #ccc #bbb;
+    border-color: $silver;
     border-radius: 3px;
-    background: #e6e6e6;
-    color: rgba(0, 0, 0, .8);
+    color: $black-alpha;
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 1;
@@ -439,7 +328,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-    border-color: #ccc #bbb #aaa;
+    border-color: $silver;
 }
 
 button:focus,
@@ -450,101 +339,25 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    border-color: #aaa #bbb #bbb;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-    color: #666;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    padding: 3px;
+    border-color: $dark-gray;
 }
 
 select {
-    border: 1px solid #ccc;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-input[type="number"]:focus,
-input[type="tel"]:focus,
-input[type="range"]:focus,
-input[type="date"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="time"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="color"]:focus,
-textarea:focus {
-    color: #111;
-}
-
-textarea {
-    width: 100%;
-}
-
-/* search entry field in header - future */
-/*
-.form-control {  
-    background: $black;
-    font-size: 1.8em;
-    left: 0;    
-    line-height: 1.8;
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-    width: 100%;
-    z-index: 1;
-}
-*/
-
-label {
-    font-weight: 300;
-    margin-top: 10px;
-}
-
-form label {
-    display: block; // contact form labels full-width of panel    
+    border: 1px solid $silver;
 }
 
 input[type="text"],
 input[type="email"],
-input[type="texturl"],
+input[type="url"],
 input[type="password"],
 input[type="search"],
-input[type="url"],
 textarea {
     @include x-story-border-details();
     @include x-border-radius(10px);
+    color: $blue;
     font-family: $font-stack;
     font-size: 1.8em;
-    width: 100%;
-}
-
-textarea {
-    @include x-story-border-details();
-    @include x-border-radius(10px);
-    font-size: 1.8em;
-    line-height: 1.8;
+    padding: 3px;
     width: 100%;
 }
 
@@ -552,6 +365,25 @@ textarea#comment {
     height: 200px;
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    color: $green;
+}
+
+label {
+    font-weight: 300;
+    // margin-top: 10px;
+}
+
+form label {
+    display: block; // contact form labels full-width of panel    
+}
+
+/* search button */
 input[type="submit"],
 button[type="submit"] {
     background: $white; 
@@ -563,12 +395,11 @@ button[type="submit"] {
 
 input[type="submit"]:hover,
 button[type="submit"]:hover {
-    color: black;
+    color: $black;
 }
 
 .form-submit,
 .send-button {
-    /* @include x-story-border-details(); */
     @include x-border-radius(10px);
     @include x-display-center();
     background: $white;    
@@ -618,12 +449,12 @@ a {
 
 .navbar-nav a:hover,
 .navbar-default .navbar-nav>li>a:hover {
-    background-color: white;
-    color: $dark-gray;
+    background-color: $white;
+    color: $gray;
 }
 
 .navbar-nav>li>a:active {
-    color: $dark-gray;
+    color: $gray;
 }
 
 .current-menu-item>a {
@@ -658,7 +489,7 @@ a.navbar-brand {
 }
 
 .navbar-toggle.collapsed .icon-bar {
-  background-color: $dark-gray !important;
+  background-color: $gray;
 }
 
 .navbar-toggle {
@@ -670,7 +501,7 @@ span.icon-bar {
 }
 
 footer {
-    background-color: white;
+    background-color: $white;
 }
 
 .footer-nav {
@@ -686,21 +517,21 @@ footer .navbar {
 --------------------------------------------------------------*/
 
 a {
-    color: royalblue;
+    color: $black;
 }
 
 a:visited {
-    color: purple;
+    color: $black;
 }
 
 a:hover,
 a:focus,
 a:active {
-    color: midnightblue;
+    color: $black;
 }
 
 a:focus {
-    outline: thin dotted;
+    // outline: thin dotted;
 }
 
 a:hover,
@@ -744,7 +575,7 @@ footer li.active a {
 }
 
 .main-navigation ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 3px $black-alpha;
     float: left;
     position: absolute;
     top: 1.5em;
@@ -853,6 +684,7 @@ img.custom-logo {
 # Accessibility
 --------------------------------------------------------------*/
 
+/* note that the !important rule is only used for accessibility */
 /* Text meant only for screen readers. */
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
@@ -864,11 +696,11 @@ img.custom-logo {
 }
 
 .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: $gainsboro;
     border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 2px 2px $black-alpha;
     clip: auto !important;
-    color: #21759b;
+    color: $slate-gray;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -912,11 +744,11 @@ img.custom-logo {
 }
 
 header#masthead.site-header {
-    background-color: white;
+    background-color: $white;
 }
 
 header#masthead {
-    background-color: white;    
+    background-color: $white;    
 }
 
 .flexbox-container {
@@ -924,9 +756,6 @@ header#masthead {
     @include x-align-items(center);
 }
 
-.page-main-image {
-    margin: auto auto;
-}
 
 .col-centered {
     float: none;
@@ -985,10 +814,18 @@ header#masthead {
     max-width: 100%;
 }
 
+/*
 .widget-title {
     color: $black;
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
+*/
+
+.recentcomments,
+.widget-area a {
+    font-size: 14px;
+}
+
 
 /* Recent Posts */
 ul, ol {
@@ -1000,7 +837,6 @@ ul {
 }
 
 /* Search */
-
 #secondary>.widget_search {
     border: 0;
     margin-bottom: 15px;
@@ -1008,11 +844,6 @@ ul {
 }
 
 .search-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    padding: 0;
-    position: relative;
 }
 
 .search-form .search-submit {
@@ -1031,7 +862,8 @@ ul {
 }
 
 input.search-field {
-    font-size: 1.4em;
+    // font-size: 1.4em;
+    font-size: 18px;
     height: 50px;
     padding-left: 10px;
 }
@@ -1077,12 +909,68 @@ a.social-icon {
 ## Posts and pages
 --------------------------------------------------------------*/
 
+.hentry {
+    margin: 0 0 30px;
+}
+
+.entry-title {
+    margin: 0;
+}
+
+.post,
+.widget,
+.comments {
+    @include x-border-radius(10px);
+    @include x-story-border-details();
+    background: $white;
+    padding: 20px;
+    position: relative;
+}
+
+.post header {
+    display: flex;
+    flex-direction: column; 
+    margin-right: 50px;   
+}
+
+.post header,
+.post .post-body,
+.post .post-excerpt,
+.comments .comments-wrap {
+    padding: 1em;
+    padding-bottom: 3em;
+}
+
+// post title size
+.entry-title a,
+.widget-title {
+    font-size: 22px;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.post-image {
+    @include x-display-center();
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+
 .sticky {
     display: block;
 }
 
-.hentry {
-    margin: 0 0 30px;
+.sticky p { 
+    font-size: 3em;
+}
+
+.page-title,
+.story-title {
+    margin-bottom: .8em;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.3em; 
 }
 
 .byline,
@@ -1093,6 +981,10 @@ a.social-icon {
 .single .byline,
 .group-blog .byline {
     display: inline;
+}
+
+.post-body {
+    margin-bottom: 1em;
 }
 
 .page-content,
@@ -1106,53 +998,12 @@ a.social-icon {
     margin: 0 0 1.5em;
 }
 
-.post,
-.widget,
-.comments {
-    @include x-border-radius(10px);
-    @include x-story-border-details();
-    background: $white;
-    padding: 10px;
-    position: relative;
-}
-
-h3#reply-title.comment-reply-title {
-    padding-top: 50px;
-}
-
-h3.comments-title {
+.comments-title {
     padding-top: 50px;    
 }
 
-.comments .comments-wrap,
-.post header,
-.post .post-body,
-.post .post-excerpt {
-    padding: 1em;
-    padding-bottom: 3em;
-}
-
-// avoid collision with badge
-.post header {
-    margin-right: 50px;   
-}
-
-
-.post header {
-    display: flex;
-    flex-direction: column; 
-    padding-bottom: 2em; 
-}
-
-.post-image {
-    @include x-display-center();
-    flex-direction: row;
-    margin-bottom: 2em;
-}
-
-img.img-responsive {
-    margin: auto;
-    margin-bottom: 30px;
+#reply-title.comment-reply-title {
+    padding-top: 50px;
 }
 
 .post-details {
@@ -1169,7 +1020,6 @@ p.not-found {
     text-align: center;
 }
 
-
 /* Post Formats */
 
 .format-quote,
@@ -1179,7 +1029,7 @@ blockquote {
 
 .format-quote p:before,
 blockquote:before {
-    color: #ccc;
+    color: $silver;
     content: open-quote;
     font-size: 5em;
     line-height: 0.1em;
@@ -1190,7 +1040,7 @@ blockquote:before {
 /*
 .format-quote p:after,
 blockquote:after {
-    color: #ccc;
+    color: $silver;
     content: close-quote;
     font-size: 5em;
     line-height: .8em;
@@ -1204,9 +1054,6 @@ blockquote p {
     display: inline;
 }
 
-.sticky p { 
-    font-size: 3em;
-}
 
 /*--------------------------------------------------------------
 ## Comments
@@ -1255,13 +1102,27 @@ blockquote p {
     width: 100%;
 }
 
+.badge.social {
+    background: $silver;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    color: $white;
+    font-size: 24px;
+    height: 40px;
+    line-height: 42px;
+    margin: 0 5px 20px 0;
+    padding: 0;    
+    text-align: center;
+    width: 40px;
+}
+
 .post-comments-badge {
     background: $white;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
-    border: 1px solid $light-gray;
-    // bottom: 20px;
+    border: 1px solid $silver;
     display: table;    
     height: 50px;
     position: absolute;
@@ -1272,6 +1133,7 @@ blockquote p {
 }
 
 .post-comments-badge a {
+    color: $silver;
     display: table-cell;
     font-size: 20px;
     line-height: 20px;        
@@ -1322,6 +1184,10 @@ blockquote p {
 # Media
 --------------------------------------------------------------*/
 
+.main-image {
+    margin-bottom: 30px;
+}
+
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
 .comment-content .wp-smiley {
@@ -1350,7 +1216,7 @@ section.main-content {
 }
 
 img.post {
-  width: 100%;
+    width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -1442,13 +1308,12 @@ img.post {
     }
 
     .search-form .search-submit {
-        top: -20px;
+        // top: -20px;
     }
  
     p.site-description {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 568px) {
