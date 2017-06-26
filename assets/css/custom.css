@@ -360,9 +360,6 @@ button {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-a {
-  font-family: Roboto, sans-serif; }
-
 .navbar {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -435,7 +432,8 @@ footer .navbar {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #000000; }
+  color: #000000;
+  font-family: Roboto, sans-serif; }
 
 a:visited {
   color: #000000; }

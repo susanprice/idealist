@@ -480,10 +480,6 @@ button {
 # Navigation
 --------------------------------------------------------------*/
 
-a {
-    font-family: $font-stack;
-}
-
 .navbar {
     @include x-border-radius(0);
     margin: 30px 0;
@@ -572,6 +568,7 @@ footer .navbar {
 
 a {
     color: $black;
+    font-family: $font-stack;
 }
 
 a:visited {
