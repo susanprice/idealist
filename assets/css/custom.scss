@@ -422,6 +422,35 @@ button[type="submit"]:hover {
     width: 100%;
 }
 
+/* search from header */
+#full-search {
+    // background: $white;
+    display: none;
+    height: 70px;
+    left: 0;
+    position: absolute;
+    // future: search bar entry field position configurable
+    top: 60px; // positioned just below menu & branding
+    // top: 0; overlay menu
+    width: 100%;
+    z-index: 9999;
+}
+
+#full-search .full-search-input:focus {
+}
+
+#full-search input[type="text"] {
+    background: $white;
+    border: none;
+    border-radius: 0;
+    color: $black;
+    display: inline-block;
+    font-size: 20px;
+    outline: solid 1px $silver;
+    padding: 0 10px;
+    width: 100%;
+}
+
 .comment-form-author {
     margin-top: .1em;
 }

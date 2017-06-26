@@ -325,6 +325,27 @@ button[type="submit"]:hover {
   margin: 1em auto;
   width: 100%; }
 
+/* search from header */
+#full-search {
+  display: none;
+  height: 70px;
+  left: 0;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 9999; }
+
+#full-search input[type="text"] {
+  background: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  color: #000000;
+  display: inline-block;
+  font-size: 20px;
+  outline: solid 1px #C0C0C0;
+  padding: 0 10px;
+  width: 100%; }
+
 .comment-form-author {
   margin-top: .1em; }
 
