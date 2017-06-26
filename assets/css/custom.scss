@@ -280,6 +280,11 @@ img {
     max-width: 100%;
 }
 
+img.custom-logo {
+    height: 50px;
+    width: 50px;
+}
+
 figure {
     margin: 1em 0;
 }
@@ -405,7 +410,6 @@ form label {
     display: block; // contact form labels full-width of panel    
 }
 
-
 /* search button */
 
 input[type="submit"],
@@ -431,7 +435,6 @@ button[type="submit"]:hover {
     margin: 1em auto;
     width: 100%;
 }
-
 
 /* search from header */
 
@@ -667,16 +670,6 @@ footer li.active a {
     display: inline;
 }
 
-img.custom-logo {
-    height: 50px;
-    width: 50px;
-}
-
-.side-by-side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .nav-links {
     height: 30px;
@@ -806,6 +799,12 @@ header#masthead {
 .flexbox-container {
     @include x-display-flex();
     @include x-align-items(center);
+}
+
+.side-by-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .col-centered {
