@@ -2,7 +2,7 @@
 /**
  * Idealist header
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
+ * This is the template that displays all of the <head> sections and everything up until <div id="content">
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
@@ -56,7 +56,7 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
     <div class="navbar-wrapper">
         <nav class="navbar" role="navigation">
             <div class="container-fluid">
-                <div class="row all-elements">
+                <div class="row">
                     <div class="navbar-header">
 
                         <!-- Mobile Menu -->
