@@ -3,6 +3,8 @@
  * Custom styles for Idealist
  *
 */
+
+
 /*--------------------------------------------------------------
  TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -27,10 +29,10 @@
 
 $white: #FFFFFF;
 $gainsboro: #DCDCDC;
-$light-gray: #D3D3D3;    
-$silver: #C0C0C0;       
+$light-gray: #D3D3D3;
+$silver: #C0C0C0;
 $dark-gray: #A9A9A9;
-$gray: #808080;         
+$gray: #808080;
 $dim-gray: #696969;
 $light-slate-gray: #778899;
 $slate-gray: #708090;
@@ -40,15 +42,14 @@ $black-alpha: rgba(0, 0, 0, .5);
 $red: #FF0000;
 $green: #00FF00;
 $blue: #0000FF;
-
-$font-stack: Roboto, sans-serif;
-
+$font-stack: Roboto,
+sans-serif;
 @mixin x-align-items($position) {
     -webkit-align-items: $position;
     align-items: $position;
     -webkit-box-align: $position;
     -moz-box-align: $position;
-    -ms-box-align: $position; 
+    -ms-box-align: $position;
     -ms-flex-align: $position;
 }
 
@@ -73,26 +74,28 @@ $font-stack: Roboto, sans-serif;
 
 @mixin x-display-flex() {
     display: -webkit-flex;
-    display: -ms-flexbox;     
+    display: -ms-flexbox;
     display: flex;
 }
 
 @mixin x-story-border-details() {
     border-color: $light-gray;
-    border-style: solid;        
+    border-style: solid;
     border-width: 1px;
 }
 
 @mixin x-user-select($type) {
     -webkit-user-select: $type;
-    -moz-user-select: $type;    
+    -moz-user-select: $type;
     -ms-user-select: $type;
-     user-select: $type;
+    user-select: $type;
 }
+
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+
 body,
 button,
 input,
@@ -158,6 +161,7 @@ big {
     font-size: 125%;
 }
 
+
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
@@ -170,7 +174,9 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     @include x-box-sizing();
 }
 
@@ -187,7 +193,7 @@ h4,
 h5,
 h6 {
     font-family: $font-stack;
-    font-weight: 300;        
+    font-weight: 300;
 }
 
 h1 {
@@ -217,7 +223,7 @@ h6 {
 
 p {
     color: $black;
-    font-family: $font-stack;     
+    font-family: $font-stack;
     // font-size: 1.4em;
     font-size: 14px;
 }
@@ -240,18 +246,21 @@ a:hover {
     line-height: 1.8em;
 }
 
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
 
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after {
+    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
     box-sizing: inherit;
 }
 
 body {
-    background: $white; /* Fallback for when there is no custom background color defined. */
+    background: $white;
+    /* Fallback for when there is no custom background color defined. */
 }
 
 blockquote:before,
@@ -267,12 +276,12 @@ q {
 }
 
 img {
-    height: auto; 
-    max-width: 100%; 
+    height: auto;
+    max-width: 100%;
 }
 
 figure {
-    margin: 1em 0; 
+    margin: 1em 0;
 }
 
 table {
@@ -295,9 +304,9 @@ article,
 }
 
 .nav-search {
-    border: 0; 
+    border: 0;
     color: $black;
-    margin-right: 10px; 
+    margin-right: 10px;
     margin-top: -18px;
 }
 
@@ -396,10 +405,12 @@ form label {
     display: block; // contact form labels full-width of panel    
 }
 
+
 /* search button */
+
 input[type="submit"],
 button[type="submit"] {
-    background: $white; 
+    background: $white;
     color: $light-gray;
     font-size: 18px;
     height: 50px;
@@ -415,13 +426,15 @@ button[type="submit"]:hover {
 .send-button {
     @include x-border-radius(10px);
     @include x-display-center();
-    background: $white;    
+    background: $white;
     height: 50px;
-    margin: 1em auto;    
+    margin: 1em auto;
     width: 100%;
 }
 
+
 /* search from header */
+
 #full-search {
     // background: $white;
     display: none;
@@ -435,8 +448,7 @@ button[type="submit"]:hover {
     z-index: 9999;
 }
 
-#full-search .full-search-input:focus {
-}
+#full-search .full-search-input:focus {}
 
 #full-search input[type="text"] {
     background: $white;
@@ -454,10 +466,10 @@ button[type="submit"]:hover {
     margin-top: .1em;
 }
 
-input[type="button" i], 
-input[type="submit" i], 
-input[type="reset" i], 
-input[type="file" i]::-webkit-file-upload-button, 
+input[type="button" i],
+input[type="submit" i],
+input[type="reset" i],
+input[type="file" i]::-webkit-file-upload-button,
 button {
     border-radius: 10px;
     border-width: 1px;
@@ -477,8 +489,9 @@ a {
     margin: 30px 0;
 }
 
-.nav>li>a:focus, .nav>li>a:hover {
-    background-color: $white;    
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: $white;
 }
 
 .navbar-nav a,
@@ -505,7 +518,6 @@ a {
 .site-title {
     font-size: 1.5em;
     margin: auto 10px;
-    padding-left: 5px;
 }
 
 p.site-description {
@@ -519,7 +531,7 @@ p.site-description {
     font-size: 2em;
     left: 0;
     margin: auto 10%;
-    position: absolute;    
+    position: absolute;
     top: 0;
     text-align: center;
     width: 80%;
@@ -530,7 +542,7 @@ a.navbar-brand {
 }
 
 .navbar-toggle.collapsed .icon-bar {
-  background-color: $gray;
+    background-color: $gray;
 }
 
 .navbar-toggle {
@@ -552,6 +564,7 @@ footer {
 footer .navbar {
     margin: 0;
 }
+
 
 /*--------------------------------------------------------------
 ## Links
@@ -588,9 +601,11 @@ footer li.active a {
     color: $white;
 }
 
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
     clear: both;
     display: block;
@@ -633,20 +648,16 @@ footer li.active a {
     width: 200px;
 }
 
-.main-navigation ul ul li {
-}
+.main-navigation ul ul li {}
 
 .main-navigation li:hover > a,
-.main-navigation li.focus > a {
-}
+.main-navigation li.focus > a {}
 
-.main-navigation ul ul :hover > a,
-.main-navigation ul ul .focus > a {
-}
+.main-navigation ul ul:hover > a,
+.main-navigation ul ul .focus > a {}
 
 .main-navigation ul ul a:hover,
-.main-navigation ul ul a.focus {
-}
+.main-navigation ul ul a.focus {}
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
@@ -661,8 +672,7 @@ footer li.active a {
 .main-navigation .current_page_item > a,
 .main-navigation .current-menu-item > a,
 .main-navigation .current_page_ancestor > a,
-.main-navigation .current-menu-ancestor > a {
-}
+.main-navigation .current-menu-ancestor > a {}
 
 .navbar-header>a.navbar-brand>img {
     display: inline;
@@ -684,7 +694,9 @@ img.custom-logo {
     margin: 20px;
 }
 
+
 /* Small menu. */
+
 .menu-toggle,
 .main-navigation.toggled ul {
     display: block;
@@ -721,19 +733,25 @@ img.custom-logo {
     width: 50%;
 }
 
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 
+
 /* note that the !important rule is only used for accessibility */
+
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
-    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -753,13 +771,17 @@ img.custom-logo {
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000; /* Above WP toolbar. */
+    z-index: 100000;
+    /* Above WP toolbar. */
 }
 
+
 /* Do not show the outline on the skip link target. */
+
 #content[tabindex="-1"]:focus {
     outline: 0;
 }
+
 
 /*--------------------------------------------------------------
 # Alignments
@@ -789,14 +811,13 @@ header#masthead.site-header {
 }
 
 header#masthead {
-    background-color: $white;    
+    background-color: $white;
 }
 
 .flexbox-container {
     @include x-display-flex();
     @include x-align-items(center);
 }
-
 
 .col-centered {
     float: none;
@@ -811,6 +832,7 @@ header#masthead {
     margin: 0;
     vertical-align: middle;
 }
+
 
 /*--------------------------------------------------------------
 # Clearings
@@ -842,6 +864,7 @@ header#masthead {
     clear: both;
 }
 
+
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -850,10 +873,13 @@ header#masthead {
     margin: 0 0 1.5em;
 }
 
+
 /* Make sure select elements fit in widgets. */
+
 .widget select {
     max-width: 100%;
 }
+
 
 /*
 .widget-title {
@@ -869,7 +895,9 @@ header#masthead {
 
 
 /* Recent Posts */
-ul, ol {
+
+ul,
+ol {
     margin: 0 0 1.5em 0;
 }
 
@@ -877,22 +905,24 @@ ul {
     padding-left: 2em;
 }
 
+
 /* Search */
+
 #secondary>.widget_search {
     border: 0;
     margin-bottom: 15px;
     padding: 0;
 }
 
-.search-form {
-}
+.search-form {}
 
 .search-form .search-submit {
-    bottom: 3px; 
+    bottom: 3px;
     padding: 0.4em .8em;
-    position: absolute; /* for Firefox */
+    position: absolute;
+    /* for Firefox */
     right: 0;
-    top: 0;  
+    top: 0;
     width: 50px;
 }
 
@@ -910,10 +940,10 @@ input.search-field {
 }
 
 button.search-submit {
-    border-top-right-radius: 10px; 
-    border-bottom-right-radius: 10px;  
-    border-top-left-radius: 0; 
-    border-bottom-left-radius: 0;  
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 svg.icon.icon-twitter,
@@ -925,7 +955,7 @@ svg.icon.icon-twitter,
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 a.social-icon {
@@ -942,9 +972,11 @@ a.social-icon {
     padding: 0;
 }
 
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -970,8 +1002,8 @@ a.social-icon {
 
 .post header {
     display: flex;
-    flex-direction: column; 
-    margin-right: 50px;   
+    flex-direction: column;
+    margin-right: 50px;
 }
 
 .post header,
@@ -1000,7 +1032,7 @@ a.social-icon {
     display: block;
 }
 
-.sticky p { 
+.sticky p {
     font-size: 3em;
 }
 
@@ -1011,7 +1043,7 @@ a.social-icon {
 }
 
 .subtitle {
-    font-size: 1.3em; 
+    font-size: 1.3em;
 }
 
 .byline,
@@ -1040,7 +1072,7 @@ a.social-icon {
 }
 
 .comments-title {
-    padding-top: 50px;    
+    padding-top: 50px;
 }
 
 #reply-title.comment-reply-title {
@@ -1061,6 +1093,7 @@ p.not-found {
     text-align: center;
 }
 
+
 /* Post Formats */
 
 .format-quote,
@@ -1077,6 +1110,7 @@ blockquote:before {
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
+
 
 /*
 .format-quote p:after,
@@ -1153,7 +1187,7 @@ blockquote p {
     height: 40px;
     line-height: 42px;
     margin: 0 5px 20px 0;
-    padding: 0;    
+    padding: 0;
     text-align: center;
     width: 40px;
 }
@@ -1164,10 +1198,10 @@ blockquote p {
     -moz-border-radius: 100%;
     border-radius: 100%;
     border: 1px solid $silver;
-    display: table;    
+    display: table;
     height: 50px;
     position: absolute;
-    right: 20px;    
+    right: 20px;
     text-align: center;
     top: 30px;
     width: 50px;
@@ -1177,7 +1211,7 @@ blockquote p {
     color: $silver;
     display: table-cell;
     font-size: 20px;
-    line-height: 20px;        
+    line-height: 20px;
     vertical-align: middle;
 }
 
@@ -1210,16 +1244,25 @@ blockquote p {
 # Infinite scroll
 --------------------------------------------------------------*/
 
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+
+.infinite-scroll .posts-navigation,
+
+/* Older / Newer Posts Navigation (always hidden) */
+
+.infinite-scroll.neverending .site-footer {
+    /* Theme Footer (when set to scrolling) */
     display: none;
 }
 
+
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+
 .infinity-end.neverending .site-footer {
     display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Media
@@ -1238,7 +1281,9 @@ blockquote p {
     padding: 0;
 }
 
+
 /* Make sure embeds and iframes fit their containers. */
+
 embed,
 iframe,
 object {
@@ -1249,7 +1294,9 @@ section.feature-image {
     margin-bottom: 20px;
 }
 
+
 /* contact form */
+
 section.main-content {
     display: flex;
     justify-content: center;
@@ -1259,6 +1306,7 @@ section.main-content {
 img.post {
     width: 100%;
 }
+
 
 /*--------------------------------------------------------------
 ## Captions
@@ -1283,9 +1331,11 @@ img.post {
     text-align: center;
 }
 
+
 /*--------------------------------------------------------------
 ## Galleries
 --------------------------------------------------------------*/
+
 .gallery {
     margin-bottom: 1.5em;
 }
@@ -1333,6 +1383,7 @@ img.post {
     display: block;
 }
 
+
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
@@ -1341,15 +1392,11 @@ img.post {
     .container {
         padding: 1.2em;
     }
-}    
+}
 
 @media screen and (max-width: 768px) {
-    .search-form {
-    }
-
-    .search-form .search-submit {
-    }
-
+    .search-form {}
+    .search-form .search-submit {}
     p.site-description {
         display: none;
     }
@@ -1358,77 +1405,65 @@ img.post {
 @media screen and (max-width: 568px) {
     .sticky p {
         font-size: 1.2em;
-    } 
-
+    }
     div#d3chart>iframe {
         height: 380px;
-    }   
+    }
 }
 
 @media (min-width: 768px) {
-    .navbar-nav>li>a {
-    }
-
-    .navbar .navbar-nav {
-    }
-
-    .navbar .navbar-collapse {
-    }
-
+    .navbar-nav>li>a {}
+    .navbar .navbar-nav {}
+    .navbar .navbar-collapse {}
     .navbar>.container-fluid .navbar-brand {
         left: 0;
         margin: auto 10%;
-        position: absolute;  
-        text-align: center;          
+        position: absolute;
+        text-align: center;
         top: 0;
         width: 80%;
     }
-} 
+}
 
 // set breakpoint to collape navbar
 @media (max-width: 1000px) {
-  .navbar-header {
-      // float: none;
-  }
-
-  .navbar-right {
-      float: right;
-  }
-
-  .navbar-toggle {
-      display: block;
-  }
-  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-      display: none!important;
-  }
-  .navbar-nav {
-      float: none!important;
-      margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-      float: none;
-  }
-  .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .collapse.in{
-      display:block !important;
-  }
+    .navbar-header {
+        // float: none;
+    }
+    .navbar-right {
+        float: right;
+    }
+    /*
+    .nav-search {
+        margin-top: -18px;
+    }
+    */
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in {
+        display: block !important;
+    }
 }
-
-
-
-
-
-
-
-

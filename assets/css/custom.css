@@ -96,7 +96,9 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -368,7 +370,8 @@ a {
   border-radius: 0;
   margin: 30px 0; }
 
-.nav > li > a:focus, .nav > li > a:hover {
+.nav > li > a:focus,
+.nav > li > a:hover {
   background-color: #FFFFFF; }
 
 .navbar-nav a,
@@ -390,8 +393,7 @@ a {
 
 .site-title {
   font-size: 1.5em;
-  margin: auto 10px;
-  padding-left: 5px; }
+  margin: auto 10px; }
 
 p.site-description {
   color: #D3D3D3;
@@ -680,7 +682,8 @@ header#masthead {
   font-size: 14px; }
 
 /* Recent Posts */
-ul, ol {
+ul,
+ol {
   margin: 0 0 1.5em 0; }
 
 ul {
@@ -1098,6 +1101,11 @@ img.post {
   .navbar-right {
     float: right; }
 
+  /*
+  .nav-search {
+      margin-top: -18px;
+  }
+  */
   .navbar-toggle {
     display: block; }
 
