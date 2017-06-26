@@ -1426,18 +1426,14 @@ img.post {
 }
 
 // set breakpoint to collape navbar
+
 @media (max-width: 1000px) {
     .navbar-header {
-        // float: none;
+        float: none;
     }
     .navbar-right {
         float: right;
     }
-    /*
-    .nav-search {
-        margin-top: -18px;
-    }
-    */
     .navbar-toggle {
         display: block;
     }

@@ -1098,14 +1098,12 @@ img.post {
     top: 0;
     width: 80%; } }
 @media (max-width: 1000px) {
+  .navbar-header {
+    float: none; }
+
   .navbar-right {
     float: right; }
 
-  /*
-  .nav-search {
-      margin-top: -18px;
-  }
-  */
   .navbar-toggle {
     display: block; }
 
