@@ -578,23 +578,15 @@ a:visited {
     color: $black;
 }
 
-a:hover,
+a:active,
 a:focus,
-a:active {
+a:hover {
     color: $black;
+    outline: 0;    
 }
 
 a:focus {
     // outline: thin dotted;
-}
-
-a:hover,
-a:active {
-    outline: 0;
-}
-
-a {
-    color: $black;
 }
 
 footer li.active a {
