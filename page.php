@@ -9,25 +9,41 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
+	<div class="container">
+		<div class="row" id="primary">
+				
+			<main id="content" class="col-sm-8" role="main">
 			<?php
-			while ( have_posts() ) : the_post();
+				if ( have_posts() ) :
 
-				get_template_part( 'template-parts/content', 'page' );
+					if ( is_home() && ! is_front_page() ) : ?>
+						<header>
+							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+						</header>
 
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+					<?php
+					endif;
 
-			endwhile; // End of the loop.
-			?>
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
+						get_template_part( 'template-parts/content', 'page' );
+					endwhile; // End of the loop.
+				endif;	
+				?>
+			</main><!-- #main -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+			<!-- SIDEBAR
+			================================================== -->
+			<aside class="col-sm-4">
+			<!-- this is defined in Appearance > Widgets -->
+			<!-- ?php get_sidebar( 'primary' ); ? -->
 
+			<!-- this is a minimal, default sidebar if a sidebar is not defined in Appearance > Widgets -->
+			<?php get_sidebar( ); ?>
+
+			</aside>
+
+		</div><!-- #primary -->
+	</div>	
 <?php
-get_sidebar();
 get_footer();
