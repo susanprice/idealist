@@ -301,6 +301,10 @@ article,
     margin-top: -18px;
 }
 
+.nav-search:hover {
+    background-color: $white;
+}
+
 .fa-search {
     color: $black;
     font-size: 1.2em;
@@ -309,15 +313,10 @@ article,
 }
 
 .fa-search:hover {
+    background-color: $white;
     color: $gray;
 }
 
-/*
-.all-elements {
-    display: flex;
-    align-items: center;
-}
-*/
 
 /*--------------------------------------------------------------
 # Forms
