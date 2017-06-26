@@ -398,16 +398,16 @@ a {
 p.site-description {
   color: #D3D3D3;
   font-size: .6em;
-  padding: 1px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding: 1px; }
 
 .navbar-brand {
   font-size: 2em;
   left: 0;
   margin: auto 10%;
   position: absolute;
-  top: 0;
   text-align: center;
+  top: 0;
   width: 80%; }
 
 a.navbar-brand {

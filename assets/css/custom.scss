@@ -523,8 +523,8 @@ a {
 p.site-description {
     color: $light-gray;
     font-size: .6em;
-    padding: 1px;
     margin-top: 20px;
+    padding: 1px;
 }
 
 .navbar-brand {
@@ -532,8 +532,8 @@ p.site-description {
     left: 0;
     margin: auto 10%;
     position: absolute;
+    text-align: center;    
     top: 0;
-    text-align: center;
     width: 80%;
 }
 
