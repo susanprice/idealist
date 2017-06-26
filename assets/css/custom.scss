@@ -1455,11 +1455,17 @@ img.post {
     .navbar-nav>li {
         float: none;
     }
+    /*
+    .navbar-nav>li:first-child {
+        margin-top: 0;
+    }
+    */
     .navbar-nav>li>a {
+        background-color: $white;
         padding-top: 10px;
         padding-bottom: 10px;
     }
     .collapse.in {
         display: block !important;
-    }
+    }   
 }

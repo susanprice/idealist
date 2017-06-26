@@ -1125,7 +1125,13 @@ img.post {
   .navbar-nav > li {
     float: none; }
 
+  /*
+  .navbar-nav>li:first-child {
+      margin-top: 0;
+  }
+  */
   .navbar-nav > li > a {
+    background-color: #FFFFFF;
     padding-top: 10px;
     padding-bottom: 10px; }
 
