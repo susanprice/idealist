@@ -51,14 +51,6 @@ h6 {
 p {
   margin-bottom: 1.5em; }
 
-p.credits,
-p.copyright a,
-.copyright {
-  color: #808080;
-  font-size: 11px;
-  margin: 20px;
-  text-align: center; }
-
 dfn,
 cite,
 em,
@@ -84,6 +76,14 @@ pre {
 
 big {
   font-size: 125%; }
+
+.copyright,
+.copyright a,
+.credits {
+  color: #808080;
+  font-size: 11px;
+  margin: 20px;
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Global
