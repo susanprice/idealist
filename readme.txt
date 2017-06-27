@@ -1,7 +1,7 @@
 === Idealist ===
 
 Theme Name: Idealist
-Version: 1.0.3
+Version: 1.0.4
 Tested up to: WordPress 4.7
 
 Author: S. Price
@@ -96,17 +96,12 @@ Idealist is distributed under the terms of GPLv2 or later
 - Fixed: customizer settings saved to theme_mod
 - Fixed: updated translatable strings
 
-= 1.0.4 = TBD
-- Added: new tags
-
-
-
-
-
-
-
-
-
-
-
-
+= 1.0.4 = 06-27-17
+- Added: tags custom-background, custom-colors, custom-logo, editor-style,          
+    news, post-formats, theme-options, threaded-comments, two-columns
+- Added: search icon in top menu bar
+- Added: template page-full-width.php
+- Added: template-parts/page-one-panel.php and template-parts/page-two-panel.php
+- Improved: refactored custom.css
+- Improved: breakpoint for mobile menu toggle changed from 768px to 1000px
+- Improved: layout of page.php consistent with front page posts
