@@ -168,6 +168,10 @@ body {
   background: #FFFFFF;
   /* Fallback for when there is no custom background color defined. */ }
 
+header#masthead,
+header#masthead.site-header {
+  background-color: #FFFFFF; }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -537,11 +541,10 @@ footer li.active a {
   margin-left: auto;
   margin-right: auto; }
 
-header#masthead.site-header {
-  background-color: #FFFFFF; }
-
-header#masthead {
-  background-color: #FFFFFF; }
+.side-by-side {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .flexbox-container {
   display: -webkit-flex;
@@ -554,24 +557,21 @@ header#masthead {
   -ms-box-align: center;
   -ms-flex-align: center; }
 
-.side-by-side {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
+/*
 .col-centered {
-  float: none;
-  margin: 0 auto; }
+    float: none;
+    margin: 0 auto;
+}
 
 .center {
-  align-items: center;
-  display: flex;
-  justify-content: center; }
+    @include x-display-center();
+}
 
 .vcenter p {
-  margin: 0;
-  vertical-align: middle; }
-
+    margin: 0;
+    vertical-align: middle;
+}
+*/
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/

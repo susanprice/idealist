@@ -263,6 +263,11 @@ body {
     /* Fallback for when there is no custom background color defined. */
 }
 
+header#masthead,
+header#masthead.site-header {
+    background-color: $white;
+}
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -696,12 +701,10 @@ footer li.active a {
     margin-right: auto;
 }
 
-header#masthead.site-header {
-    background-color: $white;
-}
-
-header#masthead {
-    background-color: $white;
+.side-by-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .flexbox-container {
@@ -709,12 +712,7 @@ header#masthead {
     @include x-align-items(center);
 }
 
-.side-by-side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
+/*
 .col-centered {
     float: none;
     margin: 0 auto;
@@ -728,7 +726,7 @@ header#masthead {
     margin: 0;
     vertical-align: middle;
 }
-
+*/
 
 /*--------------------------------------------------------------
 # Clearings
@@ -989,7 +987,6 @@ p.not-found {
     text-align: center;
 }
 
-
 /* Post Formats */
 
 .format-quote,
@@ -1006,7 +1003,6 @@ blockquote:before {
     margin-right: 0.25em;
     vertical-align: -0.4em;
 }
-
 
 /*
 .format-quote p:after,
