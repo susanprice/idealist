@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Idealist 1.0.3\n"
-"POT-Creation-Date: 2017-05-30 16:24-0700\n"
-"PO-Revision-Date: 2017-05-30 16:23-0700\n"
+"Project-Id-Version: Idealist 1.0.4\n"
+"POT-Creation-Date: 2017-06-27 15:55-0700\n"
+"PO-Revision-Date: 2017-06-27 15:50-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,13 +71,17 @@ msgid "Add widgets here."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:235
+#: functions.php:237
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: header.php:24
 msgid "Skip to content"
+msgstr ""
+
+#: header.php:116
+msgid "Search ..."
 msgstr ""
 
 #: inc/custom-header.php:49
@@ -267,7 +271,8 @@ msgstr ""
 msgid " "
 msgstr ""
 
-#: search.php:16
+#. translators: displays search term entered
+#: search.php:17
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
@@ -285,19 +290,20 @@ msgstr ""
 msgid "Nothing Found"
 msgstr ""
 
-#: template-parts/content-none.php:21
+#. translators: displays link to URL to publish first post.
+#: template-parts/content-none.php:23
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:25
+#: template-parts/content-none.php:27
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
 
-#: template-parts/content-none.php:33
+#: template-parts/content-none.php:35
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
