@@ -74,6 +74,24 @@ pre {
   overflow: auto;
   padding: 1.6em; }
 
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
+
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help; }
+
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none; }
+
 big {
   font-size: 125%; }
 
@@ -150,7 +168,7 @@ a:visited {
   color: #000000; }
 
 a:hover {
-  color: #696969;
+  color: #373737;
   text-decoration: none; }
 
 #content p {
@@ -325,7 +343,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #696969; }
+  color: #373737; }
 
 label {
   font-weight: 300;
@@ -528,7 +546,7 @@ footer li.active a {
   /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
 
 .screen-reader-text:focus {
-  background-color: #DCDCDC;
+  background-color: #F4F4F4;
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5);
   clip: auto !important;
