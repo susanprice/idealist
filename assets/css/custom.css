@@ -798,9 +798,8 @@ a.social-icon {
   margin-bottom: .8em;
   text-align: center; }
 
-#page .entry-title {
-  margin: 30px auto;
-  text-align: center; }
+.page-title {
+  margin: 30px auto; }
 
 .subtitle {
   font-size: 1.3em; }
