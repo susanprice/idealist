@@ -563,6 +563,7 @@ button {
 
 p.site-description {
     color: $light-gray;
+    display: none;
     font-size: .6em;
     margin-top: 20px;
     padding: 1px;
@@ -820,7 +821,6 @@ footer li.active a {
 }
 
 /* Recent Posts */
-
 ol,
 ul {
     margin: 0 0 1.5em 0;
@@ -831,8 +831,7 @@ ul {
     padding-left: 2em;
 }
 
-/* Search */
-
+// search 
 #secondary>.widget_search {
     border: 0;
     margin-bottom: 15px;
@@ -868,6 +867,7 @@ button.search-submit {
     border-top-left-radius: 0;
 }
 
+// social
 svg.icon.icon-twitter,
 .icon-twitter {
     color: $light-gray;
@@ -1000,8 +1000,6 @@ p.not-found {
     text-align: center;
 }
 
-/* Post Formats */
-
 .format-quote,
 blockquote {
     quotes: "\201C""\201D""\2018""\2019";
@@ -1099,7 +1097,6 @@ blockquote p {
 .children {
     list-style: none;
 }
-
 
 /*
 .badge.social {
@@ -1302,30 +1299,15 @@ section.main-content {
 # Media Queries
 --------------------------------------------------------------*/
 
-@media screen and (max-width: 991px) {
+/* Small devices (landscape phones) */
+@media screen and (min-width: 576px) {
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) {
     .container {
         padding: 1.2em;
     }
-}
-
-@media screen and (max-width: 768px) {
-    .search-form {}
-    .search-form .search-submit {}
-    p.site-description {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 568px) {
-    .sticky p {
-        font-size: 1.2em;
-    }
-    div#d3chart>iframe {
-        height: 380px;
-    }
-}
-
-@media (min-width: 768px) {
     .navbar-nav>li>a {}
     .navbar .navbar-nav {}
     .navbar .navbar-collapse {}
@@ -1339,8 +1321,19 @@ section.main-content {
     }
 }
 
-// set breakpoint to collape navbar
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+    p.site-description {
+       display: inline;
+    }
+}
 
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+}
+
+
+/* set breakpoint for mobile menu collapse */
 @media (max-width: 1000px) {
     .navbar-header {
         float: none;
@@ -1369,11 +1362,6 @@ section.main-content {
     .navbar-nav>li {
         float: none;
     }
-    /*
-    .navbar-nav>li:first-child {
-        margin-top: 0;
-    }
-    */
     .navbar-nav>li>a {
         background-color: $white;
         padding-top: 10px;
