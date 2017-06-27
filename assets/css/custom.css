@@ -310,7 +310,7 @@ textarea {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
-  color: #0000FF;
+  color: #000000;
   font-family: Roboto, sans-serif;
   font-size: 1.8em;
   padding: 3px;
@@ -325,7 +325,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-  color: #00FF00; }
+  color: #696969; }
 
 label {
   font-weight: 300;

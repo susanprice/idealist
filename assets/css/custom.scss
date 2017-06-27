@@ -419,7 +419,7 @@ input[type="search"],
 textarea {
     @include x-story-border-details();
     @include x-border-radius(10px);
-    color: $blue;
+    color: $black;
     font-family: $font-stack;
     font-size: 1.8em;
     padding: 3px;
@@ -436,7 +436,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-    color: $green;
+    color: $dim-gray;
 }
 
 label {
