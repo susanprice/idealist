@@ -7,6 +7,8 @@
  * @package Idealist
  */
 
+define( 'IDEALIST_VERSION', '1.0.4' );
+
 if ( ! function_exists( 'idealist_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -171,16 +173,16 @@ function idealist_scripts() {
 
 	// Styles
 
-	wp_enqueue_style( 'idealist-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'idealist-style', get_stylesheet_uri(), array(), IDEALIST_VERSION );
 
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
 
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome/css/font-awesome.min.css');
+	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500', false );
 
 	// wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.min.css');
-	wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.css');
+	wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), IDEALIST_VERSION );
 
 	// Scripts
 
