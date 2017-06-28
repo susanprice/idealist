@@ -2,7 +2,7 @@
 
 Theme Name: Idealist
 Version: 1.0.4
-Tested up to: WordPress 4.7
+Tested up to: WordPress 4.8
 
 Author: S. Price
 License: General Public License (GPL)v2 or later
