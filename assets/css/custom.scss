@@ -861,12 +861,10 @@ ul {
 }
 
 .search-form .search-submit {
-    bottom: 3px;
+    bottom: 0;
     padding: 0.4em .8em;
     position: absolute;
-    /* for Firefox */
     right: 0;
-    top: 0;
     width: 50px;
 }
 
@@ -877,12 +875,13 @@ ul {
 }
 
 input.search-field {
-    font-size: 18px;
+    font-size: 22px;
     height: 50px;
-    padding-left: 10px;
+    padding-left: 20px;
 }
 
 button.search-submit {
+    background-color: transparent;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 0;
