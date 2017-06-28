@@ -261,11 +261,6 @@ a:hover {
     text-decoration: none;
 }
 
-#content p {
-    line-height: 1.8em;
-}
-
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -359,7 +354,7 @@ article,
     @include x-story-border-details();
     background-color: $white;
     margin: 15px;
-    padding: .5em 2em;
+    padding: 20px;
 }
 
 .btn {
@@ -1008,6 +1003,10 @@ a.social-icon {
     display: inline;
 }
 
+#content p {
+    line-height: 1.8em;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -1236,10 +1235,8 @@ section.feature-image {
     margin-bottom: 20px;
 }
 
+// main styling to be done in editor
 section.main-content {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
 }
 
 

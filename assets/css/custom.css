@@ -171,9 +171,6 @@ a:hover {
   color: #373737;
   text-decoration: none; }
 
-#content p {
-  line-height: 1.8em; }
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -252,7 +249,7 @@ article,
   border-width: 1px;
   background-color: #FFFFFF;
   margin: 15px;
-  padding: .5em 2em; }
+  padding: 20px; }
 
 .btn {
   border: 2px solid #000000;
@@ -804,6 +801,9 @@ a.social-icon {
 .group-blog .byline {
   display: inline; }
 
+#content p {
+  line-height: 1.8em; }
+
 .page-content,
 .entry-content,
 .entry-summary {
@@ -989,11 +989,6 @@ img.post {
 
 section.feature-image {
   margin-bottom: 20px; }
-
-section.main-content {
-  display: flex;
-  justify-content: center;
-  padding: 10px; }
 
 /*--------------------------------------------------------------
 ## Captions
