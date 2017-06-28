@@ -545,6 +545,10 @@ button {
     margin: 30px 0;
 }
 
+.navbar-header {
+    height: 50px; // needed for empty menu
+}
+
 .navbar-header>a.navbar-brand>img {
     display: inline;
 }
