@@ -273,13 +273,14 @@ a:hover {
 *,
 *:before,
 *:after {
-    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+    // Inherit box-sizing to make it easier to change the property for components that leverage other behavior
+    // see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ 
     box-sizing: inherit;
 }
 
 body {
     background: $white;
-    /* Fallback for when there is no custom background color defined. */
+    // Fallback for when there is no custom background color defined.
 }
 
 header#masthead,
@@ -468,8 +469,7 @@ form label {
     display: block; // contact form labels full-width of panel    
 }
 
-/* search button */
-
+// search button
 input[type="submit"],
 button[type="submit"] {
     background: $white;
@@ -494,8 +494,7 @@ button[type="submit"]:hover {
     width: 100%;
 }
 
-/* search from header */
-
+// search from header 
 #full-search {
     // background: $white;
     display: none;
@@ -615,7 +614,7 @@ span.icon-bar {
     background-color: $light-gray;
 }
 
-/* Next & Previous */
+// Next & Previous
 .nav-links {
     height: 30px;
     margin: 20px;
@@ -694,7 +693,7 @@ footer li.active a {
 # Accessibility
 --------------------------------------------------------------*/
 
-/* Text meant only for screen readers. */
+// Text meant only for screen readers. 
 .screen-reader-text {
     clip: rect(1px, 1px, 1px, 1px);
     height: 1px;
@@ -702,7 +701,7 @@ footer li.active a {
     position: absolute !important;
     width: 1px;
     word-wrap: normal !important;
-    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    // Many screen reader and browser combos announce broken words as they would appear visually. 
 }
 
 .screen-reader-text:focus {
@@ -722,11 +721,10 @@ footer li.active a {
     text-decoration: none;
     top: 5px;
     width: auto;
-    z-index: 100000;
-    /* Above WP toolbar. */
+    z-index: 100000; // Above WP toolbar
 }
 
-/* Do not show the outline on the skip link target. */
+// Do not show the outline on the skip link target
 #content[tabindex="-1"]:focus {
     outline: 0;
 }
@@ -840,7 +838,7 @@ footer li.active a {
     font-size: 14px;
 }
 
-/* Recent Posts */
+// Recent Posts
 ol,
 ul {
     margin: 0 0 1.5em 0;
@@ -919,7 +917,6 @@ a.social-icon {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-
 
 .hentry {
     margin: 0 0 30px;
@@ -1061,7 +1058,7 @@ blockquote p {
 ## Comments
 --------------------------------------------------------------*/
 
-/* ref: wp-includes/comment-template.php */
+// ref: wp-includes/comment-template.php
 .comment-content a {
     word-wrap: break-word;
 }
@@ -1083,7 +1080,7 @@ blockquote p {
     font-size: 12px;    
 }
 
-/* custom */
+// custom
 .post-comments-badge {
     background: $white;
     border-radius: 100%;
@@ -1187,19 +1184,18 @@ blockquote p {
 --------------------------------------------------------------*/
 
 
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
+// Globally hidden elements when Infinite Scroll is supported and in use. 
 
 .infinite-scroll .posts-navigation,
 
-/* Older / Newer Posts Navigation (always hidden) */
-
+// Older / Newer Posts Navigation (always hidden) 
 .infinite-scroll.neverending .site-footer {
-    /* Theme Footer (when set to scrolling) */
+    // Theme Footer (when set to scrolling)
     display: none;
 }
 
 
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+// When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before
 
 .infinity-end.neverending .site-footer {
     display: block;
@@ -1323,11 +1319,11 @@ section.main-content {
 # Media Queries
 --------------------------------------------------------------*/
 
-/* Small devices (landscape phones) */
+// Small devices (landscape phones)
 @media screen and (min-width: 576px) {
 }
 
-/* Medium devices (tablets) */
+// Medium devices (tablets) 
 @media (min-width: 768px) {
     .container {
         padding: 1.2em;
@@ -1345,19 +1341,19 @@ section.main-content {
     }
 }
 
-/* Large devices (desktops) */
+// Large devices (desktops) 
 @media (min-width: 992px) {
     p.site-description {
        display: inline;
     }
 }
 
-/* Extra large devices (large desktops) */
+// Extra large devices (large desktops)
 @media (min-width: 1200px) {
 }
 
 
-/* set breakpoint for mobile menu collapse */
+// set breakpoint for mobile menu collapse
 @media (max-width: 1000px) {
     .navbar-header {
         float: none;

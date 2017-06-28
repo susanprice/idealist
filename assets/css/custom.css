@@ -180,12 +180,10 @@ a:hover {
 *,
 *:before,
 *:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit; }
 
 body {
-  background: #FFFFFF;
-  /* Fallback for when there is no custom background color defined. */ }
+  background: #FFFFFF; }
 
 header#masthead,
 header#masthead.site-header {
@@ -352,7 +350,6 @@ label {
 form label {
   display: block; }
 
-/* search button */
 input[type="submit"],
 button[type="submit"] {
   background: #FFFFFF;
@@ -379,7 +376,6 @@ button[type="submit"]:hover {
   margin: 1em auto;
   width: 100%; }
 
-/* search from header */
 #full-search {
   display: none;
   height: 70px;
@@ -477,7 +473,6 @@ a.navbar-brand {
 span.icon-bar {
   background-color: #D3D3D3; }
 
-/* Next & Previous */
 .nav-links {
   height: 30px;
   margin: 20px; }
@@ -535,15 +530,13 @@ footer li.active a {
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
-/* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute !important;
   width: 1px;
-  word-wrap: normal !important;
-  /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
+  word-wrap: normal !important; }
 
 .screen-reader-text:focus {
   background-color: #F4F4F4;
@@ -562,10 +555,8 @@ footer li.active a {
   text-decoration: none;
   top: 5px;
   width: auto;
-  z-index: 100000;
-  /* Above WP toolbar. */ }
+  z-index: 100000; }
 
-/* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
@@ -673,7 +664,6 @@ footer li.active a {
 .widget-area a {
   font-size: 14px; }
 
-/* Recent Posts */
 ol,
 ul {
   margin: 0 0 1.5em 0; }
@@ -856,7 +846,6 @@ blockquote p {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
-/* ref: wp-includes/comment-template.php */
 .comment-content a {
   word-wrap: break-word; }
 
@@ -873,7 +862,6 @@ blockquote p {
 #comments time {
   font-size: 12px; }
 
-/* custom */
 .post-comments-badge {
   background: #FFFFFF;
   border-radius: 100%;
@@ -968,13 +956,10 @@ blockquote p {
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
   display: none; }
 
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
 .infinity-end.neverending .site-footer {
   display: block; }
 
@@ -1068,8 +1053,6 @@ section.main-content {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
-/* Small devices (landscape phones) */
-/* Medium devices (tablets) */
 @media (min-width: 768px) {
   .container {
     padding: 1.2em; }
@@ -1081,12 +1064,9 @@ section.main-content {
     text-align: center;
     top: 0;
     width: 80%; } }
-/* Large devices (desktops) */
 @media (min-width: 992px) {
   p.site-description {
     display: inline; } }
-/* Extra large devices (large desktops) */
-/* set breakpoint for mobile menu collapse */
 @media (max-width: 1000px) {
   .navbar-header {
     float: none; }
