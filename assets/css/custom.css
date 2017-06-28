@@ -261,8 +261,8 @@ article,
 .nav-search {
   border: 0;
   color: #000000;
-  margin-right: 10px;
-  margin-top: -18px; }
+  margin-top: -18px;
+  padding-right: 5px; }
 
 .nav-search:hover {
   background-color: #FFFFFF; }
@@ -1070,7 +1070,7 @@ section.main-content {
 @media (min-width: 992px) {
   p.site-description {
     display: inline; } }
-@media (max-width: 1000px) {
+@media (max-width: 1400px) {
   .navbar-header {
     float: none; }
 
