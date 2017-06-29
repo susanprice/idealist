@@ -935,7 +935,10 @@ a.social-icon {
 .post header {
     display: flex;
     flex-direction: column;
-    margin-right: 50px;
+}
+
+.post-title {
+    margin-right: 50px; // avoid colliding w/ badge    
 }
 
 .post header,
@@ -981,6 +984,7 @@ a.social-icon {
 
 .page-title,
 .story-title {
+    margin: 0;
     margin-bottom: .8em;
     text-align: center;
 }
