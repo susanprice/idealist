@@ -158,7 +158,7 @@ h6 {
 p {
   color: #000000;
   font-family: Roboto, sans-serif;
-  font-size: 14px; }
+  font-size: 18px; }
 
 strong {
   font-weight: 400; }
@@ -662,7 +662,11 @@ footer li.active a {
   padding-bottom: 10px; }
 
 .widget-area a {
-  font-size: 14px; }
+  font-size: 18px; }
+
+.recentcomments {
+  font-size: 18px;
+  padding-bottom: 10px; }
 
 ol,
 ul {
@@ -718,6 +722,9 @@ a.social-icon {
 #menu-social {
   margin: 0;
   padding: 0; }
+
+.textwidget {
+  font-size: 18px; }
 
 /*--------------------------------------------------------------
 # Content

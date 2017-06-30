@@ -43,6 +43,10 @@ $green: #00FF00;
 $blue: #0000FF;
 $font-stack: Roboto,
 sans-serif;
+
+$main-text-size: 18px;
+$main-title-size: 22px;
+
 @mixin x-align-items($position) {
     -webkit-align-items: $position;
     align-items: $position;
@@ -243,8 +247,7 @@ h6 {
 p {
     color: $black;
     font-family: $font-stack;
-    // font-size: 1.4em;
-    font-size: 14px;
+    font-size: $main-text-size;
 }
 
 strong {
@@ -469,7 +472,7 @@ input[type="submit"],
 button[type="submit"] {
     background: $white;
     color: $light-gray;
-    font-size: 18px;
+    font-size: $main-text-size;
     height: 50px;
     width: 100%;
 }
@@ -834,7 +837,13 @@ footer li.active a {
 }
 
 .widget-area a {
-    font-size: 14px;
+    font-size: $main-text-size;
+}
+
+// recent comments
+.recentcomments {
+    font-size: $main-text-size;
+    padding-bottom: 10px;
 }
 
 // Recent Posts
@@ -904,6 +913,10 @@ a.social-icon {
 #menu-social {
     margin: 0;
     padding: 0;
+}
+
+.textwidget {
+    font-size: $main-text-size;
 }
 
 
