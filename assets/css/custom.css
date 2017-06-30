@@ -676,6 +676,9 @@ ul {
   list-style-type: none;
   padding-left: 2em; }
 
+ul#recentcomments {
+  padding-left: 0; }
+
 #secondary > .widget_search {
   border: 0;
   margin-bottom: 15px;
