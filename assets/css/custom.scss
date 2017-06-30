@@ -388,6 +388,31 @@ article,
     color: $gray;
 }
 
+.fa-times {
+    color: $gray;
+    font-size: 20px;
+}
+
+.close-button {
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 100%;
+    width: 50px;
+}
+
+.close-icon {
+}
+
+.close-icon:before {
+    background-color: white;
+    font-family: 'FontAwesome';
+    color:black;
+    position: relative;
+    content: "\f00d";
+}
 
 /*--------------------------------------------------------------
 # Forms
@@ -500,8 +525,8 @@ button[type="submit"]:hover {
     left: 0;
     position: absolute;
     // future: search bar entry field position configurable
-    top: 60px; // positioned just below menu & branding
-    // top: 0; overlay menu
+    top: -15px; // overlay menu
+    // top: 60px; // positioned just below menu & branding
     width: 100%;
     z-index: 9999;
 }
@@ -515,6 +540,7 @@ button[type="submit"]:hover {
     color: $black;
     display: inline-block;
     font-size: 20px;
+    height: 80px;
     outline: solid 1px $silver;
     padding: 0 10px;
     width: 100%;

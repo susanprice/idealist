@@ -274,6 +274,26 @@ article,
   background-color: #FFFFFF;
   color: #808080; }
 
+.fa-times {
+  color: #808080;
+  font-size: 20px; }
+
+.close-button {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  height: 100%;
+  width: 50px; }
+
+.close-icon:before {
+  background-color: white;
+  font-family: 'FontAwesome';
+  color: black;
+  position: relative;
+  content: "\f00d"; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -378,7 +398,7 @@ button[type="submit"]:hover {
   height: 70px;
   left: 0;
   position: absolute;
-  top: 60px;
+  top: -15px;
   width: 100%;
   z-index: 9999; }
 
@@ -389,6 +409,7 @@ button[type="submit"]:hover {
   color: #000000;
   display: inline-block;
   font-size: 20px;
+  height: 80px;
   outline: solid 1px #C0C0C0;
   padding: 0 10px;
   width: 100%; }
