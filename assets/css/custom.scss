@@ -44,8 +44,8 @@ $blue: #0000FF;
 $font-stack: Roboto,
 sans-serif;
 
-$main-text-size: 18px;
-$main-title-size: 22px;
+$main-text-size: 14px;
+$main-title-size: 36px;
 
 @mixin x-align-items($position) {
     -webkit-align-items: $position;
@@ -220,28 +220,28 @@ h6 {
 }
 
 h1 {
-    font-size: 2.2em;
+    font-size: 50px;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 40px;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 30px;
 }
 
 h4 {
-    font-size: 1.2em;
+    font-size: 20px;
 }
 
 h5 {
-    font-size: 1em;
+    font-size: 16px;
     letter-spacing: 0.15em;
 }
 
 h6 {
-    font-size: .8em;
+    font-size: 12px;
 }
 
 p {
@@ -610,7 +610,7 @@ button {
 }
 
 .site-title {
-    font-size: 36px;
+    font-size: $main-title-size;
     margin: auto 1px;
 }
 
@@ -863,7 +863,7 @@ footer li.active a {
 }
 
 .widget-title {
-    font-size: 22px;
+    font-size: $main-title-size;
     margin: 0;
     padding-bottom: 40px;
 }
@@ -999,7 +999,7 @@ a.social-icon {
 
 // post title size
 .entry-title a {
-    font-size: 22px;
+    font-size: $main-title-size;
     margin: 0;
     padding-bottom: 10px;
 }
@@ -1437,5 +1437,8 @@ section.main-content {
     }
     .collapse.in {
         display: block !important;
-    }   
+    } 
+    //.entry-title a {
+    //    font-size: 30px;
+    //}  
 }

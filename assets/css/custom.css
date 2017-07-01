@@ -137,28 +137,28 @@ h6 {
   font-weight: 300; }
 
 h1 {
-  font-size: 2.2em; }
+  font-size: 50px; }
 
 h2 {
-  font-size: 2em; }
+  font-size: 40px; }
 
 h3 {
-  font-size: 1.4em; }
+  font-size: 30px; }
 
 h4 {
-  font-size: 1.2em; }
+  font-size: 20px; }
 
 h5 {
-  font-size: 1em;
+  font-size: 16px;
   letter-spacing: 0.15em; }
 
 h6 {
-  font-size: .8em; }
+  font-size: 12px; }
 
 p {
   color: #000000;
   font-family: Roboto, sans-serif;
-  font-size: 18px; }
+  font-size: 14px; }
 
 strong {
   font-weight: 400; }
@@ -371,7 +371,7 @@ input[type="submit"],
 button[type="submit"] {
   background: #FFFFFF;
   color: #D3D3D3;
-  font-size: 18px;
+  font-size: 14px;
   height: 50px;
   width: 100%; }
 
@@ -678,15 +678,15 @@ footer li.active a {
   max-width: 100%; }
 
 .widget-title {
-  font-size: 22px;
+  font-size: 36px;
   margin: 0;
   padding-bottom: 40px; }
 
 .widget-area a {
-  font-size: 18px; }
+  font-size: 14px; }
 
 .recentcomments {
-  font-size: 18px;
+  font-size: 14px;
   padding-bottom: 10px; }
 
 ol,
@@ -748,7 +748,7 @@ a.social-icon {
   padding: 0; }
 
 .textwidget {
-  font-size: 18px; }
+  font-size: 14px; }
 
 /*--------------------------------------------------------------
 # Content
@@ -788,7 +788,7 @@ a.social-icon {
   padding-bottom: 3em; }
 
 .entry-title a {
-  font-size: 22px;
+  font-size: 36px;
   margin: 0;
   padding-bottom: 10px; }
 
