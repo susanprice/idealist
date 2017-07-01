@@ -1192,6 +1192,16 @@ blockquote p {
     list-style: none;
 }
 
+#comments ol {
+   list-style: none;    
+    margin-left: 40px;
+    padding: 0;
+}
+
+.comment-list ol {
+   list-style: none;    
+}
+
 /*
 .badge.social {
     background: $silver;
@@ -1206,12 +1216,6 @@ blockquote p {
     padding: 0;
     text-align: center;
     width: 40px;
-}
-
-.comments ol {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .comments ol li {
