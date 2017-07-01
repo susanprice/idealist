@@ -37,8 +37,8 @@ echo "<br>";
 		<?php the_title( sprintf( '<h2 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-			<?php if ( get_theme_mod( 'show_comments_badge_id' ) ) : ?>
-			<!-- ?php if ( get_theme_mod( 'show_comments_badge_id' ) || ( empty( $badgedefault ) ) ) : ? -->
+			<!-- Display comments badge unless it was disabled in the customizer -->
+			<?php if ( esc_attr (get_theme_mod( 'show_comments_badge_id' ) !== 0 ) ) : ?>
 				<div class="post-comments-badge">
 					<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
 				</div><!-- post-comments-badge -->
