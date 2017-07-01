@@ -5,7 +5,6 @@
 
 
 function showSearchInput() {
-    document.getElementById("full-search").style.visibility = "visible";
     document.getElementById("full-search").style.display = "block";
     document.getElementById('search').focus();
 }
