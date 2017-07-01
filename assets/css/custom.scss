@@ -397,8 +397,8 @@ article,
     background-color: transparent;
     border: 0;
     position: absolute;
-    right: 0;
-    top: 5px;
+    right: 11px;
+    top: 2px;
     height: 100%;
     width: 50px;
 }
@@ -531,7 +531,13 @@ button[type="submit"]:hover {
     z-index: 9999;
 }
 
-#full-search .full-search-input:focus {}
+// this animation shrinks the entry field when clicked
+#full-search .full-search-input:focus {
+    // transition: all .5s ease;  
+    // -moz-transition: all .5s ease;
+    // -webkit-transition: all .5s ease;
+    // width: 88%;     
+}
 
 #full-search input[type="text"] {
     background: $white;
@@ -542,7 +548,7 @@ button[type="submit"]:hover {
     font-size: 20px;
     height: 80px;
     outline: solid 1px $silver;
-    padding: 0 10px;
+    padding: 0 10px;  
     width: 100%;
 }
 
