@@ -94,6 +94,12 @@ $main-title-size: 36px;
     user-select: $type;
 }
 
+@keyframes animateBorder {
+  to {
+    outline-color: $silver;
+    // box-shadow: 0 0 0 1px $black;
+  }
+}
 
 /*--------------------------------------------------------------
 # Typography
@@ -540,6 +546,7 @@ button[type="submit"]:hover {
 }
 
 #full-search input[type="text"] {
+    // animation: 3s animateBorder 1;
     background: $white;
     border: none;
     border-radius: 0;
