@@ -1031,6 +1031,17 @@ a.social-icon {
     font-size: $main-text-size;
 }
 
+.sticky:before {
+    color: $charcoal;
+    content: "\f02e";
+    font-family: FontAwesome;
+    font-size: 200%;
+    line-height: 1;    
+    position: absolute;
+    right: 100px;
+    top: -5px;
+}
+
 .page-title,
 .story-title {
     margin: 0;

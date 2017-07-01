@@ -815,6 +815,16 @@ a.social-icon {
 .sticky p {
   font-size: 14px; }
 
+.sticky:before {
+  color: #373737;
+  content: "\f02e";
+  font-family: FontAwesome;
+  font-size: 200%;
+  line-height: 1;
+  position: absolute;
+  right: 100px;
+  top: -5px; }
+
 .page-title,
 .story-title {
   margin: 0;
