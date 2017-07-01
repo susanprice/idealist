@@ -15,9 +15,12 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		
-		<div class="post-comments-badge">
-			<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
-		</div><!-- post-comments-badge -->
+		<!-- Display comments badge unless it was disabled in customizer -->
+		<?php if ( esc_attr ( get_theme_mod( 'show_comments_badge_id' ) !== 0 ) ) : ?>
+			<div class="post-comments-badge">
+				<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
+			</div><!-- post-comments-badge -->
+		<?php endif; ?>
 
 		<div class="post-details">
 			<?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', ''  ); ?>
