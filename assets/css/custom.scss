@@ -610,15 +610,15 @@ button {
 }
 
 .site-title {
-    font-size: 1.5em;
+    font-size: 36px;
     margin: auto 1px;
 }
 
 p.site-description {
     color: $light-gray;
     display: none;
-    font-size: .6em;
-    margin-top: 20px;
+    font-size: 12px;
+    margin: auto 0;
     padding: 1px;
 }
 
@@ -633,7 +633,7 @@ p.site-description {
 }
 
 a.navbar-brand {
-    padding: 10px;
+    padding: 0;
 }
 
 .navbar-toggle.collapsed .icon-bar {
@@ -1385,12 +1385,7 @@ section.main-content {
     .navbar .navbar-nav {}
     .navbar .navbar-collapse {}
     .navbar>.container-fluid .navbar-brand {
-        left: 0;
         margin: auto 10%;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        width: 80%;
     }
 }
 

@@ -463,14 +463,14 @@ button {
   color: #000000; }
 
 .site-title {
-  font-size: 1.5em;
+  font-size: 36px;
   margin: auto 1px; }
 
 p.site-description {
   color: #D3D3D3;
   display: none;
-  font-size: .6em;
-  margin-top: 20px;
+  font-size: 12px;
+  margin: auto 0;
   padding: 1px; }
 
 .navbar-brand {
@@ -483,7 +483,7 @@ p.site-description {
   width: 80%; }
 
 a.navbar-brand {
-  padding: 10px; }
+  padding: 0; }
 
 .navbar-toggle.collapsed .icon-bar {
   background-color: #808080; }
@@ -1089,12 +1089,7 @@ section.feature-image {
     padding: 1.2em; }
 
   .navbar > .container-fluid .navbar-brand {
-    left: 0;
-    margin: auto 10%;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 80%; } }
+    margin: auto 10%; } }
 @media (min-width: 992px) {
   p.site-description {
     display: inline; } }
