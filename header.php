@@ -47,7 +47,7 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
   #secondary > .widget_search { background-color: #<?php echo esc_attr( $idealist_background_color ); ?>; }
 
   /* Border Display */
-  .post, .widget, .comments, input[type="search"], button.search-submit { border-width: <?php echo intval( $idealist_show_borders ); ?>; } 
+  article, button.search-submit, .comments, input[type="search"], .panel, .post, .widget { border-width: <?php echo intval( $idealist_show_borders ); ?>; } 
 </style>
 
 <!-- HEADER
