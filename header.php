@@ -113,7 +113,7 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
                     <form id="full-search" action="<?php echo esc_url( home_url( '/') ); ?>">
                         <div class="container-fluid">
                             <div class="row">
-                                <input class="full-search-input" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
+                                <input class="full-search-input" id="search" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
                                 <button type="button" class="fa fa-times close-icon close-button" onclick="hideSearchInput()">
                                 </button>   
                             </div>
