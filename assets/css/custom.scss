@@ -878,28 +878,27 @@ footer li.active a {
     font-size: $main-text-size;
 }
 
-// recent comments
+aside ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+aside li {
+    list-style: none;
+}
+
+// Recent Comments
 .recentcomments {
     font-size: $main-text-size;
     padding-bottom: 10px;
 }
 
 // Recent Posts
-ol,
-ul {
-    margin: 0 0 1.5em 0;
+.widget_recent_entries li {
+    padding-bottom: 10px;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 2em;
-}
-
-ul#recentcomments {
-    padding-left: 0;    
-}
-
-// search 
+// Search 
 #secondary>.widget_search {
     border: 0;
     margin-bottom: 15px;
@@ -934,7 +933,7 @@ button.search-submit {
     border-top-left-radius: 0;
 }
 
-// social
+// Social
 svg.icon.icon-twitter,
 .icon-twitter {
     color: $light-gray;
@@ -957,6 +956,7 @@ a.social-icon {
     padding: 0;
 }
 
+// Text Widget
 .textwidget {
     font-size: $main-text-size;
 }
@@ -1108,7 +1108,6 @@ blockquote:before {
     vertical-align: -0.4em;
 }
 
-/*
 .format-quote p:after,
 blockquote:after {
     color: $silver;
@@ -1118,7 +1117,6 @@ blockquote:after {
     margin-left: 0.25em;
     vertical-align: -0.4em;
 }
-*/
 
 .format-quote p,
 blockquote p {
@@ -1192,7 +1190,7 @@ blockquote p {
 }
 
 #comments ol {
-   list-style: none;    
+    list-style: none;    
     margin-left: 40px;
     padding: 0;
 }

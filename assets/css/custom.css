@@ -687,20 +687,19 @@ footer li.active a {
 .widget-area a {
   font-size: 14px; }
 
+aside ul {
+  margin-left: 0;
+  padding-left: 0; }
+
+aside li {
+  list-style: none; }
+
 .recentcomments {
   font-size: 14px;
   padding-bottom: 10px; }
 
-ol,
-ul {
-  margin: 0 0 1.5em 0; }
-
-ul {
-  list-style-type: none;
-  padding-left: 2em; }
-
-ul#recentcomments {
-  padding-left: 0; }
+.widget_recent_entries li {
+  padding-bottom: 10px; }
 
 #secondary > .widget_search {
   border: 0;
@@ -876,17 +875,15 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em; }
 
-/*
 .format-quote p:after,
 blockquote:after {
-    color: $silver;
-    content: close-quote;
-    font-size: 5em;
-    line-height: .8em;
-    margin-left: 0.25em;
-    vertical-align: -0.4em;
-}
-*/
+  color: #C0C0C0;
+  content: close-quote;
+  font-size: 5em;
+  line-height: .8em;
+  margin-left: 0.25em;
+  vertical-align: -0.4em; }
+
 .format-quote p,
 blockquote p {
   display: inline; }
