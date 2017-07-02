@@ -27,7 +27,7 @@
 <!-- CUSTOM LOGO
 ================================================== -->
 <?php
-$idealist_logo = get_theme_mod( 'custom_logo' );
+$idealist_logo = esc_attr( get_theme_mod( 'custom_logo' ) );
 $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 ?>
 
