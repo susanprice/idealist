@@ -33,10 +33,41 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 
 <!-- CUSTOM SETTINGS
 ================================================== -->
+
+<!-- ?php $bordersdefault = get_theme_mod( 'show_borders_id' );
+echo "borders is set to: [";
+echo $bordersdefault;
+echo "]" . "<br>";
+
+if ( get_theme_mod( 'show_borders_id' ) !== FALSE ) {
+    echo "value is not FALSE" . "<br>";
+}
+
+if ( get_theme_mod( 'show_borders_id' ) !== TRUE ) {
+    echo "value is not TRUE" . "<br>";
+}
+
+if ( get_theme_mod( 'show_borders_id' ) === FALSE ) {
+    echo "value is FALSE" . "<br>";
+}
+
+echo "var_dump of bordersdefault: ";
+var_dump( $bordersdefault );
+echo "<br>";
+echo "<br>";
+
+? -->
+
+
 <?php
-  $idealist_header_text_color = get_header_textcolor();
-  $idealist_background_color = get_background_color();  
-  $idealist_show_borders = get_theme_mod( 'show_borders_id' );
+    $idealist_header_text_color = get_header_textcolor();
+    $idealist_background_color = get_background_color();  
+    $idealist_show_borders = get_theme_mod( 'show_borders_id' );
+
+    // if borders have not been set (in customizer), turn them on, as default
+    if ( get_theme_mod( 'show_borders_id' ) === FALSE ) {
+        $idealist_show_borders = 1;        
+} 
 ?>
 
 <style>
