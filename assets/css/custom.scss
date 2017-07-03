@@ -214,6 +214,11 @@ body {
     letter-spacing: .1rem;
 }
 
+#page {
+    position: relative;
+    word-wrap: break-word;
+}
+
 h1,
 h2,
 h3,
@@ -868,6 +873,7 @@ footer li.active a {
     margin: 0 0 1.5em;
     padding: 20px;
     position: relative;
+    word-wrap: break-word;
 }
 
 .widget select {
@@ -965,6 +971,7 @@ a.social-icon {
 // Text Widget
 .textwidget {
     font-size: $main-text-size;
+    word-wrap: break-word;
 }
 
 
