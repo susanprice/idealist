@@ -281,6 +281,12 @@ a:hover {
     box-sizing: inherit;
 }
 
+// underlined links are off by default in idealist
+// this will turn them back on (possbile future option)
+// #content a {
+//     text-decoration: underline;
+// }
+
 body {
     background: $white;
     // Fallback for when there is no custom background color defined.
