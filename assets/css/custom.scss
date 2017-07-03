@@ -161,6 +161,8 @@ kbd,
 tt,
 var {
     background-color: transparent;
+    box-shadow: none;
+    -webkit-box-shadow: none;
     color: $black;
     font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
     font-size: 14px;
