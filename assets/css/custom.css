@@ -80,9 +80,10 @@ code,
 kbd,
 tt,
 var {
+  background-color: transparent;
+  color: #000000;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  font-size: 14px; }
 
 abbr,
 acronym {
