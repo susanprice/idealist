@@ -304,14 +304,11 @@ header#masthead.site-header {
 }
 
 blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:after {
     content: "";
 }
 
-blockquote,
-q {
+blockquote {
     quotes: "" "";
 }
 
@@ -320,6 +317,10 @@ hr {
     border: 0;
     height: 1px;
     margin-bottom: 1.5em;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
 }
 
 ul,
