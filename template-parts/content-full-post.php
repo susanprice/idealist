@@ -40,7 +40,17 @@
 	<div class="entry-content">
 		<?php
 			the_content();
+			?>
 
+		    <!--  display tags and categories -->
+		    <div class="post-footer">
+		        <i class="fa fa-folder"></i> <?php the_category(', ') ?>
+		        <?php if ( has_tag( ) ) { ?>
+		        	<i class="fa fa-tags"></i> <?php the_tags(' ') ?>
+		        <?php } ?>	
+		    </div>
+
+			<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'idealist' ),
 				'after'  => '</div>',
