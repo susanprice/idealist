@@ -20,6 +20,9 @@
 				</div><!-- post-comments-badge -->
 			<?php endif; ?>
 	
+			<!-- This version includes author -->
+			<!-- ?php idealist_posted_on(); ? -->
+
 			<div class="post-details">
 				<!-- display the date on every post, using the format specified in Settings/General -->
 				<?php the_time( get_option( 'date_format' ) ); ?>
@@ -34,10 +37,16 @@
 		<?php the_post_thumbnail(); ?>
 	</div><!-- post-image -->
 	<?php } ?>
-	
-	<div class="post-excerpt">
-		<?php the_excerpt(); ?>
-	</div><!-- post-excerpt -->
+
+	<div class="entry-content">
+		<?php
+			/* translators: %s: Name of current post */
+			the_content( sprintf(
+				__( '(more)<span class="screen-reader-text"> "%s"</span>', 'idealist' ),
+			get_the_title()
+			) );
+		?>
+	</div>
 	
 	<!--  display tags and categories -->
 	<div class="post-footer">
