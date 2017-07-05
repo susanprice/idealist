@@ -293,6 +293,10 @@ a:hover {
 //     text-decoration: underline;
 // }
 
+a:hover {
+    text-decoration: underline;    
+}
+
 body {
     background: $white;
     // Fallback for when there is no custom background color defined.
