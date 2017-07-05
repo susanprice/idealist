@@ -864,6 +864,9 @@ a.social-icon {
 .entry-summary {
   margin: 20px 0; }
 
+.entry-content {
+  padding: 20px; }
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
