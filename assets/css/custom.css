@@ -795,8 +795,8 @@ a.social-icon {
 .post header,
 .post .post-body,
 .post .post-excerpt {
-  padding: 1em;
-  padding-bottom: 3em; }
+  padding: 20px;
+  padding-bottom: 40px; }
 
 .entry-title a {
   font-size: 36px;
