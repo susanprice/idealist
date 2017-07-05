@@ -1117,7 +1117,6 @@ blockquote {
     quotes: "\201C""\201D""\2018""\2019";
 }
 
-.format-quote p:before,
 blockquote:before {
     color: $silver;
     content: open-quote;
@@ -1127,7 +1126,6 @@ blockquote:before {
     vertical-align: -0.4em;
 }
 
-.format-quote p:after,
 blockquote:after {
     color: $silver;
     content: close-quote;
@@ -1135,6 +1133,11 @@ blockquote:after {
     line-height: .8em;
     margin-left: 0.25em;
     vertical-align: -0.4em;
+}
+
+.format-quote p:before,
+.format-quote p:after {
+   font-size: 5em;       
 }
 
 .format-quote p,

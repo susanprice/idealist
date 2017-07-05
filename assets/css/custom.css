@@ -876,7 +876,6 @@ p.not-found {
 blockquote {
   quotes: "“" "”" "‘" "’"; }
 
-.format-quote p:before,
 blockquote:before {
   color: #C0C0C0;
   content: open-quote;
@@ -885,7 +884,6 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em; }
 
-.format-quote p:after,
 blockquote:after {
   color: #C0C0C0;
   content: close-quote;
@@ -893,6 +891,10 @@ blockquote:after {
   line-height: .8em;
   margin-left: 0.25em;
   vertical-align: -0.4em; }
+
+.format-quote p:before,
+.format-quote p:after {
+  font-size: 5em; }
 
 .format-quote p,
 blockquote p {
