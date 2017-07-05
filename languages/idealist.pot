@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Idealist 1.0.4\n"
-"POT-Creation-Date: 2017-06-27 15:55-0700\n"
-"PO-Revision-Date: 2017-06-27 15:50-0700\n"
+"Project-Id-Version: Idealist 1.0.5\n"
+"POT-Creation-Date: 2017-07-05 14:56-0700\n"
+"PO-Revision-Date: 2017-07-05 14:53-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -54,24 +54,24 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:52
+#: functions.php:54
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:53
+#: functions.php:55
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:115
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:117
 msgid "Add widgets here."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:237
+#: functions.php:239
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -80,7 +80,7 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:116
+#: header.php:122
 msgid "Search ..."
 msgstr ""
 
@@ -282,7 +282,7 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: template-parts/content-full-post.php:41 template-parts/content-page.php:22
+#: template-parts/content-full-post.php:55 template-parts/content-page.php:22
 msgid "Pages:"
 msgstr ""
 
@@ -307,6 +307,12 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
+msgstr ""
+
+#. translators: %s: Name of current post
+#: template-parts/content.php:45
+#, php-format
+msgid "(more)<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #. Theme Name of the plugin/theme
