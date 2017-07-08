@@ -7,7 +7,7 @@
  * @package Idealist
  */
 
-define( 'IDEALIST_VERSION', '1.0.5' );
+define( 'IDEALIST_VERSION', '1.0.6' );
 
 if ( ! function_exists( 'idealist_setup' ) ) :
 /**
