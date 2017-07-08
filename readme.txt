@@ -1,10 +1,9 @@
 === Idealist ===
-
-Theme Name: Idealist
-Version: 1.0.4
+Contributors: susanprice
+Requires at least: WordPress 4.7
 Tested up to: WordPress 4.8
-
-Author: S. Price
+Version: 1.0.6
+Stable tag: 1.0.6
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor-style, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
@@ -18,6 +17,14 @@ Idealist is a minimalist WordPress theme for news, blogs, and other media rich s
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
+
+== Screenshots ==
+ 
+1. The screenshot contains the header image which is: assets/img/header.jpg.
+ 
+== Upgrade Notice ==
+ 
+for future use 
 
 == Credits & Copyrights ==
 
@@ -54,7 +61,7 @@ Roboto Font by Christian Robertson
 License: Apache License, version 2.0 http://www.apache.org/licenses/LICENSE-2.0
 Source: https://fonts.google.com/specimen/Roboto
 
-Idealist WordPress Theme, Copyright 2017 WPVisuals.com
+Idealist WordPress Theme, Copyright 2017 S. Price
 Idealist is distributed under the terms of GPLv2 or later
 
 == Changelog ==
@@ -105,3 +112,28 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: refactored custom.css
 - Improved: breakpoint for mobile menu toggle changed from 768px to 1400px
 - Improved: layout of page.php consistent with front page posts
+
+= 1.0.5 = 07-05-17
+- Added: tags, categories, and date (per settings) displayed in post
+- Added: a dismiss button in search entry field, on navbar
+- Added: theme version number to force updates
+- Added: more styles to editor-style.css
+- Improved: sticky posts dintinquished with bookmark icon
+- Improved: HTML tag styles updated for readability
+- Improved: front page based on the_content(), not the_excerpt()
+- Fixed: search widget button issues under WordPress 4.8
+- Fixed: starter content default styling
+- Fixed: front page handles 'more' tag 
+
+= 1.0.6 = 07-08-17
+- Added: post format styling for aside, image, link, quote & status
+- Improved: loading minified js
+
+
+
+
+
+
+
+
+
