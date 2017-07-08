@@ -214,7 +214,7 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/customizer.php';
 
 // Register custom navigation walker
-require_once get_template_directory() . '/inc/wp_bootstrap_navwalker.php';
+require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with ... and
