@@ -92,20 +92,17 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
                     </div> <!-- navbar-header -->
 
     				<?php
-
-                        if ( has_nav_menu( 'primary' ) ) {
-        		            wp_nav_menu( array(
-        		                'menu'              => 'primary',
-        		                'theme_location'    => 'primary',
-        		                'depth'             => 2,
-        		                'container'         => 'div',
-        		                'container_class'   => 'collapse navbar-collapse',
-        		        		'container_id'      => 'main-navbar-collapse-1',
-        		                'menu_class'        => 'nav navbar-nav',
-        		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-        		                'walker'            => new wp_bootstrap_navwalker())
-        		            );
-                        }    
+    		            wp_nav_menu( array(
+    		                'menu'              => 'primary',
+    		                'theme_location'    => 'primary',
+    		                'depth'             => 2,
+    		                'container'         => 'div',
+    		                'container_class'   => 'collapse navbar-collapse',
+    		        		'container_id'      => 'main-navbar-collapse-1',
+    		                'menu_class'        => 'nav navbar-nav',
+    		                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+    		                'walker'            => new WP_Bootstrap_Navwalker())
+    		            );
     		        ?>
                 </div>   
 
