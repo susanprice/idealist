@@ -91,6 +91,26 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
                         </a>
                     </div> <!-- navbar-header -->
 
+                    <!-- Display Search Icon -->
+                    <div class="pull-right nav-search">
+                        <button type="button" class="btn btn-default nav-search pull-right" onclick="showSearchInput()">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+
+                        <!-- Search Entry Form  -->
+                        <form id="full-search" action="<?php echo esc_url( home_url( '/') ); ?>">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <input class="full-search-input" id="search" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
+                                    <button type="button" class="fa fa-times close-icon close-button" onclick="hideSearchInput()">
+                                    </button>   
+                                </div>
+                            </div>
+                        </form>
+                    </div> 
+
+                    <div style="clear:both"></div>
+
     				<?php
     		            wp_nav_menu( array(
     		                'menu'              => 'primary',
@@ -106,23 +126,7 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
     		        ?>
                 </div>   
 
-                <!-- Display Search Icon -->
-                <div class="pull-right nav-search">
-                    <button type="button" class="btn btn-default nav-search pull-right" onclick="showSearchInput()">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </button>
-
-                    <!-- Search Entry Form  -->
-                    <form id="full-search" action="<?php echo esc_url( home_url( '/') ); ?>">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <input class="full-search-input" id="search" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
-                                <button type="button" class="fa fa-times close-icon close-button" onclick="hideSearchInput()">
-                                </button>   
-                            </div>
-                        </div>
-                    </form>
-                </div> 
+               
 			</div><!-- /.container-fluid -->
         </nav>
     </div>
