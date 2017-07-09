@@ -390,8 +390,8 @@ article,
 .nav-search {
     border: 0;
     color: $black;
-    margin-top: -18px;
-    padding-right: 5px;
+    margin-top: 7px;
+    padding-right: 10px;
 }
 
 .nav-search:hover {
@@ -1584,7 +1584,8 @@ section.main-content {
     .collapse.in {
         display: block !important;
     } 
-    //.entry-title a {
-    //    font-size: 30px;
-    //}  
+    .nav-search {
+        margin-top: -18px;
+    } 
 }
+

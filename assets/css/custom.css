@@ -268,8 +268,8 @@ article,
 .nav-search {
   border: 0;
   color: #000000;
-  margin-top: -18px;
-  padding-right: 5px; }
+  margin-top: 7px;
+  padding-right: 10px; }
 
 .nav-search:hover {
   background-color: #FFFFFF; }
@@ -1223,4 +1223,7 @@ section.feature-image {
     padding-bottom: 10px; }
 
   .collapse.in {
-    display: block !important; } }
+    display: block !important; }
+
+  .nav-search {
+    margin-top: -18px; } }
