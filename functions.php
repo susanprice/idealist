@@ -236,12 +236,3 @@ function idealist_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
 
-// Remove admin bar on backend
- 
-// remove admin bar entirely - best for design
-// add_filter( 'show_admin_bar', '__return_false' );
-
-// keep admin bar, but remove extra margin
-// add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
-
-
