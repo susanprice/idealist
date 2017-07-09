@@ -1189,7 +1189,7 @@ section.feature-image {
 @media (min-width: 992px) {
   p.site-description {
     display: inline; } }
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .navbar-header {
     float: none; }
 
