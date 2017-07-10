@@ -588,6 +588,11 @@ button {
 # Navigation
 --------------------------------------------------------------*/
 
+.primary-navigation {
+    padding-top: 20px;
+    background-color: white;
+}    
+
 .navbar {
     @include x-border-radius(0);
     margin: 30px 0;
