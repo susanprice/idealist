@@ -192,10 +192,6 @@ a:hover {
 body {
   background: #FFFFFF; }
 
-header#masthead,
-header#masthead.site-header {
-  background-color: #FFFFFF; }
-
 blockquote:before,
 blockquote:after {
   content: ""; }
