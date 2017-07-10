@@ -23,7 +23,6 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'idealist' ); ?></a>
 
-
 <!-- CUSTOM LOGO
 ================================================== -->
 <?php
@@ -58,80 +57,72 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 
 <!-- HEADER
 ================================================== -->
-<header id="masthead" class="site-header">
-    <div class="navbar-wrapper">
-        <nav class="navbar" role="navigation">
-            <div class="container-fluid">
-                <div class="row">
+<div class="container-fluid primary-navigation" role="main"">
+
+    <!-- Header: Logo, Title, and Tagline -->
+    <div class="site-header" > 
+        <?php the_custom_logo(); ?>
+
+        <div class="site-branding-text">
+            <h1 class="site-title identity"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+
+            <?php
+            $description = get_bloginfo( 'description', 'display' );
+            if ( $description || is_customize_preview() ) :
+                ?>
+                <p class="site-description"><?php echo $description; ?></p>
+            <?php endif; ?>
+        </div><!-- .site-branding-text -->
+    </div><!-- .site-header -->
+
+    <!-- Menus: Mobile, Fullsize, and Search -->
+    <div class="main-menu" >
+        <nav id="site-navigation" class="navbar">     
+            <div class="container">
+                <?php if ( has_nav_menu( 'primary' ) ) : ?>
                     <div class="navbar-header">
-
-                        <!-- Mobile Menu -->
-                        <?php
-                            if ( has_nav_menu( 'primary' ) ) {
-                                ?>
-                                <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#main-navbar-collapse-1" aria-expanded="false">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                    <span class="icon-bar"></span>
-                                </button>
-                            <?php        
-                            }
-                            ?> 
-                        
-                        <!-- Display Custom Logo, Site Title, and Tagline -->
-                        <a class="navbar-brand side-by-side" href="<?php echo esc_url( home_url() ); ?>">
-                            <?php
-                                if ( has_custom_logo() ) {
-                                   echo '<img class="custom-logo" src="'. esc_url( $idealist_logo_image[0] ) .'">';
-                                }
-                                echo '<h1 class="site-title">'. esc_attr( get_bloginfo( 'name' ) ) .'</h1>';
-                                echo '<p class="site-description">' . esc_attr( get_bloginfo( 'description', 'display' ) ) .'</p>';
-                            ?>
-                        </a>
-                    </div> <!-- navbar-header -->
-
-                    <!-- Display Search Icon -->
-                    <div class="pull-right nav-search">
-                        <button type="button" class="btn btn-default nav-search pull-right" onclick="showSearchInput()">
-                            <i class="fa fa-search" aria-hidden="true"></i>
+                        <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target=".main-navbar-collapse-1">
+                            <span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'idealist' ); ?></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </button>
+                    </div>
+                <?php endif; ?>
+                <?php
+                wp_nav_menu( array(
+                    'theme_location'    => 'primary',
+                    'depth'             => 3,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse main-navbar-collapse-1',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new WP_Bootstrap_Navwalker()
+                ) );
+                ?>
+                
+                <!-- Display Search Icon -->
+                <div class="pull-right nav-search">
+                    <button type="button" class="btn btn-default nav-search pull-right" onclick="showSearchInput()">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
 
-                        <!-- Search Entry Form  -->
-                        <form id="full-search" action="<?php echo esc_url( home_url( '/') ); ?>">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <input class="full-search-input" id="search" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
-                                    <button type="button" class="fa fa-times close-icon close-button" onclick="hideSearchInput()">
-                                    </button>   
-                                </div>
+                    <!-- Search Entry Form  -->
+                    <form id="full-search" action="<?php echo esc_url( home_url( '/') ); ?>">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <input class="full-search-input" id="search" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
+                                <button type="button" class="fa fa-times close-icon close-button" onclick="hideSearchInput()">
+                                </button>   
                             </div>
-                        </form>
-                    </div> 
-
-                    <div style="clear:both"></div>
-
-    				<?php
-    		            wp_nav_menu( array(
-    		                'menu'              => 'primary',
-    		                'theme_location'    => 'primary',
-    		                'depth'             => 2,
-    		                'container'         => 'div',
-    		                'container_class'   => 'collapse navbar-collapse',
-    		        		'container_id'      => 'main-navbar-collapse-1',
-    		                'menu_class'        => 'nav navbar-nav',
-    		                'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-    		                'walker'            => new WP_Bootstrap_Navwalker())
-    		            );
-    		        ?>
-                </div>   
-
-               
-			</div><!-- /.container-fluid -->
-        </nav>
+                        </div>
+                    </form>
+                </div> 
+            </div> 
+        </nav> 
     </div>
-</header>
-
+</div><!-- /.container-fluid -->
+      
 <!-- CUSTOM HEADER
 ================================================== -->
 <?php if ( get_header_image() ) : ?>
