@@ -191,6 +191,9 @@ a:hover {
 *:after {
   box-sizing: inherit; }
 
+#content a {
+  text-decoration: underline; }
+
 a:hover {
   text-decoration: underline; }
 
