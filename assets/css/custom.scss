@@ -191,6 +191,12 @@ big {
     text-align: center;
 }
 
+.identity {
+    margin: 0;
+    padding: 0;
+    width: auto auto;
+}
+
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
@@ -356,7 +362,7 @@ img {
 
 img.custom-logo {
     height: 50px;
-    width: 50px;
+    width: auto;
 }
 
 figure {
@@ -634,7 +640,6 @@ button {
 
 .site-title {
     font-size: $main-title-size;
-    margin: auto 1px;
 }
 
 p.site-description {
