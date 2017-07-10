@@ -264,7 +264,7 @@ article,
 .nav-search {
   border: 0;
   color: #000000;
-  margin-top: 7px;
+  margin-top: -20px;
   padding-right: 10px; }
 
 .nav-search:hover {
@@ -434,6 +434,10 @@ button {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+.primary-navigation {
+  padding-top: 20px;
+  background-color: white; }
+
 .navbar {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -453,7 +457,7 @@ button {
 
 .navbar-nav a,
 .navbar-default .navbar-nav > li > a {
-  color: #D3D3D3;
+  color: #000000;
   font-family: Roboto, sans-serif;
   text-transform: uppercase; }
 
@@ -1177,9 +1181,6 @@ section.feature-image {
 # Media Queries
 --------------------------------------------------------------*/
 @media (min-width: 768px) {
-  .container {
-    padding: 1.2em; }
-
   .navbar > .container-fluid .navbar-brand {
     margin: auto 10%; } }
 @media (min-width: 992px) {
