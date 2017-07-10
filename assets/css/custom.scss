@@ -302,11 +302,6 @@ body {
     // Fallback for when there is no custom background color defined.
 }
 
-header#masthead,
-header#masthead.site-header {
-    background-color: $white;
-}
-
 blockquote:before,
 blockquote:after {
     content: "";
