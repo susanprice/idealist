@@ -1187,26 +1187,22 @@ blockquote:after {
 
 // Post Formats
 
-.format-aside .post-title,
 .format-aside .post-details,
 .format-aside .post-footer,
 .format-aside .post-comments-badge,
-.format-image .post-title,
 .format-image .post-details,
 .format-image .post-footer,
 .format-image .post-comments-badge,
-.format-link .post-title,
 .format-link .post-details,
 .format-link .post-footer,
 .format-link .post-comments-badge,
-.format-quote .post-title,
 .format-quote .post-details,
 .format-quote .post-footer,
 .format-quote .post-comments-badge,
-.format-status .post-title,
 .format-status .post-details,
 .format-status .post-footer,
-.format-status .post-comments-badge {
+.format-status .post-comments-badge 
+{
     display:none;
 }
 
@@ -1219,7 +1215,8 @@ blockquote:after {
 .format-quote header,
 .format-quote p,
 .format-status header,
-.format-status p {
+.format-status p 
+{
     margin: 0;
     padding: 0;
 }
