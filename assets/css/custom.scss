@@ -271,15 +271,6 @@ strong {
     font-weight: 400;
 }
 
-a:link,
-a:visited {
-    color: $black;
-}
-
-a:hover {
-    color: $charcoal;
-    text-decoration: none;
-}
 
 /*--------------------------------------------------------------
 # Elements
@@ -293,13 +284,9 @@ a:hover {
     box-sizing: inherit;
 }
 
-#content a {
-    text-decoration: underline;
-}
-
-a:hover {
-    text-decoration: underline;    
-}
+//a:hover {
+//    text-decoration: underline;    
+//}
 
 body {
     background: $white;
@@ -606,10 +593,12 @@ button {
     height: 50px; // needed for empty menu
 }
 
+// not using navbar-brand class 7/13/17
 .navbar-header>a.navbar-brand>img {
     display: inline;
 }
 
+// nav is html element AND navwalker class
 .nav>li>a:focus,
 .nav>li>a:hover {
     background-color: $white;
@@ -628,12 +617,21 @@ button {
     color: $gray;
 }
 
+.navbar-nav a:visited,
+.navbar-default .navbar-nav>li>a:visited {
+    //color: $red;
+}
+
 .navbar-nav>li>a:active {
     color: $gray;
 }
 
 .current-menu-item>a {
     color: $black;
+}
+
+.navbar-nav>li>a:visited {
+    //color: $red;
 }
 
 .site-title {
@@ -672,6 +670,31 @@ a.navbar-brand {
 
 span.icon-bar {
     background-color: $light-gray;
+}
+
+// test
+
+.dropdown {
+    // border: 1px solid red;
+}
+
+// box-shadow is needed and default via bootstrap class dropdown-menu 
+.navbar .dropdown-menu {
+  border: 0;
+  //-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.dropdown-menu>li>a {
+    color: $black;
+    font-weight: 300;
+}
+
+.dropdown-menu>li>a:focus, 
+.dropdown-menu>li>a:hover {
+    background-color: $white;
+    // color: $charcoal;
+    color: $gray;
 }
 
 // Next & Previous
@@ -720,23 +743,31 @@ footer .navbar {
 --------------------------------------------------------------*/
 
 a {
-    color: $black;
+    color: $charcoal;
     font-family: $font-stack;
-}
-
-a:visited {
-    color: $black;
-}
-
-a:active,
-a:focus,
-a:hover {
-    color: $black;
-    outline: 0;    
+    text-decoration: none;
 }
 
 a:focus {
-    // outline: thin dotted;
+    outline: 0;    
+}
+
+a:hover {
+    text-decoration: underline;    
+}
+
+a:active {
+    color: $charcoal;
+    text-decoration: none;
+}
+
+a:visited {
+    //color: $black;
+    //color: $red;    
+}
+
+.entry-content a {
+    text-decoration: underline;
 }
 
 footer li.active a {
@@ -1294,7 +1325,7 @@ a.more-link span {
     border-radius: 100%;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;    
-    border: 1px solid $silver;
+    border: 1px solid $charcoal;
     display: table;
     height: 50px;
     position: absolute;
@@ -1305,7 +1336,7 @@ a.more-link span {
 }
 
 .post-comments-badge a {
-    color: $silver;
+    color: $charcoal;
     display: table-cell;
     font-size: 20px;
     line-height: 20px;
@@ -1320,7 +1351,12 @@ a.more-link span {
 }
 
 .post-comments-badge:hover {
-    background-color: $light-gray;
+    border-color: $silver;
+    text-decoration: none;
+}
+
+.post-comments-badge a:hover {
+    text-decoration: none;
 }
 
 .children {

@@ -175,14 +175,6 @@ p {
 strong {
   font-weight: 400; }
 
-a:link,
-a:visited {
-  color: #000000; }
-
-a:hover {
-  color: #373737;
-  text-decoration: none; }
-
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -190,12 +182,6 @@ a:hover {
 *:before,
 *:after {
   box-sizing: inherit; }
-
-#content a {
-  text-decoration: underline; }
-
-a:hover {
-  text-decoration: underline; }
 
 body {
   background: #FFFFFF; }
@@ -511,6 +497,18 @@ a.navbar-brand {
 span.icon-bar {
   background-color: #D3D3D3; }
 
+.navbar .dropdown-menu {
+  border: 0; }
+
+.dropdown-menu > li > a {
+  color: #000000;
+  font-weight: 300; }
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  background-color: #FFFFFF;
+  color: #808080; }
+
 .nav-links {
   height: 30px;
   margin: 20px; }
@@ -547,17 +545,22 @@ footer .navbar {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #000000;
-  font-family: Roboto, sans-serif; }
+  color: #373737;
+  font-family: Roboto, sans-serif;
+  text-decoration: none; }
 
-a:visited {
-  color: #000000; }
-
-a:active,
-a:focus,
-a:hover {
-  color: #000000;
+a:focus {
   outline: 0; }
+
+a:hover {
+  text-decoration: underline; }
+
+a:active {
+  color: #373737;
+  text-decoration: none; }
+
+.entry-content a {
+  text-decoration: underline; }
 
 footer li.active a {
   color: #FFFFFF; }
@@ -1011,7 +1014,7 @@ blockquote:after {
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #373737;
   display: table;
   height: 50px;
   position: absolute;
@@ -1021,7 +1024,7 @@ blockquote:after {
   width: 50px; }
 
 .post-comments-badge a {
-  color: #C0C0C0;
+  color: #373737;
   display: table-cell;
   font-size: 20px;
   line-height: 20px;
@@ -1034,7 +1037,11 @@ blockquote:after {
   margin-bottom: 4px; }
 
 .post-comments-badge:hover {
-  background-color: #D3D3D3; }
+  border-color: #C0C0C0;
+  text-decoration: none; }
+
+.post-comments-badge a:hover {
+  text-decoration: none; }
 
 .children {
   list-style: none; }
