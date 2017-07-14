@@ -359,6 +359,10 @@ table {
     width: 100%;
 }
 
+th {
+    padding: 10px;
+}
+
 article,
 .panel {
     @include x-border-radius(10px);
