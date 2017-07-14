@@ -1233,3 +1233,18 @@ section.feature-image {
 
   .nav-search {
     margin-top: -18px; } }
+@media print {
+  body {
+    background: white;
+    color: #000000;
+    margin: 0; }
+
+  #header,
+  #content {
+    display: block; }
+
+  #comments,
+  #sidebar,
+  #footer,
+  .nav-links {
+    display: none; } }

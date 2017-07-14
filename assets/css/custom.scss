@@ -1586,7 +1586,6 @@ section.main-content {
 @media (min-width: 1200px) {
 }
 
-
 // set breakpoint for mobile menu collapse
 @media (max-width: 1200px) {
     .navbar-header {
@@ -1629,3 +1628,21 @@ section.main-content {
     } 
 }
 
+// Print Styles
+@media print {
+    body { 
+        background:white; 
+        color: $black; 
+        margin:0; 
+    }
+    #header,
+    #content { 
+        display: block;
+    }
+    #comments,
+    #sidebar,
+    #footer,
+    .nav-links { 
+        display: none;
+    }
+}
