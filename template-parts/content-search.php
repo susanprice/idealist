@@ -41,10 +41,7 @@
 	
 	<!--  display tags and categories -->	
 	<div class="post-footer">
-		<i class="fa fa-folder"></i> <?php the_category(', ') ?>
-        <?php if ( has_tag( ) ) { ?>
-        	<i class="fa fa-tags"></i> <?php the_tags(' ') ?>
-        <?php } ?>
+		<?php idealist_post_footer(); ?>
 	</div><!-- post-footer -->
 	
 
