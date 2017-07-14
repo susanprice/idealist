@@ -238,6 +238,9 @@ table {
   margin: 0 0 1.5em;
   width: 100%; }
 
+th {
+  padding: 10px; }
+
 article,
 .panel {
   -webkit-border-radius: 10px;
@@ -636,21 +639,6 @@ footer li.active a {
   -ms-box-align: center;
   -ms-flex-align: center; }
 
-/*
-.col-centered {
-    float: none;
-    margin: 0 auto;
-}
-
-.center {
-    @include x-display-center();
-}
-
-.vcenter p {
-    margin: 0;
-    vertical-align: middle;
-}
-*/
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -984,6 +972,11 @@ blockquote:after {
   content: "";
   display: block;
   margin-top: 1.5em; }
+
+.archive-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column; }
 
 /*--------------------------------------------------------------
 ## Comments
