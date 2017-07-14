@@ -859,21 +859,6 @@ footer li.active a {
     @include x-align-items(center);
 }
 
-/*
-.col-centered {
-    float: none;
-    margin: 0 auto;
-}
-
-.center {
-    @include x-display-center();
-}
-
-.vcenter p {
-    margin: 0;
-    vertical-align: middle;
-}
-*/
 
 /*--------------------------------------------------------------
 # Clearings
