@@ -207,6 +207,9 @@ add_action( 'wp_enqueue_scripts', 'idealist_scripts' );
 // Add "Header Image" option in the Customizer
 require get_template_directory() . '/inc/custom-header.php';
 
+// Additional features to allow styling of the templates
+require get_template_directory() . '/inc/template-functions.php';
+
 // Custom template tags for this theme
 require get_template_directory() . '/inc/template-tags.php';
 
