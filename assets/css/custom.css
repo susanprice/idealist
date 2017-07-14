@@ -698,6 +698,9 @@ aside ul {
   margin-left: 0;
   padding-left: 0; }
 
+aside .widget_nav_menu ul {
+  margin-left: 10px; }
+
 aside li {
   list-style: none; }
 
