@@ -1232,7 +1232,17 @@ section.feature-image {
     display: block !important; }
 
   .nav-search {
-    margin-top: -18px; } }
+    margin-top: -18px; }
+
+  .navbar-nav .open .dropdown-menu {
+    background-color: transparent;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: none;
+    margin-top: 0;
+    position: static;
+    width: auto; } }
 @media print {
   body {
     background: white;

@@ -1625,7 +1625,17 @@ section.main-content {
     } 
     .nav-search {
         margin-top: -18px;
-    } 
+    }
+    .navbar-nav .open .dropdown-menu {
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        float: none;
+        margin-top: 0;                    
+        position: static;
+        width: auto;
+    }
 }
 
 // Print Styles
