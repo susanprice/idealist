@@ -68,10 +68,10 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 
             <?php
             $description = get_bloginfo( 'description', 'display' );
-            if ( $description || is_customize_preview() ) :
-                ?>
-                <p class="site-description"><?php echo $description; ?></p>
-            <?php endif; ?>
+            if ( $description || is_customize_preview() ) {
+                echo '<p class="site-description">' . esc_attr( $description ) .'</p>';
+                }
+            ?>    
         </div><!-- .site-branding-text -->
     </div><!-- .site-header -->
 
