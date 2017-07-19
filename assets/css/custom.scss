@@ -1273,10 +1273,17 @@ blockquote:after {
 
 // More tag 
 
+#content a.more-link {
+    background-color: $charcoal;
+    color: white;
+    display: inline-block;
+    padding: 10px 20px;    
+    text-decoration: none;
+}    
+
 .entry-content .more-link:before {
     content: "";
     display: block;
-    margin-top: 1.5em;
 }
 
 a.more-link span {
