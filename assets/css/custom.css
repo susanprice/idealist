@@ -769,6 +769,13 @@ a.social-icon {
   font-size: 14px;
   word-wrap: break-word; }
 
+#secondary section.widget_media_image {
+  text-align: center; }
+
+.text-image-widget {
+  text-align: center;
+  margin-bottom: 40px; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -816,7 +823,7 @@ a.social-icon {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-bottom: 2em; }
+  margin-top: 50px; }
 
 .post-body {
   margin-bottom: 1em; }
@@ -971,10 +978,16 @@ blockquote:after {
 .post-footer {
   padding: 40px 20px; }
 
+#content a.more-link {
+  background-color: #373737;
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none; }
+
 .entry-content .more-link:before {
   content: "";
-  display: block;
-  margin-top: 1.5em; }
+  display: block; }
 
 .archive-header {
   align-items: center;
@@ -1131,6 +1144,9 @@ img.post {
 
 section.feature-image {
   margin-bottom: 20px; }
+
+.round {
+  border-radius: 100px; }
 
 /*--------------------------------------------------------------
 ## Captions
