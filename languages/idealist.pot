@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Idealist 1.0.6\n"
-"POT-Creation-Date: 2017-07-08 12:12-0700\n"
-"PO-Revision-Date: 2017-07-08 12:11-0700\n"
+"Project-Id-Version: Idealist 1.0.7\n"
+"POT-Creation-Date: 2017-07-13 21:52-0700\n"
+"PO-Revision-Date: 2017-07-13 21:51-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -67,11 +67,13 @@ msgid "Primary Sidebar"
 msgstr ""
 
 #: functions.php:117
-msgid "Add widgets here."
+msgid ""
+"Add widgets here to display on the right side of your posts. This sidebar is "
+"displayed on the Front Page by default, and with the Two Panel Template."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:233
+#: functions.php:236
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
@@ -80,7 +82,11 @@ msgstr ""
 msgid "Skip to content"
 msgstr ""
 
-#: header.php:122
+#: header.php:85
+msgid "Toggle navigation"
+msgstr ""
+
+#: header.php:114
 msgid "Search ..."
 msgstr ""
 
@@ -267,10 +273,6 @@ msgstr ""
 msgid "Edit %s"
 msgstr ""
 
-#: inc/wp_bootstrap_navwalker.php:197
-msgid " "
-msgstr ""
-
 #. translators: displays search term entered
 #: search.php:17
 #, php-format
@@ -282,7 +284,7 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: template-parts/content-full-post.php:55 template-parts/content-page.php:22
+#: template-parts/content-full-post.php:52 template-parts/content-page.php:22
 msgid "Pages:"
 msgstr ""
 
