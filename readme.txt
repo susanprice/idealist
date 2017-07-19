@@ -129,11 +129,21 @@ Idealist is distributed under the terms of GPLv2 or later
 - Added: post format styling for aside, image, link, quote & status
 - Improved: loading minified js
 
-
-
-
-
-
-
+= 1.0.7 = 07-14-17
+- Added: print styles
+- Added: search form to 404 page
+- Improved: increased table padding
+- Improved: links (in entry-content) are underlined by default
+- Improved: mobile breakpoint changed from 1400px to 1200px
+- Improved: menu dropdown styles change at 1200px (mobile breakpoint)
+- Improved: custom menu in sidebar shows structure, with slight indentation
+- Improved: primary menu displays under left-aligned title/description
+- Improved: archive description is centered
+- Improved: upgraded wp-bootstrap-navwalker from 2.0.4 to 2.0.5
+- Improved: all post formats display the title
+- Fixed: primary menu handles long titles and menus, without overlap 
+- Fixed: 'Add a Menu' displays if no menu is assigned to primary
+- Fixed: comments display on static pages 
+- Fixed: file folders display in post footer only if at least one category
 
 
