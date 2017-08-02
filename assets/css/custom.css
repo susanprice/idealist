@@ -432,7 +432,7 @@ button {
 # Navigation
 --------------------------------------------------------------*/
 .primary-navigation {
-  padding-top: 20px;
+  padding-top: 10px;
   background-color: white; }
 
 .navbar {
@@ -952,7 +952,8 @@ blockquote:after {
   quotes: "“" "”" "‘" "’"; }
 
 .format-quote p {
-  display: inline; }
+  font-size: 26px;
+  margin-top: 30px; }
 
 .format-quote p:before {
   color: #C0C0C0;
@@ -978,16 +979,20 @@ blockquote:after {
 .post-footer {
   padding: 40px 20px; }
 
+.entry-content .more-link:before {
+  content: "";
+  display: block; }
+
 #content a.more-link {
   background-color: #373737;
   color: white;
   display: inline-block;
   padding: 10px 20px;
-  text-decoration: none; }
+  text-decoration: none;
+  text-transform: uppercase; }
 
-.entry-content .more-link:before {
-  content: "";
-  display: block; }
+#content a.more-link:hover {
+  color: red; }
 
 .archive-header {
   align-items: center;
