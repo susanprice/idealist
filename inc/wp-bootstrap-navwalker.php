@@ -200,7 +200,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 
 				if ( $container ) {
 					echo '<' . esc_attr( $container );
-					if ( $container_id ) {
+					if (  wp_kses ($container_id) ) {
 						echo ' id="' . esc_attr( $container_id ) . '"';
 					}
 					if ( $container_class ) {
