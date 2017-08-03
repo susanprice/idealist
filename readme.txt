@@ -2,8 +2,7 @@
 Contributors: susanprice
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.8
-Version: 1.0.6
-Stable tag: 1.0.6
+Version: 1.0.8
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor-style, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
@@ -11,6 +10,8 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor
 == Description ==
 
 Idealist is a minimalist WordPress theme for news, blogs, and other media rich sites. It was designed to be fast, clean, highly readable, easy to use, and customizable.
+
+Menus to two levels deep.
 
 == Installation ==
 
@@ -145,5 +146,10 @@ Idealist is distributed under the terms of GPLv2 or later
 - Fixed: 'Add a Menu' displays if no menu is assigned to primary
 - Fixed: comments display on static pages 
 - Fixed: file folders display in post footer only if at least one category
+
+= 1.0.8 = 08-03-17
+- Improved: styling of "MORE" link 
+- Improved: using get_theme_file_uri() to load header graphic
+
 
 
