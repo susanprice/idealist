@@ -353,7 +353,8 @@ textarea {
   width: 100%; }
 
 textarea#comment {
-  height: 200px; }
+  height: 200px;
+  word-wrap: break-word; }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -872,7 +873,8 @@ a.social-icon {
   display: inline; }
 
 #content p {
-  line-height: 1.8em; }
+  line-height: 1.8em;
+  word-wrap: break-word; }
 
 .page-content,
 .entry-content,
