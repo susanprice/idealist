@@ -484,6 +484,7 @@ textarea {
 
 textarea#comment {
     height: 200px;
+    word-wrap: break-word;
 }
 
 input[type="text"]:focus,
@@ -1140,6 +1141,7 @@ a.social-icon {
 
 #content p {
     line-height: 1.8em;
+    word-wrap: break-word;
 }
 
 .page-content,
