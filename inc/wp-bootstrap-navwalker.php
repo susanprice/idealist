@@ -191,32 +191,46 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 		public static function fallback( $args ) {
 			if ( current_user_can( 'edit_theme_options' ) ) {
 
-				/* Get Arguments. */
-				$container = $args['container'];
-				$container_id = $args['container_id'];
-				$container_class = $args['container_class'];
-				$menu_class = $args['menu_class'];
-				$menu_id = $args['menu_id'];
+				extract( $args );
+
+				$fb_output = null;
 
 				if ( $container ) {
-					echo '<' . esc_attr( $container );
-					if (  wp_kses ($container_id) ) {
-						echo ' id="' . esc_attr( $container_id ) . '"';
-					}
-					if ( $container_class ) {
-						echo ' class="' . sanitize_html_class( $container_class ) . '"'; }
-					echo '>';
+					$fb_output = '<' . $container;
+
+					if ( $container_id )
+						$fb_output .= ' id="' . $container_id . '"';
+
+					if ( $container_class )
+						$fb_output .= ' class="' . $container_class . '"';
+
+					$fb_output .= '>';
 				}
-				echo '<ul';
-				if ( $menu_id ) {
-					echo ' id="' . esc_attr( $menu_id ) . '"'; }
-				if ( $menu_class ) {
-					echo ' class="' . esc_attr( $menu_class ) . '"'; }
-				echo '>';
-				echo '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '" title="">' . esc_attr( 'Add a menu', 'idealist' ) . '</a></li>';
-				echo '</ul>';
-				if ( $container ) {
-					echo '</' . esc_attr( $container ) . '>'; }
+
+				$fb_output .= '<ul';
+
+				if ( $menu_id )
+					$fb_output .= ' id="' . $menu_id . '"';
+
+				if ( $menu_class )
+					$fb_output .= ' class="' . $menu_class . '"';
+
+				$fb_output .= '>';
+				$fb_output .= '<li><a href="' . esc_url( admin_url( 'nav-menus.php' ) ) . '">'. esc_html__('Add a menu', 'idealist') .'</a></li>';
+
+				$fb_output .= '</ul>';
+
+				if ( $container )
+					$fb_output .= '</' . $container . '>';
+
+				$allowed_html = array(
+					'a' => array( 'href' => array(), ),
+					'div' => array( 'id' => array(), 'class' => array(), ),
+					'ul' => array( 'class' => array() ),
+					'li' => array(),
+				);
+
+				echo wp_kses( $fb_output, $allowed_html );	
 			}
 		}
 	}
