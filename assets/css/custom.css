@@ -1001,6 +1001,10 @@ blockquote:after {
   display: flex;
   flex-direction: column; }
 
+.archive-description p {
+  font-size: 24px;
+  text-align: center; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
