@@ -147,7 +147,7 @@ Idealist is distributed under the terms of GPLv2 or later
 - Fixed: comments display on static pages 
 - Fixed: file folders display in post footer only if at least one category
 
-= 1.0.8 = 08-03-17
+= 1.0.8 = 08-04-17
 - Improved: styling of "MORE" link 
 - Improved: using get_theme_file_uri() to load header graphic
 
