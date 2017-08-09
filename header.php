@@ -57,10 +57,10 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 
 <!-- HEADER
 ================================================== -->
-<div class="container-fluid primary-navigation" role="main"">
+<div class="container-fluid primary-navigation" role="main">
 
     <!-- Header: Logo, Title, and Tagline -->
-    <div class="site-header text-center" > 
+    <div class="site-header text-center"> 
         <?php the_custom_logo(); ?>
 
         <div class="site-branding-text">
