@@ -28,9 +28,9 @@
 
 $white: #FFFFFF;
 $paper: #F4F4F4;
-$light-gray: #D3D3D3;
-$silver: #C0C0C0;
-$dark-gray: #A9A9A9;
+$light-gray: #D3D3D3;   // default border color
+$silver: #C0C0C0;      
+$dark-gray: #A9A9A9;    // default hover color
 $gray: #808080;
 $charcoal: #373737;
 $light-slate-gray: #778899;
@@ -434,15 +434,18 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    background: $light-gray;
-    border: 1px solid;
-    border-color: $silver;
-    border-radius: 3px;
-    color: $black-alpha;
-    font-size: 12px;
-    font-size: 0.75rem;
-    line-height: 1;
-    padding: .6em 1em .4em;
+    background: $white;
+    border: 1px solid $light-gray;
+    @include x-border-radius(10px);    
+    color: $black;
+    font-size: $main-text-size;
+}
+
+// full-width buttons only (not navbar buttons)
+input[type="reset"],
+input[type="submit"] {
+    height: 50px;  
+    width: 100%;   
 }
 
 button:hover,
@@ -505,21 +508,6 @@ form label {
     display: block; // contact form labels full-width of panel    
 }
 
-// search button
-input[type="submit"],
-button[type="submit"] {
-    background: $white;
-    color: $light-gray;
-    font-size: $main-text-size;
-    height: 50px;
-    width: 100%;
-}
-
-input[type="submit"]:hover,
-button[type="submit"]:hover {
-    color: $black;
-}
-
 .form-submit,
 .send-button {
     @include x-border-radius(10px);
@@ -568,15 +556,6 @@ button[type="submit"]:hover {
 
 .comment-form-author {
     margin-top: .1em;
-}
-
-input[type="button" i],
-input[type="submit" i],
-input[type="reset" i],
-input[type="file" i]::-webkit-file-upload-button,
-button {
-    border-radius: 10px;
-    border-width: 1px;
 }
 
 

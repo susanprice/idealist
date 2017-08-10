@@ -304,15 +304,19 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background: #D3D3D3;
-  border: 1px solid;
-  border-color: #C0C0C0;
-  border-radius: 3px;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: .6em 1em .4em; }
+  background: #FFFFFF;
+  border: 1px solid #D3D3D3;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 14px; }
+
+input[type="reset"],
+input[type="submit"] {
+  height: 50px;
+  width: 100%; }
 
 button:hover,
 input[type="button"]:hover,
@@ -371,18 +375,6 @@ label {
 form label {
   display: block; }
 
-input[type="submit"],
-button[type="submit"] {
-  background: #FFFFFF;
-  color: #D3D3D3;
-  font-size: 14px;
-  height: 50px;
-  width: 100%; }
-
-input[type="submit"]:hover,
-button[type="submit"]:hover {
-  color: #000000; }
-
 .form-submit,
 .send-button {
   -webkit-border-radius: 10px;
@@ -420,14 +412,6 @@ button[type="submit"]:hover {
 
 .comment-form-author {
   margin-top: .1em; }
-
-input[type="button" i],
-input[type="submit" i],
-input[type="reset" i],
-input[type="file" i]::-webkit-file-upload-button,
-button {
-  border-radius: 10px;
-  border-width: 1px; }
 
 /*--------------------------------------------------------------
 # Navigation
