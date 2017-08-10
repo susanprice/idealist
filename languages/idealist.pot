@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Idealist 1.0.8\n"
-"POT-Creation-Date: 2017-08-03 15:39-0700\n"
-"PO-Revision-Date: 2017-08-03 15:38-0700\n"
+"Project-Id-Version: Idealist 1.0.9\n"
+"POT-Creation-Date: 2017-08-10 13:05-0700\n"
+"PO-Revision-Date: 2017-08-10 13:04-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -271,6 +271,10 @@ msgstr ""
 #: inc/template-tags.php:74 template-parts/content-page.php:34
 #, php-format
 msgid "Edit %s"
+msgstr ""
+
+#: inc/wp-bootstrap-navwalker.php:219
+msgid "Add a menu"
 msgstr ""
 
 #. translators: displays search term entered
