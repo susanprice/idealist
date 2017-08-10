@@ -2,7 +2,7 @@
 Contributors: susanprice
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.8
-Version: 1.0.8
+Version: 1.0.9
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor-style, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
@@ -151,5 +151,6 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: styling of "MORE" link 
 - Improved: using get_theme_file_uri() to load header graphic
 
-
+= 1.0.9 = 08-010-17
+- Improved: increased button text contrast for accessibility
 
