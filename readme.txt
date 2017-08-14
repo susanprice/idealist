@@ -151,6 +151,10 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: styling of "MORE" link 
 - Improved: using get_theme_file_uri() to load header graphic
 
-= 1.0.9 = 08-010-17
-- Improved: increased button text contrast for accessibility
+= 1.0.9 = 08-011-17
+- Improved: new screenshot.jpg
+- Improved: button text darker
+- Improved: post headings smaller on mobile 
+- Fixed: search icon in navbar white background
+- Fixed: custom header image margins (0,0,30px,0)
 
