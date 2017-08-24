@@ -42,7 +42,7 @@
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post */				
-				__( '(more)<span class="screen-reader-text"> "%s"</span>', 'idealist' ),
+				__( 'more<span class="screen-reader-text"> "%s"</span>', 'idealist' ),
 			get_the_title()
 			) );
 		?>
