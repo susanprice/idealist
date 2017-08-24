@@ -1600,22 +1600,22 @@ section.main-content {
 --------------------------------------------------------------*/
 
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
     .entry-title a {
         font-size: 30px;
     }
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) and (max-width: 767px) {
+// Small devices (landscape phones, 576px - 767px)
+@media screen and (min-width: 576px) and (max-width: 767px) {
     .entry-title a {
         font-size: 32px;
     }
 }
 
-// Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) and (max-width: 991px) { 
-@media (min-width: 768px) { 
+// Medium devices (tablets, 768px - 991px)
+// @media screen and (min-width: 768px) and (max-width: 991px) { 
+@media screen and (min-width: 768px) { 
     .entry-title a {
         font-size: 34px;
     }
@@ -1625,18 +1625,18 @@ section.main-content {
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     p.site-description {
        display: inline;
     }
 }
 
-// Extra large devices (large desktops)
-@media (min-width: 1200px) {
+// Extra large devices (large desktops, 1200px and up)
+@media screen and (min-width: 1200px) {
 }
 
 // set breakpoint for mobile menu collapse
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     .navbar-header {
         float: none;
     }
