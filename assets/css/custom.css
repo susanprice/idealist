@@ -991,15 +991,25 @@ blockquote:after {
   display: block; }
 
 #content a.more-link {
-  background-color: #373737;
-  color: white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #373737;
+  color: #373737;
   display: inline-block;
   padding: 10px 20px;
   text-decoration: none;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  transition: color 0.5s ease 0s; }
 
 #content a.more-link:hover {
-  color: red; }
+  color: #FF0000; }
+
+.custom-more {
+  align-items: center;
+  display: flex;
+  justify-content: center; }
 
 .archive-header {
   align-items: center;

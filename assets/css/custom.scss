@@ -26,6 +26,7 @@
 # Media Queries
 --------------------------------------------------------------*/
 
+$accent-color: #FF0000;
 $white: #FFFFFF;
 $paper: #F4F4F4;
 $light-gray: #D3D3D3;   // default border color
@@ -1297,18 +1298,26 @@ blockquote:after {
 }
 
 #content a.more-link {
-    background-color: $charcoal;
-    color: white;
+    @include x-border-radius(10px);
+    border: 1px solid $charcoal;
+    color: $charcoal;
     display: inline-block;
     padding: 10px 20px;    
     text-decoration: none;
     text-transform: uppercase;
+    transition: color 0.5s ease 0s;
 }    
 
 #content a.more-link:hover {
-    color: red; // accent color
+    color: $accent-color;
 } 
 
+// wrap more tag in editor with div and this class
+.custom-more {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}    
 
 // Archives
 
