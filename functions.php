@@ -239,3 +239,19 @@ function idealist_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
 
+/**
+ *
+ * More tag links to top of single page
+ */
+function idealist_remove_more_jump_link($link) { 
+	$offset = strpos($link, '#more-');
+	if ($offset) {
+		$end = strpos($link, '"',$offset);
+	}
+	if ($end) {
+		$link = substr_replace($link, '', $offset, $end-$offset);
+	}
+	return $link;
+}
+add_filter('the_content_more_link', 'idealist_remove_more_jump_link');
+
