@@ -949,6 +949,9 @@ blockquote:after {
   margin: 0;
   padding: 0; }
 
+.format-aside {
+  margin-left: 100px; }
+
 .format-image img {
   width: 100%; }
 
@@ -1187,7 +1190,11 @@ section.feature-image {
   margin-right: auto; }
 
 .wp-caption .wp-caption-text {
-  margin: 0.8075em 0; }
+  border: 1px solid #A9A9A9;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  width: 75%; }
 
 .wp-caption-text {
   text-align: center; }
@@ -1296,7 +1303,17 @@ section.feature-image {
     float: none;
     margin-top: 0;
     position: static;
-    width: auto; } }
+    width: auto; }
+
+  .format-aside {
+    margin-left: 50px; }
+
+  .wp-caption .wp-caption-text {
+    border: 0;
+    margin: 20px auto;
+    padding: 0;
+    text-align: left;
+    width: 100%; } }
 @media print {
   body {
     background: white;

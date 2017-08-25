@@ -1233,6 +1233,10 @@ blockquote:after {
 
 // Post Format: Aside
 
+.format-aside {
+    margin-left: 100px;
+}
+
 .format-aside p { 
 }
 
@@ -1545,8 +1549,14 @@ section.main-content {
 }
 
 .wp-caption .wp-caption-text {
-    margin: 0.8075em 0;
+    // @include x-border-radius(10px);
+    border: 1px solid $dark-gray;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    width: 75%;
 }
+
 
 .wp-caption-text {
     text-align: center;
@@ -1693,6 +1703,16 @@ section.main-content {
         margin-top: 0;                    
         position: static;
         width: auto;
+    }
+    .format-aside {
+        margin-left: 50px;
+    }
+    .wp-caption .wp-caption-text {
+        border: 0;
+        margin: 20px auto;
+        padding: 0;
+        text-align: left;
+        width: 100%;
     }
 }
 
