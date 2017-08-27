@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'idealist' ); ?></a>
+    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'idealist' ); ?></a>
 
 <!-- CUSTOM LOGO
 ================================================== -->
@@ -40,29 +40,19 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 
     // if borders have not been set (in customizer), turn them on, as default
     if ( get_theme_mod( 'show_borders_id' ) === FALSE ) {
-        $idealist_show_borders = 1; 
-    } 
-
-    // if no custom header, add white space
-    if ( has_header_image() === FALSE) { 
-        $header_white_space = "30px";
-    }
-
+        $idealist_show_borders = 1;        
+} 
 ?>
 
 <style>
-    /* Header Text Color */
-    .site-title, p.site-description { color: #<?php echo esc_attr( $idealist_header_text_color ); ?>; }
+  /* Header Text Color */
+  .site-title, p.site-description { color: #<?php echo esc_attr( $idealist_header_text_color ); ?>; }
 
-    /* Background Color */
-    #secondary > .widget_search { background-color: #<?php echo esc_attr( $idealist_background_color ); ?>; }
+  /* Background Color */
+  #secondary > .widget_search { background-color: #<?php echo esc_attr( $idealist_background_color ); ?>; }
 
-    /* Border Display */
-    article, button.search-submit, .comments, input[type="search"], .panel, .post, .widget { border-width: <?php echo intval( $idealist_show_borders ); ?>; } 
-
-   /* White space under primary navigation */
-   .primary-navigation { margin-bottom: <?php echo esc_attr( $header_white_space ); ?>; }
-
+  /* Border Display */
+  article, button.search-submit, .comments, input[type="search"], .panel, .post, .widget { border-width: <?php echo intval( $idealist_show_borders ); ?>; } 
 </style>
 
 <!-- HEADER
