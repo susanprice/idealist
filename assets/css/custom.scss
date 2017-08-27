@@ -864,6 +864,10 @@ footer li.active a {
     @include x-align-items(center);
 }
 
+#primary {
+    margin-top: 30px;
+}
+
 
 /*--------------------------------------------------------------
 # Clearings
@@ -904,7 +908,7 @@ footer li.active a {
     @include x-border-radius(10px);
     @include x-story-border-details();
     background: $white;
-    margin: 0 0 1.5em;
+    margin: 0 0 30px;
     padding: 20px;
     position: relative;
     word-wrap: break-word;
@@ -1518,7 +1522,7 @@ object {
 }
 
 .main-image {
-    margin: 0 auto 30px;
+    margin: 0 auto;
 }
 
 img.post {

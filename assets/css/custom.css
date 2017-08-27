@@ -645,6 +645,9 @@ footer li.active a {
   -ms-box-align: center;
   -ms-flex-align: center; }
 
+#primary {
+  margin-top: 30px; }
+
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
@@ -684,7 +687,7 @@ footer li.active a {
   border-style: solid;
   border-width: 1px;
   background: #FFFFFF;
-  margin: 0 0 1.5em;
+  margin: 0 0 30px;
   padding: 20px;
   position: relative;
   word-wrap: break-word; }
@@ -1168,7 +1171,7 @@ object {
   max-width: 100%; }
 
 .main-image {
-  margin: 0 auto 30px; }
+  margin: 0 auto; }
 
 img.post {
   width: 100%; }
