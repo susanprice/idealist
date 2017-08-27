@@ -1073,17 +1073,16 @@ a.social-icon {
     padding-bottom: 40px;
 }
 
-// post title size
+// post title
 .entry-title a {
     font-size: $main-title-size;
     margin: 0;
-    padding-bottom: 10px;
 }
 
 .post-image {
     @include x-display-center();
     flex-direction: row;
-    margin-top: 50px;
+    padding: 50px 20px;
 }
 
 .post-body {
@@ -1196,6 +1195,11 @@ blockquote:after {
 }
 
 // Post Formats
+
+
+header.entry-header {
+    padding: 20px;
+}
 
 .format-aside .post-details,
 .format-aside .post-footer,
