@@ -141,7 +141,7 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
 <!-- FEATURED IMAGE
 ================================================== -->
 <?php
-if ( is_home () | is_single () | is_category () | is_search () ) {
+if ( is_home () | is_single () | is_category () | is_search () | is_archive () ) {
     return;
 }
 ?>
