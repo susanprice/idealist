@@ -518,10 +518,6 @@ span.icon-bar {
   background-color: #FFFFFF;
   color: #808080; }
 
-.nav-links {
-  height: 30px;
-  margin: 20px; }
-
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous {
@@ -646,6 +642,7 @@ footer li.active a {
   -ms-flex-align: center; }
 
 #primary {
+  margin-bottom: 30px;
   margin-top: 30px; }
 
 /*--------------------------------------------------------------
@@ -783,6 +780,24 @@ a.social-icon {
 .text-image-widget {
   text-align: center;
   margin-bottom: 40px; }
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-around; }
+
+.page-numbers {
+  background-color: white;
+  border: 1px solid #373737;
+  padding: 14px; }
+
+a.page-numbers {
+  text-decoration: none; }
+
+.page-numbers:hover,
+.page-numbers.current {
+  background-color: black;
+  color: white;
+  transition: color 0.5s ease 0s; }
 
 /*--------------------------------------------------------------
 # Content
@@ -1247,7 +1262,10 @@ section.feature-image {
 --------------------------------------------------------------*/
 @media screen and (max-width: 575px) {
   .entry-title a {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  .page-numbers {
+    padding: 7px; } }
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .entry-title a {
     font-size: 32px; } }

@@ -708,8 +708,6 @@ span.icon-bar {
 
 // Next & Previous
 .nav-links {
-    height: 30px;
-    margin: 20px;
 }
 
 .comment-navigation .nav-previous,
@@ -865,6 +863,7 @@ footer li.active a {
 }
 
 #primary {
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 
@@ -1032,6 +1031,30 @@ a.social-icon {
 .text-image-widget {
     text-align: center;
     margin-bottom: 40px;
+}
+
+// Pagination
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-around;
+} 
+
+.page-numbers {
+    background-color: white;
+    border: 1px solid $charcoal;
+    padding: 14px;
+}
+
+a.page-numbers {
+    text-decoration: none;
+}
+
+.page-numbers:hover,
+.page-numbers.current {
+    background-color: black;
+    color: white;
+    transition: color 0.5s ease 0s;
 }
 
 
@@ -1629,6 +1652,9 @@ section.main-content {
 @media screen and (max-width: 575px) {
     .entry-title a {
         font-size: 30px;
+    }
+    .page-numbers {
+        padding: 7px;
     }
 }
 
