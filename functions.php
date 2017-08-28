@@ -220,8 +220,7 @@ require get_template_directory() . '/inc/customizer.php';
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with ... and
- * a 'Continue reading' link.
+ * Replaces "[...]" (appended to automatically generated excerpts) with a "MORE" link.
  *
  * @return string 'Continue reading' link prepended with an ellipsis.
  */
@@ -233,7 +232,7 @@ function idealist_excerpt_more($more) {
 	$link = sprintf( '<p class="link-more"><a href="%1$s" class="more-link">%2$s</a></p>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		/* translators: %s: Name of current post */
-		sprintf( __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'idealist' ), get_the_title( get_the_ID() ) )
+		sprintf( __( 'more<span class="screen-reader-text"> "%s"</span>', 'idealist' ), get_the_title( get_the_ID() ) )
 	);
 	return ' &hellip; ' . $link;
 }
