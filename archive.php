@@ -23,7 +23,7 @@ get_header(); ?>
 			</section>
 
 			<div class="container">
-				<div id="primary" class="row">
+				<div class="row">
 					<main id="content" class="col-sm-8">
 
 						<?php
