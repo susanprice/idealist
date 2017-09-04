@@ -30,7 +30,7 @@ get_header(); ?>
 						get_template_part( 'template-parts/content', 'search' );
 					endwhile;
 
-					get_template_part( 'template-parts/page/pagination' );
+					the_posts_navigation();
 
 				else :
 					get_template_part( 'template-parts/content', 'none' );

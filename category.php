@@ -44,7 +44,7 @@ if ( have_posts() ) : ?>
 					get_template_part( 'template-parts/content', get_post_format() );
 				endwhile;
 
-				get_template_part( 'template-parts/page/pagination' );
+				the_posts_navigation();
 
 				else :
 
