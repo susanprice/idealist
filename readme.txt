@@ -2,10 +2,10 @@
 Contributors: susanprice
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.8
-Version: 1.0.9
+Version: 1.1.0
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, custom-background, custom-colors, custom-header, custom-logo, editor-style, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
+Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
 
 == Description ==
 
@@ -157,4 +157,12 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: post headings smaller on mobile 
 - Fixed: search icon in navbar white background
 - Fixed: custom header image margins (0,0,30px,0)
+
+= 1.1.0 = TBD
+- Added: tags custom-menu and featured-images
+- Added: prefix to class idealist_WP_Bootstrap_Navwalker
+- Improved: post format aside, caption, and "more" tag styling
+- Fixed: added 'screen' to media queries
+- Fixed: don't display featured image on archive page
+- Fixed: copyright string in footer escaped with esc_html()
 
