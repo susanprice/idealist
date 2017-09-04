@@ -799,6 +799,10 @@ a.page-numbers {
   color: white;
   transition: color 0.5s ease 0s; }
 
+.page-numbers.dots {
+  background-color: transparent;
+  border: 0; }
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
