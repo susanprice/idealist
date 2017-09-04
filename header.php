@@ -96,8 +96,8 @@ $idealist_logo_image = wp_get_attachment_image_src( $idealist_logo , 'full' );
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse main-navbar-collapse-1',
                     'menu_class'        => 'nav navbar-nav',
-                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'            => new WP_Bootstrap_Navwalker()
+                    'fallback_cb'       => 'idealist_WP_Bootstrap_Navwalker::fallback',
+                    'walker'            => new idealist_WP_Bootstrap_Navwalker()
                 ) );
                 ?>
                 
