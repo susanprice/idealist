@@ -24,7 +24,7 @@
         <nav class="navbar">
             <div class="container-fluid">
                 <div class="col-sm-12 col-md-12 col-lg-12">
-                    <p class="copyright"><?php echo esc_attr( $idealist_footer_copyright ); ?></p>
+                    <p class="copyright"><?php echo esc_html( $idealist_footer_copyright ); ?></p>
                     <p class="credits"><?php echo esc_html("WordPress Theme: Idealist"); ?>
                 </div>
             </div>
