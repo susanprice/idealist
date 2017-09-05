@@ -39,6 +39,7 @@ Source: http://getbootstrap.com/
 
 Font Awesome CSS and Fonts, Copyright Dave Gandy
 License: SIL Open Font License, version 1.1.
+License: MIT http://www.opensource.org/licenses/MIT
 Source: http://fontawesome.io/
 
 Header image 
