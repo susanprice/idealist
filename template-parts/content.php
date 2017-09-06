@@ -26,7 +26,7 @@
 			<div class="post-details">
 				<!-- display the date on every post, using the format specified in Settings/General -->
 				<?php the_time( get_option( 'date_format' ) ); ?>
-				<?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', ''  ); ?>
+				<?php edit_post_link( __( 'Edit', 'idealist' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>'  ); ?>
 			</div><!-- post-details -->
 		
 		<?php endif; ?>

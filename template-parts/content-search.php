@@ -23,7 +23,7 @@
 		<?php endif; ?>
 
 		<div class="post-details">
-			<?php edit_post_link( 'Edit', '<i class="fa fa-pencil"></i> ', ''  ); ?>
+			<?php edit_post_link( __( 'Edit', 'idealist' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>'  ); ?>
 		</div><!-- post-details -->
 		
 		<?php endif; ?>
