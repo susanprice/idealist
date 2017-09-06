@@ -581,6 +581,7 @@ button {
 // navbar search icon on click
 button.btn.btn-default.nav-search {
     background-color: white;
+    border-width: 0;
 }
 
 
@@ -648,7 +649,6 @@ button.btn.btn-default.nav-search {
 }
 
 p.site-description {
-    color: $light-gray;
     display: none;
     font-size: 12px;
     margin: auto 0;
@@ -1450,6 +1450,10 @@ blockquote:after {
 
 .comment-list ol {
    list-style: none;    
+}
+
+a.comment-edit-link {
+    font-size: .8em;
 }
 
 /*
