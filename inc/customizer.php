@@ -238,3 +238,34 @@ if( class_exists( 'WP_Customize_Control' ) ):
 endif;
 
 
+/**
+ * Enqueues front-end CSS for the border style
+ *
+ * @see wp_add_inline_style()
+ *
+ */
+function idealist_border_css() {
+    $css = '';
+    $idealist_show_borders = get_theme_mod( 'show_borders_id' );
+
+    // if borders have not been set, use the default
+    if ( get_theme_mod( 'show_borders_id' ) === FALSE ) {
+        $idealist_show_borders = 1;
+    }
+
+    $css = '
+        article, 
+        button.search-submit, 
+        .comments, 
+        input[type="search"], 
+        .panel, 
+        .post, 
+        .widget { 
+            border-width: ' . $idealist_show_borders . 'px;
+        }
+    ';
+
+    wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), IDEALIST_VERSION );
+    wp_add_inline_style( 'idealist-custom-style', $css );
+}
+add_action( 'wp_enqueue_scripts', 'idealist_border_css' );
