@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Idealist 1.1.0\n"
-"POT-Creation-Date: 2017-09-06 07:13-0700\n"
-"PO-Revision-Date: 2017-09-06 07:12-0700\n"
+"POT-Creation-Date: 2017-09-07 08:02-0700\n"
+"PO-Revision-Date: 2017-09-07 08:01-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -146,7 +146,7 @@ msgstr ""
 msgid "2. Select a logo. A square works best."
 msgstr ""
 
-#: inc/customizer.php:210 inc/customizer.php:219 inc/customizer.php:228
+#: inc/customizer.php:210 inc/customizer.php:219 inc/customizer.php:229
 msgid "3. Select 'Save & Publish'."
 msgstr ""
 
@@ -166,7 +166,7 @@ msgstr ""
 msgid "3. Set Background Color to #e8e8e8."
 msgstr ""
 
-#: inc/customizer.php:215 inc/customizer.php:224
+#: inc/customizer.php:215
 msgid "4. Select 'Save & Publish'."
 msgstr ""
 
@@ -191,42 +191,50 @@ msgid "1. Go to Appearance / Customize / Widgets."
 msgstr ""
 
 #: inc/customizer.php:222
-msgid "2. Add the Search widget."
+msgid "2. Add the Recent Posts widget."
 msgstr ""
 
 #: inc/customizer.php:223
-msgid "3. Add the Recent Posts widget."
+msgid "3. Add a Text widget for an About section."
+msgstr ""
+
+#: inc/customizer.php:224
+msgid "4. Delete the other widgets."
 msgstr ""
 
 #: inc/customizer.php:225
-msgid "Set the Front Page"
+msgid "5. Select 'Save & Publish'."
 msgstr ""
 
 #: inc/customizer.php:226
-msgid "1. Go to Appearance / Customize / Static Front Page."
+msgid "Set the Front Page"
 msgstr ""
 
 #: inc/customizer.php:227
+msgid "1. Go to Appearance / Customize / Static Front Page."
+msgstr ""
+
+#: inc/customizer.php:228
 msgid "2. Set to 'Your latest posts'."
 msgstr ""
 
-#: inc/customizer.php:229
+#: inc/customizer.php:230
 msgid "Extras"
 msgstr ""
 
-#: inc/customizer.php:230
+#: inc/customizer.php:231
 msgid "1. Go to Appearance / Customize / Idealist Options / Settings."
 msgstr ""
 
-#: inc/customizer.php:231
+#: inc/customizer.php:232
 msgid "2. Toggle the Comments Badge and Borders."
 msgstr ""
 
-#: inc/customizer.php:232
+#: inc/customizer.php:233
 msgid "3. Add Text to the Footer."
 msgstr ""
 
-#: inc/customizer.php:233
+#: inc/customizer.php:234
 msgid "Thank you for using the WordPress Idealist theme!"
 msgstr ""
 
