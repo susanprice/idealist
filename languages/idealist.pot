@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Idealist 1.1.0\n"
-"POT-Creation-Date: 2017-09-07 08:02-0700\n"
-"PO-Revision-Date: 2017-09-07 08:01-0700\n"
+"POT-Creation-Date: 2017-09-07 09:58-0700\n"
+"PO-Revision-Date: 2017-09-07 09:58-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -62,18 +62,18 @@ msgstr ""
 msgid "Social Links Menu"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:113
 msgid "Primary Sidebar"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:115
 msgid ""
 "Add widgets here to display on the right side of your posts. This sidebar is "
 "displayed on the Front Page by default, and with the Two Panel Template."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:235 template-parts/content.php:45
+#: functions.php:233 template-parts/content.php:45
 #, php-format
 msgid "more<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
