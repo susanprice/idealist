@@ -71,7 +71,7 @@
                 
                 <!-- Display Search Icon -->
                 <div class="pull-right nav-search">
-                    <button type="button" class="btn btn-default nav-search pull-right" onclick="showSearchInput()">
+                    <button type="button" class="btn btn-default nav-search pull-right" onclick="idealist_showSearchInput()">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </button>
 
@@ -80,7 +80,7 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <input class="full-search-input" id="search" name="s" type="text" placeholder="<?php esc_attr_e( 'Search ...', 'idealist' );?>">
-                                <button type="button" class="fa fa-times close-icon close-button" onclick="hideSearchInput()">
+                                <button type="button" class="fa fa-times close-icon close-button" onclick="idealist_hideSearchInput()">
                                 </button>   
                             </div>
                         </div>
