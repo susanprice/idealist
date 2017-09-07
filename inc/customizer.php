@@ -219,9 +219,10 @@ if( class_exists( 'WP_Customize_Control' ) ):
             <p><?php esc_html_e('3. Select \'Save & Publish\'.', 'idealist'); ?>
             <h3><?php esc_html_e('Setup the Sidebar', 'idealist'); ?></h3>
             <p><?php esc_html_e('1. Go to Appearance / Customize / Widgets.', 'idealist'); ?></p>
-            <p><?php esc_html_e('2. Add the Search widget.', 'idealist'); ?></p>
-            <p><?php esc_html_e('3. Add the Recent Posts widget.', 'idealist'); ?></p>
-            <p><?php esc_html_e('4. Select \'Save & Publish\'.', 'idealist'); ?>
+            <p><?php esc_html_e('2. Add the Recent Posts widget.', 'idealist'); ?></p>
+            <p><?php esc_html_e('3. Add a Text widget for an About section.', 'idealist'); ?></p>
+            <p><?php esc_html_e('4. Delete the other widgets.', 'idealist'); ?></p>
+            <p><?php esc_html_e('5. Select \'Save & Publish\'.', 'idealist'); ?>
             <h3><?php esc_html_e('Set the Front Page', 'idealist'); ?></h3>
             <p><?php esc_html_e('1. Go to Appearance / Customize / Static Front Page.', 'idealist'); ?></p>
             <p><?php esc_html_e('2. Set to \'Your latest posts\'.', 'idealist'); ?></p>
