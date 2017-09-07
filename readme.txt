@@ -162,6 +162,7 @@ Idealist is distributed under the terms of GPLv2 or later
 = 1.1.0 = TBD
 - Added: tags custom-menu and featured-images
 - Improved: post format aside, caption, and "more" tag styling
+- Improved: removed 'search' from starter content (to match screenshot)
 - Fixed: added 'screen' to media queries
 - Fixed: copyright string in footer escaped with esc_html()
 - Fixed: changed custom.js enqueue handle to 'idealist-custom-js'
