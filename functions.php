@@ -58,10 +58,9 @@ function idealist_setup() {
 	// Define and register starter content to showcase the theme on new sites.
 	$starter_content = array(
 		'widgets' => array(
-			// Place three core-defined widgets in the sidebar area.
+			// Place two core-defined widgets in the sidebar area.
 			'sidebar-1' => array(
 				'text_business_info',
-				'search',
 				'text_about',
 			),
 
@@ -70,10 +69,9 @@ function idealist_setup() {
 				'text_business_info',
 			),
 
-			// Put two core-defined widgets in the footer 2 area.
+			// Put one core-defined widgets in the footer 2 area.
 			'sidebar-3' => array(
 				'text_about',
-				'search',
 			),
 		),
 	);
