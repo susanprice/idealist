@@ -152,14 +152,14 @@ Idealist is distributed under the terms of GPLv2 or later
 - Improved: styling of "MORE" link 
 - Improved: using get_theme_file_uri() to load header graphic
 
-= 1.0.9 = 08-011-17
+= 1.0.9 = 08-11-17
 - Improved: new screenshot.jpg
 - Improved: button text darker
 - Improved: post headings smaller on mobile 
 - Fixed: search icon in navbar white background
 - Fixed: custom header image margins (0,0,30px,0)
 
-= 1.1.0 = TBD
+= 1.1.0 = 09-07-17
 - Added: tags custom-menu and featured-images
 - Improved: post format aside, caption, and "more" tag styling
 - Improved: removed 'search' from starter content (to match screenshot)
