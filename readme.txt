@@ -2,7 +2,7 @@
 Contributors: susanprice
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.8
-Version: 1.1.1
+Version: 1.1.2
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
@@ -175,3 +175,5 @@ Idealist is distributed under the terms of GPLv2 or later
 - Added: Author URI 
 - Added: link to https://NewMediaThemes.com in footer
 
+= 1.1.2 = 11-06-17
+- Added: Single post pages can have sidebar via Two-Panel template
