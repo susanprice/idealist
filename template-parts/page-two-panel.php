@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Two Panel Template
+ * Template Post Type: post, page
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
