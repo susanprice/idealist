@@ -7,7 +7,7 @@
  * @package Idealist
  */
 
-define( 'IDEALIST_VERSION', '1.1.3' );
+define( 'IDEALIST_VERSION', '1.1.4' );
 
 if ( ! function_exists( 'idealist_setup' ) ) :
 /**
@@ -235,3 +235,36 @@ function idealist_excerpt_more($more) {
 	return ' &hellip; ' . $link;
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
+
+// Insert 'styleselect' into the $buttons array
+function idealist_mce_buttons_2( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+add_filter( 'mce_buttons_2', 'idealist_mce_buttons_2' );
+
+
+// Filter the MCE settings
+function idealist_mce_before_init_insert_formats( $init_array ) {  
+	$style_formats = array(  
+		array(  
+			'title' => 'dropcap',  
+			'inline' => 'span',  
+			'classes' => 'dropcap',
+			'wrapper' => true,	
+		),  
+		array(  
+			'title' => 'highlight',  
+			'inline' => 'span',  
+			'classes' => 'highlight',
+			'wrapper' => true,
+		),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  	
+	return $init_array;  
+} 
+add_filter( 'tiny_mce_before_init', 'idealist_mce_before_init_insert_formats' );  
+
+
+
