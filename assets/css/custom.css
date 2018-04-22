@@ -111,6 +111,16 @@ big {
   padding: 0;
   width: auto auto; }
 
+.highlight {
+  background-color: #FFFF99; }
+
+.dropcap {
+  float: left;
+  font-size: 5.125em;
+  font-weight: 300;
+  line-height: 1;
+  margin-right: 10px; }
+
 /*--------------------------------------------------------------
 # Global
 --------------------------------------------------------------*/
@@ -119,6 +129,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: Roboto, sans-serif;
+  font-weight: 300;
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -506,6 +517,7 @@ a.navbar-brand {
 span.icon-bar {
   background-color: #D3D3D3; }
 
+dropdown-menu
 .navbar .dropdown-menu {
   border: 0; }
 
@@ -570,9 +582,6 @@ a:active {
 footer li.active a {
   color: #FFFFFF; }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -924,19 +933,20 @@ blockquote p {
   display: inline; }
 
 blockquote:before {
-  color: #C0C0C0;
   content: open-quote;
-  font-size: 5em;
   line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em; }
+  margin-right: 0.25em; }
 
 blockquote:after {
-  color: #C0C0C0;
   content: close-quote;
-  font-size: 5em;
   line-height: .8em;
-  margin-left: 0.25em;
+  margin-left: 0.25em; }
+
+blockquote:before,
+blockquote:after {
+  color: #C0C0C0;
+  font-family: dash-icons;
+  font-size: 5em;
   vertical-align: -0.4em; }
 
 header.entry-header {
@@ -996,10 +1006,6 @@ header.entry-header {
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em; }
-
-blockquote:before,
-blockquote:after {
-  font-family: dash-icons; }
 
 .format-quote p:after {
   color: #C0C0C0;
@@ -1113,58 +1119,6 @@ blockquote:after {
 a.comment-edit-link {
   font-size: .8em; }
 
-/*
-.badge.social {
-    background: $silver;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    color: $white;
-    font-size: 24px;
-    height: 40px;
-    line-height: 42px;
-    margin: 0 5px 20px 0;
-    padding: 0;
-    text-align: center;
-    width: 40px;
-}
-
-.comments ol li {
-    margin: .5em 0;
-    padding: .6em 1.2em;
-}
-
-.comments-title {
-    padding-top: 50px;
-}
-
-#comments .comments-wrap {
-    padding: 1em;
-    padding-bottom: 3em;
-}
-
-.leave-comment {
-    @include x-border-radius(10px);
-    @include x-story-border-details();
-    margin: 1.2em auto;
-    max-width: 600px;
-    padding: .8em 2em;
-}
-
-.comment {
-    width: 100%;
-    word-wrap: break-word;
-}
-
-#comments footer {
-    background: none;
-    color: inherit;
-}
-
-#comments footer a {
-    color: inherit;
-}
-*/
 /*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/

@@ -2,7 +2,7 @@
 Contributors: susanprice
 Requires at least: WordPress 4.7
 Tested up to: WordPress 4.8
-Version: 1.1.3
+Version: 1.1.4
 License: General Public License (GPL)v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, news, post-formats, right-sidebar, sticky-post, theme-options, threaded-comments, translation-ready, two-columns
@@ -181,3 +181,11 @@ Idealist is distributed under the terms of GPLv2 or later
 = 1.1.3 = 11-12-17
 - Added: template "post-two-panel", which includes sidebar and post date
 - Improved: template "page-two-panel" is for pages only (no sidebar or post date)
+
+= 1.1.4 = 04-21-17
+- Added: dropcap and highlight styling to TinyMCE 
+- Fixed: TinyMCE editor WYSIWYG: blockquote, bullets, fontsize
+- Fixed: refactored custom.css
+
+
+

@@ -1,9 +1,8 @@
+@charset "UTF-8";
 /*
 Theme Name: Idealist
 Description: Used to style the TinyMCE editor.
 */
-
-
 /**
  * Table of Contents:
  *
@@ -16,330 +15,291 @@ Description: Used to style the TinyMCE editor.
  * 7.0 - Media Elements
  * 8.0 - RTL
  */
-
 /**
  * 1.0 - Body
  */
+html {
+  padding: 2em 4.6em; }
 
 body {
-	color: #444;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	font-size: 1rem;
-	line-height: 1;
-	text-rendering: optimizeLegibility;
-	vertical-align: baseline;
-}
+  color: #444;
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: .1rem;
+  text-rendering: optimizeLegibility;
+  vertical-align: baseline; }
+
+body#tinymce.wp-editor {
+  font-family: sans-serif, Arial, Helvetica; }
 
 /**
  * 2.0 - Typography
  */
-
+p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-	color: #000;
-    font-weight: 300;        
-}
+h6,
+li {
+  color: #000;
+  font-family: sans-serif, Arial, Helvetica;
+  font-weight: 300; }
 
 h1 {
-	font-size: 31px;
-}
+  font-size: 50px; }
 
 h2 {
-	font-size: 26px;
-}
+  font-size: 40px; }
 
 h3 {
-	font-size: 22px;
-}
+  font-size: 30px; }
 
 h4 {
-	font-size: 18px;
-}
+  font-size: 20px; }
 
-h5,
+h5 {
+  font-size: 16px;
+  letter-spacing: 0.15em; }
+
 h6 {
-	font-size: 15px;
-}
+  font-size: 12px; }
 
 p {
-	font-size: 12px;
-}
+  font-size: 14px; }
 
 dfn,
 cite,
 em,
 i {
-	font-style: italic;
-}
-
+  font-style: italic; }
 
 blockquote {
-	color: #666;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-style: italic;
-	line-height: 1.7;
-	margin: 0;
-	overflow: hidden;
-	padding: 0;
-}
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 17.5px;
+  border-left: 5px solid #eee; }
 
-blockquote.alignleft,
-blockquote.alignright {
-	font-size: 14px;
-	font-size: 0.875rem;
-	width: 34%;
-}
+blockquote {
+  quotes: "“" "”"; }
+
+blockquote p {
+  display: inline; }
+
+blockquote:before {
+  content: open-quote;
+  line-height: 0.1em;
+  margin-right: 0.25em; }
+
+blockquote:after {
+  content: close-quote;
+  line-height: .8em;
+  margin-left: 0.25em; }
+
+blockquote:before,
+blockquote:after {
+  color: #C0C0C0;
+  font-family: dash-icons;
+  font-size: 5em;
+  vertical-align: -0.4em; }
 
 address {
-	margin: 0 0 1.5em;
-}
+  margin: 0 0 1.5em; }
 
 pre {
-	background: #eee;
-	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-	line-height: 1.6;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
+  background: #eee;
+  font-family: "Courier 10 Pitch", Courier, monospace;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em; }
 
 code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
-}
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 15px;
+  font-size: 0.9375rem; }
 
 abbr,
 acronym {
-	border-bottom: 1px dotted #666;
-	cursor: help;
-}
+  border-bottom: 1px dotted #666;
+  cursor: help; }
 
 mark,
 ins {
-	background: #eee;
-	text-decoration: none;
-}
+  background: #eee;
+  text-decoration: none; }
 
 big {
-	font-size: 125%;
-}
+  font-size: 125%; }
 
-blockquote,
-q {
-	quotes: "" "";
-}
+.highlight {
+  background-color: #FFFF99; }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-	content: "";
-}
+.dropcap {
+  float: left;
+  font-size: 5.125em;
+  line-height: 1;
+  font-weight: 500;
+  line-height: 1;
+  margin-right: 10px; }
+
+.mce-content-body p, .mce-content-body div, .mce-content-body h1, .mce-content-body h2, .mce-content-body h3, .mce-content-body h4, .mce-content-body h5, .mce-content-body h6 {
+  font-weight: 300;
+  line-height: 1.5em; }
+
+ul, ol {
+  margin: 0 0 1.5em 3em; }
 
 /**
  * 3.0 - Elements
  */
-
 hr {
-	background-color: #bbb;
-	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
-}
+  background-color: #bbb;
+  border: 0;
+  height: 1px;
+  margin-bottom: 1.5em; }
 
-ul,
-ol {
-	margin: 0 0 1.5em;
-	padding: 0;
-}
-
-ul {
-	list-style: disc;
-}
-
-ol {
-	counter-reset: item;
-}
-
-ol li {
-	display: block;
-	position: relative;
-}
-
-ol li:before {
-	content: counter(item);
-	counter-increment: item;
-	font-weight: 800;
-	left: -1.5em;
-	position: absolute;
-}
-
-li > ul,
-li > ol {
-	margin-bottom: 0;
-	margin-left: 1.5em;
-}
+li {
+  font-family: sans-serif, Arial, Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5em; }
 
 dt {
-	font-weight: 700;
-}
+  font-weight: 700; }
 
 dd {
-	margin: 0 1.5em 1.5em;
-}
+  margin: 0 1.5em 1.5em; }
 
 table {
-	border-collapse: collapse;
-	margin: 0 0 1.5em;
-	width: 100%;
-}
+  border-collapse: collapse;
+  margin: 0 0 1.5em;
+  width: 100%; }
 
 thead th {
-	border-bottom: 2px solid #bbb;
-	padding-bottom: 0.5em;
-}
+  border-bottom: 2px solid #bbb;
+  padding-bottom: 0.5em; }
 
 th {
-	padding: 0.4em;
-	text-align: left;
-}
+  padding: 0.4em;
+  text-align: left; }
 
 tr {
-	border-bottom: 1px solid #eee;
-}
+  border-bottom: 1px solid #eee; }
 
 td {
-	padding: 0.4em;
-}
+  padding: 0.4em; }
 
 th:first-child,
 td:first-child {
-	padding-left: 0;
-}
+  padding-left: 0; }
 
 th:last-child,
 td:last-child {
-	padding-right: 0;
-}
+  padding-right: 0; }
 
 a {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	color: #222;
-	text-decoration: none;
-	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
-}
+  -webkit-box-shadow: inset 0 -1px 0 #0f0f0f;
+  box-shadow: inset 0 -1px 0 #0f0f0f;
+  color: #222;
+  text-decoration: none;
+  -webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+  transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out; }
 
 a:focus {
-	outline: thin dotted;
-}
+  outline: thin dotted; }
 
 a:hover,
 a:focus {
-	color: #000;
-	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-}
+  color: #000;
+  -webkit-box-shadow: inset 0 0 0 transparent, 0 3px 0 black;
+  box-shadow: inset 0 0 0 transparent, 0 3px 0 black; }
 
 /* Fixes linked images */
-
 a img {
-	background: #fff;
-	-webkit-box-shadow: 0 0 0 6px #fff;
-	box-shadow: 0 0 0 6px #fff;
-}
+  background: #fff;
+  -webkit-box-shadow: 0 0 0 6px #fff;
+  box-shadow: 0 0 0 6px #fff; }
 
 /**
  * 4.0 - Alignment
  */
+h1, h2, h3 {
+  margin: 20px 0 10px 0; }
+
+h4, h5, h6 {
+  margin: 10px 0; }
+
+p {
+  margin: 0 0 21px 0; }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	width: inherit;  /* Make images fill their parent's space. Solves IE8. */
-	max-width: 100%; /* Adhere to container width. */
-}
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  width: inherit;
+  /* Make images fill their parent's space. Solves IE8. */
+  max-width: 100%;
+  /* Adhere to container width. */ }
 
 embed,
 iframe,
 object {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
+  margin-bottom: 1.5em;
+  max-width: 100%; }
 
 /**
  * 5.0 - Caption
  */
-
 .wp-caption {
-	color: #666;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-style: italic;
-	margin-bottom: 1.5em;
-	max-width: 100%;
-}
+  color: #666;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+  margin-bottom: 1.5em;
+  max-width: 100%; }
 
 .wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 
 .wp-caption .wp-caption-text {
-	margin: 0.8075em 0;
-}
-
+  margin: 0.8075em 0; }
 
 /**
  * 6.0 - Galleries
  */
-
-
 /**
  * 7.0 - Media Elements
  */
- 
-
 /**
  * 8.0 - RTL
  */
-
 .rtl th {
-	text-align: right;
-}
+  text-align: right; }
 
 .rtl ol {
-	counter-reset: item;
-}
+  counter-reset: item; }
 
 .rtl ol li:before {
-	left: auto;
-	right: -1.5em;
-}
+  left: auto;
+  right: -1.5em; }
 
 .rtl li > ul,
 .rtl li > ol {
-	margin-left: 0;
-	margin-right: 1.5em;
-}
+  margin-left: 0;
+  margin-right: 1.5em; }
 
 .rtl .mejs-offscreen {
-	right: -10000px;
-}
-
+  right: -10000px; }
