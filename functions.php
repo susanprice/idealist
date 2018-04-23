@@ -177,10 +177,7 @@ function idealist_scripts() {
 
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome/css/font-awesome.min.css', array(), '4.7.0' );
 
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:100,300,400,500', false );
-
-	// wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.min.css', array(), IDEALIST_VERSION );
-	wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.css', array(), IDEALIST_VERSION );
+	wp_enqueue_style( 'idealist-custom-style', get_template_directory_uri() . '/assets/css/custom.min.css', array(), IDEALIST_VERSION );
 
 	// Scripts
 
