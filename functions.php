@@ -233,7 +233,15 @@ function idealist_excerpt_more($more) {
 }
 add_filter('excerpt_more', 'idealist_excerpt_more');
 
-// Insert 'styleselect' into the $buttons array
+
+/**
+ * Activate the styleselect pulldown menu in the Visual editor. 
+ * Insert 'styleselect' into the $buttons array
+ *
+ * @since Idealist 1.1.4
+ *
+ * @package Idealist
+ */
 function idealist_mce_buttons_2( $buttons ) {
 	array_unshift( $buttons, 'styleselect' );
 	return $buttons;
@@ -241,7 +249,13 @@ function idealist_mce_buttons_2( $buttons ) {
 add_filter( 'mce_buttons_2', 'idealist_mce_buttons_2' );
 
 
-// Filter the MCE settings
+/**
+ * Register our custom styles in the Visual editor. 
+ *
+ * @since Idealist 1.1.4
+ *
+ * @package Idealist
+ */
 function idealist_mce_before_init_insert_formats( $init_array ) {  
 	$style_formats = array(  
 		array(  
@@ -263,5 +277,106 @@ function idealist_mce_before_init_insert_formats( $init_array ) {
 } 
 add_filter( 'tiny_mce_before_init', 'idealist_mce_before_init_insert_formats' );  
 
+
+/**
+ * Adds a sub menu page to the Appearance menu. 
+ *
+ * @since Idealist 1.1.4
+ *
+ * @link https://codex.wordpress.org/Function_Reference/add_theme_page
+ *
+ * @package Idealist
+ *
+ * @param type string $page_title    The text displayed in the title tags of the page.              
+ * @param type string $menu_title    The text to be used for the menu.     
+ * @param type string $capability    Required for this menu to be displayed to the user.      
+ * @param type string $menu_slug     Slug name to refer to this menu.            
+ * @param type callback $function    Optional. Function called to output the content for this page. Default empty.
+ *
+ * @return type string                The resulting page's hook_suffix.
+ */
+function idealist_info_page() {
+   add_theme_page( __('About Idealist', 'idealist'), __('About Idealist', 'idealist'), 'edit_theme_options', 'idealist-welcome.php', 'idealist_welcome_page');
+}
+add_action( 'admin_menu', 'idealist_info_page' );
+
+
+/**
+ * Callback function that displays content on theme's sub menu page.
+ *
+ * @since Idealist 1.1.4
+ *
+ * @package Idealist
+ *
+ */
+function idealist_welcome_page() { 
+    $html = '<div class="wrap">';
+        $html .= '<p class="description">Enjoying Idealist? Why not leave a review on WordPress.org? We\'d really appreciate it!</p>';
+        $html .= '<h2>Welcome to Idealist!</h2>';
+        $html .= '<p class="description">Quick Start Guide</p>';
+    $html .= '</div>';
+     
+    echo $html;   
+} 
+
+
+/**
+ * Creates a helper function for Freemius SDK access.
+ */
+function idealist_freemius() {
+    global $idealist_freemius;
+
+    if ( ! isset( $idealist_freemius ) ) {
+        require_once dirname(__FILE__) . '/freemius/start.php';
+
+        $idealist_freemius = fs_dynamic_init( array(
+            'id'                => '2003',
+            'slug'              => 'idealist',
+            'type'              => 'theme',
+            'public_key'        => 'pk_c93f5030a03bcb1b354ad9879549b',
+            'is_premium'        => false,
+            'has_addons'        => false,
+            'has_paid_plans'    => false,
+            'menu'              => array(
+            'slug'              => 'idealist-welcome.php',
+            'account'           => false,
+            'parent'            => array(
+                'slug' => 'themes.php',
+                ),
+            ),
+        ) );
+    }
+    return $idealist_freemius;
+}
+
+// Init Freemius.
+idealist_freemius();
+// Signal that SDK was initiated.
+do_action( 'idealist_freemius_loaded' );
+
+
+/**
+ * Custom opt-in message for Freemius access.
+ */
+function idealist_freemius_custom_connect_message_on_update(
+    $message,
+    $user_first_name,
+    $theme_title,
+    $user_login,
+    $site_link,
+    $freemius_link
+) {
+    return sprintf(
+        __( 'Hey %1$s' ) . ',<br>' .
+        __( 'Please help us improve %2$s! If you opt-in, some data about your usage of %2$s will be sent to %5$s. If you skip this, that\'s okay! %2$s will still work just fine.', 'idealist' ),
+        $user_first_name,
+        '<b>' . $theme_title . '</b>',
+        '<b>' . $user_login . '</b>',
+        $site_link,
+        $freemius_link
+    );
+}
+
+idealist_freemius()->add_filter('connect_message_on_update', 'idealist_freemius_custom_connect_message_on_update', 10, 6);
 
 
