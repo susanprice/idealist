@@ -524,8 +524,8 @@ textarea {
     @include x-border-radius(10px);
     color: $black;
     font-family: $font-stack;
-    font-size: 1.8em;
-    padding: 3px;
+    font-size: 1.2em;
+    padding: 2px 10px;
     width: 100%;
 }
 
@@ -563,7 +563,10 @@ button[type="submit"] {
 
 input[type="submit"]:hover,
 button[type="submit"]:hover {
+    background-color: black;
     border-color: $dark-gray;
+    color: white;
+
 }
 
 .form-submit,
