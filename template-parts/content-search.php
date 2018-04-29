@@ -15,16 +15,11 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		
-		<!-- Display comments badge unless it was disabled in customizer -->
-		<?php if ( esc_attr ( get_theme_mod( 'show_comments_badge_id' ) !== 0 ) ) : ?>
-			<div class="post-comments-badge">
-				<a href="<?php comments_link(); ?>"><i class="fa fa-comments"></i> <?php comments_number( 0, 1, '%'); ?></a>
-			</div><!-- post-comments-badge -->
-		<?php endif; ?>
+			<?php idealist_display_comments_badge();  ?>
 
-		<div class="post-details">
-			<?php edit_post_link( __( 'Edit', 'idealist' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>'  ); ?>
-		</div><!-- post-details -->
+			<div class="post-details">
+				<?php edit_post_link( __( 'Edit', 'idealist' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>'  ); ?>
+			</div><!-- post-details -->
 		
 		<?php endif; ?>
 	</header><!-- .entry-header -->
