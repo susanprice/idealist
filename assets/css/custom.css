@@ -558,25 +558,6 @@ dropdown-menu
   background-color: #FFFFFF;
   color: #808080; }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
-
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
 footer {
   background-color: #FFFFFF; }
 
@@ -818,28 +799,6 @@ a.social-icon {
   text-align: center;
   margin-bottom: 40px; }
 
-.pagination-wrapper {
-  display: flex;
-  justify-content: space-around; }
-
-.page-numbers {
-  background-color: white;
-  border: 1px solid #373737;
-  padding: 14px; }
-
-a.page-numbers {
-  text-decoration: none; }
-
-.page-numbers:hover,
-.page-numbers.current {
-  background-color: black;
-  color: white;
-  transition: color 0.5s ease 0s; }
-
-.page-numbers.dots {
-  background-color: transparent;
-  border: 0; }
-
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -1080,6 +1039,42 @@ header.entry-header {
   font-size: 24px;
   text-align: center; }
 
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-around; }
+
+.page-numbers {
+  background-color: white;
+  border: 1px solid #373737;
+  padding: 10px; }
+
+a.page-numbers {
+  text-decoration: none; }
+
+.page-numbers:hover,
+.page-numbers.current {
+  background-color: black;
+  color: white;
+  font-family: Roboto, sans-serif;
+  transition: color 0.5s ease 0s; }
+
+.page-numbers.dots {
+  background-color: transparent;
+  border: 0; }
+
+.comment-navigation .nav-previous {
+  float: left;
+  width: 50%; }
+
+.comment-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%; }
+
+.nav-links {
+  height: 5px;
+  margin: 30px 0; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1249,12 +1244,12 @@ section.feature-image {
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
+@media screen and (max-width: 400px) {
+  .page-numbers {
+    padding: 3px; } }
 @media screen and (max-width: 575px) {
   .entry-title a {
-    font-size: 30px; }
-
-  .page-numbers {
-    padding: 7px; } }
+    font-size: 30px; } }
 @media screen and (min-width: 576px) and (max-width: 767px) {
   .entry-title a {
     font-size: 32px; } }
