@@ -35,6 +35,6 @@ function idealist_welcome_page() {
 
         $html .= '</div>';
   
-    echo wp_kses( $html, shapeSpace_allowed_html() );   
+    echo wp_kses( $html, idealist_allowed_html() );   
 }
 ?>

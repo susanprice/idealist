@@ -13,7 +13,7 @@
  * https://wp-mix.com/wordpress-basic-allowed-html-wp_kses/
  */
 
-function shapeSpace_allowed_html() {
+function idealist_allowed_html() {
 
     $allowed_tags = array(
         'a' => array(
