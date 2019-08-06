@@ -7,7 +7,7 @@
  * @package Idealist
  */
 
-define( 'IDEALIST_VERSION', '1.1.4' );
+define( 'IDEALIST_VERSION', '1.1.5' );
 
 if ( ! function_exists( 'idealist_setup' ) ) :
 /**
@@ -211,6 +211,12 @@ require get_template_directory() . '/inc/template-tags.php';
 // Customizer additions
 require get_template_directory() . '/inc/customizer.php';
 
+// Helper functions
+require get_template_directory() . '/inc/helper-functions.php';
+
+// About Page functions
+require get_template_directory() . '/inc/admin/about-page.php';
+
 // Register custom navigation walker
 require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
@@ -301,20 +307,3 @@ function idealist_info_page() {
 add_action( 'admin_menu', 'idealist_info_page' );
 
 
-/**
- * Callback function that displays content on theme's sub menu page.
- *
- * @since Idealist 1.1.4
- *
- * @package Idealist
- *
- */
-function idealist_welcome_page() { 
-    $html = '<div class="wrap">';
-        $html .= '<p class="description">Enjoying Idealist? Why not leave a review on WordPress.org? We\'d really appreciate it!</p>';
-        $html .= '<h2>Welcome to Idealist!</h2>';
-        $html .= '<p class="description">Quick Start Guide</p>';
-    $html .= '</div>';
-     
-    echo $html;   
-} 
