@@ -2,9 +2,9 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: Idealist 1.1.4\n"
-"POT-Creation-Date: 2018-04-21 20:24-0700\n"
-"PO-Revision-Date: 2018-04-21 20:21-0700\n"
+"Project-Id-Version: Idealist 1.1.5\n"
+"POT-Creation-Date: 2018-05-02 16:15-0700\n"
+"PO-Revision-Date: 2018-05-02 16:13-0700\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -77,9 +77,13 @@ msgid ""
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:233 template-parts/content.php:45
+#: functions.php:236 template-parts/content.php:41
 #, php-format
 msgid "more<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: functions.php:305
+msgid "About Idealist"
 msgstr ""
 
 #: header.php:24
@@ -92,6 +96,52 @@ msgstr ""
 
 #: header.php:82
 msgid "Search ..."
+msgstr ""
+
+#: inc/admin/about-page.php:10
+msgid "Welcome to Idealist!"
+msgstr ""
+
+#: inc/admin/about-page.php:11
+msgid "Theme Options & Quick Start Guide"
+msgstr ""
+
+#: inc/admin/about-page.php:13
+msgid ""
+"Use the WordPress Customizer to set theme options and view the Quick Start "
+"Guide."
+msgstr ""
+
+#: inc/admin/about-page.php:14
+msgid "Go to Customizer"
+msgstr ""
+
+#: inc/admin/about-page.php:16
+msgid "Questions?"
+msgstr ""
+
+#: inc/admin/about-page.php:17
+msgid ""
+"If you have questions about the Idealist theme, please post your questions "
+"in the community forum."
+msgstr ""
+
+#: inc/admin/about-page.php:18
+msgid "Go to Support Forum"
+msgstr ""
+
+#: inc/admin/about-page.php:20
+msgid "Subscribe to Design News"
+msgstr ""
+
+#: inc/admin/about-page.php:21
+msgid "If you would like to receive design news, sign up here:"
+msgstr ""
+
+#: inc/admin/about-page.php:23
+msgid ""
+"Enjoying Idealist? Please consider leaving a five star review on WordPress."
+"org. We'd really appreciate it!"
 msgstr ""
 
 #: inc/custom-header.php:49
@@ -300,12 +350,12 @@ msgctxt "placeholder"
 msgid "Search &hellip;"
 msgstr ""
 
-#: template-parts/content-full-post.php:26 template-parts/content-search.php:26
-#: template-parts/content.php:29
+#: template-parts/content-full-post.php:20 template-parts/content-search.php:21
+#: template-parts/content.php:25
 msgid "Edit"
 msgstr ""
 
-#: template-parts/content-full-post.php:52 template-parts/content-page.php:22
+#: template-parts/content-full-post.php:46 template-parts/content-page.php:22
 msgid "Pages:"
 msgstr ""
 
@@ -330,6 +380,14 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
+msgstr ""
+
+#: template-parts/navigation/pagination.php:16
+msgid "Prev"
+msgstr ""
+
+#: template-parts/navigation/pagination.php:17
+msgid "Next"
 msgstr ""
 
 #. Theme Name of the plugin/theme

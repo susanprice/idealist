@@ -182,13 +182,19 @@ Idealist is distributed under the terms of GPLv2 or later
 - Added: template "post-two-panel", which includes sidebar and post date
 - Improved: template "page-two-panel" is for pages only (no sidebar or post date)
 
-= 1.1.4 = 04-21-17
+= 1.1.4 = 04-21-18
 - Added: dropcap and highlight styling to TinyMCE 
 - Fixed: TinyMCE editor WYSIWYG: blockquote, bullets, fontsize
 - Fixed: refactored custom.css
 
-= 1.1.5 = TBD
-- Improved: Roboto font loaded locally
-- Improved: minified custom css
+= 1.1.5 = 05-02-18
+- Added: about page
+- Added: custom pagination
+- Improved: Google fonts loaded locally for GDPR
+- Improved: performance optimizations
+- Improved: form styling
+- Improved: comments badge display
+
+
 
 

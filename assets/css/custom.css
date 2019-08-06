@@ -1141,7 +1141,8 @@ a.page-numbers {
 .comment-list ol {
   list-style: none; }
 
-.avatar.photo {
+.avatar.photo,
+.comment-meta img {
   border-radius: 100%; }
 
 a.comment-edit-link {
